@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b832rqy6jvapn"]
+
+[ext_resource type="Script" uid="uid://xlhdgjt23n4y" path="res://scripts/characters/game_state.gd" id="1_ho7yu"]
+[ext_resource type="PackedScene" uid="uid://bhgx8ors0i5hy" path="res://scenes/characters/Ana.tscn" id="1_xttmw"]
+
+[node name="GameState" type="Node"]
+script = ExtResource("1_ho7yu")
+
+[node name="Ana" parent="." instance=ExtResource("1_xttmw")]
+position = Vector2(472.754, 452.869)
+
+[node name="CurrentLevel" type="Node" parent="."]

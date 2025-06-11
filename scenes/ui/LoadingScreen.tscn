@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo6rd68r1k3wh"]
+
+[ext_resource type="Script" uid="uid://cph6cauae5g8e" path="res://scripts/ui/loading_screen.gd" id="1_qhghk"]
+[ext_resource type="Texture2D" uid="uid://bxoogbmebihnl" path="res://assets/ui/Pantalla de Carga.png" id="1_uo7ie"]
+
+[node name="LoadingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qhghk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_uo7ie")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 395.0
+offset_right = 939.0
+offset_bottom = 549.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1

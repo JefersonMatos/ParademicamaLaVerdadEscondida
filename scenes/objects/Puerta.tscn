@@ -1,0 +1,140 @@
+[gd_scene load_steps=21 format=3 uid="uid://cvnw7pqkfbx2w"]
+
+[ext_resource type="Script" uid="uid://hs8mwjsjtcub" path="res://scripts/objects/puerta.gd" id="1_qcot6"]
+[ext_resource type="Texture2D" uid="uid://dssh3l1bu156m" path="res://assets/enviroments/animated_door_glass_sliding_32x32.png" id="2_5na0v"]
+[ext_resource type="AudioStream" uid="uid://bmu6yicynqsg3" path="res://assets/audio/puertas/Abrir puerta.wav" id="3_77q3r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77q3r"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4od2m"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjmor"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehy1e"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb27a"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx3jp"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu7ms"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b64hk"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_564u1"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1igdh"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_larc5"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm2yp"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtuv0"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1egug"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(832, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ka6l5"]
+atlas = ExtResource("2_5na0v")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4nq4d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77q3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4od2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjmor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehy1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb27a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx3jp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu7ms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b64hk")
+}],
+"loop": false,
+"name": &"abrir",
+"speed": 17.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_564u1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1igdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_larc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gm2yp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtuv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1egug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ka6l5")
+}],
+"loop": false,
+"name": &"cerrar",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnecp"]
+size = Vector2(64, 58)
+
+[node name="Puerta" type="Area2D"]
+script = ExtResource("1_qcot6")
+
+[node name="SpritePuerta" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4nq4d")
+animation = &"abrir"
+
+[node name="CollisionPuerta" type="CollisionShape2D" parent="."]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_gnecp")
+
+[node name="SonidoAbrir" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_77q3r")

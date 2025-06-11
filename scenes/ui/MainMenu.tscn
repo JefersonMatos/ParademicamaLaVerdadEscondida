@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm56wcgoqmllh"]
+
+[ext_resource type="Script" uid="uid://cc2fuv7wo830a" path="res://scripts/ui/main_menu.gd" id="1_xpiny"]
+[ext_resource type="Texture2D" uid="uid://cufjyefe4x1j4" path="res://assets/enviroments/MenuPricipal.png" id="2_6jbdy"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xpiny")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_6jbdy")
+expand_mode = 1
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 647.0
+offset_top = 356.0
+offset_right = 1074.0
+offset_bottom = 445.0
+theme_override_constants/icon_max_width = 350
+flat = true
+icon_alignment = 1
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 746.0
+offset_top = 482.0
+offset_right = 980.0
+offset_bottom = 559.0
+theme_override_constants/icon_max_width = 350
+flat = true
+icon_alignment = 1

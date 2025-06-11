@@ -1,0 +1,81 @@
+[background arg="res://assets/enviroments/OficinaSunafil.png" fade="0.0"]
+join JefeSunafil (Principal) leftmost
+join Investigador (Principal) rightmost [mirrored="true"]
+JefeSunafil: Gomez, ¿has escuchado de la cadena televisiva Parademicama?
+Investigador: Claro que sí, señor. Son bastante conocidos… aunque también algo sensacionalistas.
+JefeSunafil: Hemos recibido denuncias anónimas sobre casos de acoso sexual dentro de sus instalaciones.
+Investigador: ¿Acoso? ¿Y desde cuándo?
+JefeSunafil: Desde hace 6 meses. Las denuncias llegan por correos anonimos.
+JefeSunafil: Lo preocupante es que ya enviamos a dos inspectores antes que usted... y ambos regresaron sin nada que reportar.
+JefeSunafil: Sin embargo, las denuncias siguen llegando. Algo no encaja.
+Investigador: Entonces… ¿cree que se trató de simples errores en sus reportes?
+Investigador: O que simplemente no vieron nada, o no quisieron ver.
+JefeSunafil: Eso es lo que necesito que usted descubra.
+Investigador: Entendido, señor.\
+Mañana a primera hora estare ahi.
+leave Investigador
+leave JefeSunafil
+[background fade="0.0"]
+(El investigador entrevista a los empleados de la cadena televisiva Parademicama)
+[background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
+join Investigador leftmost
+(El investigador entra en la oficina del jefe de Parademicama)
+join JefeParademicama rightmost [mirrored="true"]
+Investigador: Hemos terminado la inspección. He hablado con varios trabajadores... y hay patrones que no se pueden ignorar.
+JefeParademicama: ¿Patrones?
+Investigador: Miedo. Silencio. Algunos se niegan a hablar. Otros solo lo hacen cuando están completamente seguros de que nadie los escucha.
+JefeParademicama: ¿Y qué cree que eso significa?
+Investigador: Que alguien con poder está abusando de él... y que todos aquí lo saben.
+JefeParademicama: ¿Tiene pruebas?
+Investigador: Tengo lo necesario para que vaya a la carcel por unos años.
+JefeParademicama: Mire, inspector Gómez… todos tenemos un precio. Lo que me parece curioso es que los anteriores nunca regresaron con "indicios".
+Investigador: Yo no soy como los anteriores.
+JefeParademicama: No estoy tan seguro. Pero hagamos esto más sencillo. Digamos que… valoramos su tiempo. ¿Qué tal si le hago una propuesta para que lo reconsidere?
+Investigador: ¿Me está ofreciendo un soborno?
+JefeParademicama: No lo llame así. Digamos que es... una compensación por cerrar el expediente y seguir con su camino.
+Investigador: Eso confirma todo lo que sospechaba.
+JefeParademicama: Confirma que usted también tiene la oportunidad de decidir hasta dónde quiere llegar. Si acepta, todo se borra. Nadie se entera. Usted gana… todos ganan.
+Investigador: Y si no acepto, supongo que lo que sigue es intimidación, ¿no?
+JefeParademicama: S/. 80,000 en efectivo y sin rastros.
+Investigador: ¿S/. 80,000?
+JefeParademicama: He preguntado por usted, Gómez. No soy tonto. Sé que su hijo necesita tratamiento fuera del país.
+Investigador: No mezcle a mi familia en esto.
+JefeParademicama: No lo hago por maldad. Lo hago porque entiendo su posicion.
+JefeParademicama: ¿De qué sirve un buen padre si no puede proteger a su hijo? Tome la decisión correcta. Hágalo por él.
+Investigador: ...
+leave Investigador
+leave JefeParademicama
+[background arg="res://assets/enviroments/OficinaSunafil.png" fade="0.0"]
+join Investigador leftmost
+join JefeSunafil rightmost [mirrored="true"]
+JefeSunafil: ¿Y bien Gómez, qué encontró?
+Investigador: Hablé con varios trabajadores... pero nadie quiso declarar. Todo parecía en orden.
+JefeSunafil: ¿En orden? ¿Después de seis meses de denuncias anónimas?
+Investigador: Mire, jefe... no es tan simple. La gente allá tiene miedo. Es como si... alguien los estuviera vigilando constantemente.
+JefeSunafil: ¿Y eso no le parece suficiente para escarbar más?
+Investigador: Escarbé. Lo intenté. Pero todos están cerrados. Nadie confía. Nadie se arriesga.
+JefeSunafil: Entiendo. Gracias por su trabajo, Gómez. Puede retirarse.
+Investigador: (con la mirada baja) Lo siento, señor. Hice lo que pude.
+leave Investigador
+JefeSunafil: Ya no puedo confiar en métodos tradicionales. Si seguimos como hasta ahora, no vamos a descubrir nada. Necesito a alguien que no sólo se limite a inspeccionar, sino que pueda llegar al fondo de todo esto.
+JefeSunafil: No tengo tiempo que perder. Tengo que llamar a Ana. No puedo dejar que esto quede en la nada.
+leave JefeSunafil
+[background fade="0.0"]
+Al dia siguiente en las oficinas de SUNAFIL
+[background arg="res://assets/enviroments/OficinaSunafil.png" fade="0.0"]
+join JefeSunafil rightmost [mirrored="true"]
+join Ana leftmost
+JefeSunafil: Ana, gracias por venir tan pronto. Como habras podido ver en el informe que te envie la situación con PARADEMICAMA se complica cada vez más.
+JefeSunafil: Los investigadores que enviamos no lograron encontrar nada.
+Ana: Algo raro está pasando, pero no puedo decir qué exactamente.
+JefeSunafil: Precisamente. Nadie puede señalar con certeza qué está mal, pero las denuncias de acoso sexual siguen llegando. Y lo peor es que todos parecen tener miedo de hablar.
+Ana: ¿Miedo? ¿De qué? ¿Quién está controlando todo esto?
+JefeSunafil: Eso es lo que quiero que averigües. Creo que dentro de PARADEMICAMA hay algo más grande y más oscuro que lo que imaginamos.
+Ana: ¿Cómo puedo ayudar? ¿Qué quieren que haga?
+JefeSunafil: Necesito que te infiltre en PARADEMICAMA. Aplica al puesto de asistente del jefe. Gánate su confianza, hazte indispensable. Y, sobre todo, recoge cualquier prueba que encuentres.
+Ana: ¿Estás seguro de que soy la persona indicada para esto?
+JefeSunafil: No tengo dudas, Ana. Necesito a alguien inteligente, astuta y que no se asuste con nada.
+JefeSunafil: ¿Crees ser capaz de sacar la verdad a flote?
+- Sí, confíe en mí, lo haré.
+- No estoy segura, esto suena peligroso.
+[end_timeline]
