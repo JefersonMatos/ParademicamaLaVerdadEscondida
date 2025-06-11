@@ -75,7 +75,12 @@ Ana: ¿Cómo puedo ayudar? ¿Qué quieren que haga?
 JefeSunafil: Necesito que te infiltre en PARADEMICAMA. Aplica al puesto de asistente del jefe. Gánate su confianza, hazte indispensable. Y, sobre todo, recoge cualquier prueba que encuentres.
 Ana: ¿Estás seguro de que soy la persona indicada para esto?
 JefeSunafil: No tengo dudas, Ana. Necesito a alguien inteligente, astuta y que no se asuste con nada.
+label ¿Crees ser capaz de sacar la verdad a flote?
 JefeSunafil: ¿Crees ser capaz de sacar la verdad a flote?
 - Sí, confíe en mí, lo haré.
+	JefeSunafil: Excelente, Ana. Confío en ti.
+	[end_timeline]
 - No estoy segura, esto suena peligroso.
-[end_timeline]
+	JefeSunafil: Entiendo tus dudas, pero piensa en lo que pasara si no hacemos nada.
+	JefeSunafil: Te lo preguntare de nuevo
+	jump ¿Crees ser capaz de sacar la verdad a flote?

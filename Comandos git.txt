@@ -1,1 +1,12 @@
-Ana - Personaje principal - Detective de SUNAFIL que trabaja como infiltrada en la empresa
+Para descargar los avances
+git pull origin master
+
+
+Para descargar el proyecto
+git clone https://github.com/JefersonMatos/ParademicamaLaVerdadEscondida.git
+
+
+Para subir las actualizaciones
+git add .
+git commit -m "Descripción de los cambios"
+git push origin master

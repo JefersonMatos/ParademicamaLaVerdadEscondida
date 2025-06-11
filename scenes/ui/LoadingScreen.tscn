@@ -9,6 +9,7 @@ anchors_preset = 0
 script = ExtResource("1_qhghk")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_uo7ie")

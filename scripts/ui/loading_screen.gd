@@ -1,6 +1,5 @@
 extends Control
 
-@onready var dialogic := $Dialogic
 @onready var texto := $PanelContainer/RichTextLabel  # Si usas un Label para mostrar texto
 var escenas_precargadas := false
 
