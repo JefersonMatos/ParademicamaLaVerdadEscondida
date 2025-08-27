@@ -1,16 +1,36 @@
 extends Area2D
 
-@onready var puerta := $"../Puerta"
-@onready var anim := puerta.get_node("SpritePuerta")
-@onready var sonido_abrir := puerta.get_node("SonidoAbrir")
+@onready var gs := get_tree().root.get_node("GameState")
 
-var puerta_abierta := false
+@export var target_scene_path: String = "res://scenes/levels/NivelOficinaJefe.tscn"
+@export var spawn_name_on_arrive: String = "SpawnOficina-OficinaJefe"
+@export var complete_objective_id: String = "go_boss_office"
+
+var _triggered := false
 
 func _ready():
 	connect("body_entered", Callable(self, "_on_body_entered"))
 
 func _on_body_entered(body):
-	if body.name == "Ana":
-		var game_state = get_tree().get_root().get_node("GameState")
-		game_state.spawn_name = "SpawnOficina-OficinaJefe"
-		game_state.load_level("res://scenes/levels/NivelOficinaJefe.tscn")
+	if _triggered: 
+		return
+	if body.name != "Ana":
+		return
+	_triggered = true
+
+	# (Opcional) animar/sonar la puerta si existen esos nodos
+	if has_node("../Puerta"):
+		var puerta := $"../Puerta"
+		if puerta.has_node("SpritePuerta"):
+			var anim = puerta.get_node("SpritePuerta")
+			if "play" in anim: anim.play("abrir")
+		if puerta.has_node("SonidoAbrir"):
+			puerta.get_node("SonidoAbrir").play()
+
+	# Marca el objetivo "ir a la oficina del jefe" como completado
+	if gs and gs.has_method("quest_complete"):
+		gs.quest_complete(complete_objective_id)
+
+	# Cambia de escena con el spawn adecuado
+	gs.spawn_name = spawn_name_on_arrive
+	gs.load_level(target_scene_path)

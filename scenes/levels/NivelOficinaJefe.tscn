@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://biw1iekiopwlb"]
+[gd_scene load_steps=19 format=3 uid="uid://biw1iekiopwlb"]
 
 [ext_resource type="Texture2D" uid="uid://6umxoa0fb1ya" path="res://assets/enviroments/Room_Builder_32x32.png" id="1_xfygq"]
 [ext_resource type="Texture2D" uid="uid://0vncdyviq60m" path="res://assets/enviroments/14_Basement_32x32.png" id="2_socfk"]
 [ext_resource type="Texture2D" uid="uid://dmrfs2kywpy52" path="res://assets/enviroments/Modern_Office_Black_Shadow_32x32.png" id="3_r8i0b"]
 [ext_resource type="Script" uid="uid://1655lmv7acq2" path="res://scripts/systems/cambio_escena_hacia_oficina.gd" id="4_socfk"]
+[ext_resource type="PackedScene" uid="uid://dpmtx8mk2ccpn" path="res://scenes/characters/Jefe.tscn" id="5_r8i0b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_socfk"]
 texture = ExtResource("1_xfygq")
@@ -53306,3 +53307,6 @@ script = ExtResource("4_socfk")
 [node name="cambioescena_oficinajefe_oficina" type="CollisionShape2D" parent="CambioEscena_OficinaJefe_Oficina"]
 position = Vector2(576, 655.5)
 shape = SubResource("RectangleShape2D_r8i0b")
+
+[node name="Jefe" parent="." instance=ExtResource("5_r8i0b")]
+position = Vector2(579, 504)

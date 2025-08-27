@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b832rqy6jvapn"]
+[gd_scene load_steps=5 format=3 uid="uid://b832rqy6jvapn"]
 
 [ext_resource type="Script" uid="uid://xlhdgjt23n4y" path="res://scripts/characters/game_state.gd" id="1_ho7yu"]
 [ext_resource type="PackedScene" uid="uid://bhgx8ors0i5hy" path="res://scenes/characters/Ana.tscn" id="1_xttmw"]
+[ext_resource type="Script" uid="uid://bwrdc180ye578" path="res://scripts/systems/QuestManager.gd" id="3_q8nh7"]
+[ext_resource type="PackedScene" uid="uid://diyiwu7kutgy0" path="res://scenes/ui/HUD.tscn" id="4_xvdg6"]
 
 [node name="GameState" type="Node"]
 script = ExtResource("1_ho7yu")
@@ -10,3 +12,8 @@ script = ExtResource("1_ho7yu")
 position = Vector2(472.754, 452.869)
 
 [node name="CurrentLevel" type="Node" parent="."]
+
+[node name="QuestManager" type="Node" parent="."]
+script = ExtResource("3_q8nh7")
+
+[node name="HUD" parent="." instance=ExtResource("4_xvdg6")]
