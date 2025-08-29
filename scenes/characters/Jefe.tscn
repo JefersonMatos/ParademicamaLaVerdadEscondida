@@ -388,7 +388,7 @@ animations = [{
 size = Vector2(20, 33)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m68n6"]
-radius = 17.0294
+radius = 20.025
 
 [node name="Jefe" type="CharacterBody2D"]
 z_index = 4
@@ -399,12 +399,12 @@ sprite_frames = SubResource("SpriteFrames_kpmtg")
 animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4.5)
+position = Vector2(0, 7.5)
 shape = SubResource("RectangleShape2D_fsuo1")
 
 [node name="Interact" type="Area2D" parent="."]
 script = ExtResource("4_u7yhp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]
-position = Vector2(0, 10)
+position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_m68n6")
