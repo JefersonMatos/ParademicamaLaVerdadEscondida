@@ -1,5 +1,6 @@
-join JefeSunafil right
+[background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
+join JefeSunafil leftmost
+join Ana rightmost [mirrored="true"]
 JefeSunafil: Hola Ana, Bienvenida a Paradmeicama.
 JefeSunafil: Desde hoy empezaras como asistente.
-join Ana left
 Ana: Muchas gracias por la oportunidad!!!

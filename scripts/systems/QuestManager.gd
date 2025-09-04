@@ -89,8 +89,8 @@ func _advance_to_next() -> void:
 	else:
 		_emit_change()
 
-func _next_unfinished_from(start: int) -> int:
-	for j in range(start, _sequence.size()):
+func _next_unfinished_from(from_index: int) -> int:
+	for j in range(from_index, _sequence.size()):
 		if not _sequence[j]["done"]:
 			return j
 	return -1

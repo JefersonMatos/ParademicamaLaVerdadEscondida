@@ -173,7 +173,7 @@ func quest_add_next(id: String, text: String) -> void:
 		quest.call("add_next", id, text)
 
 # Callbacks desde QuestManager para actualizar HUD
-func _on_objective_changed(id: String, text: String, index: int, total: int) -> void:
+func _on_objective_changed(_id: String, text: String, _index: int, _total: int) -> void:
 	hud_set_objective(text)
 
 func _on_all_objectives_done() -> void:
