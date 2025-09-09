@@ -2,10 +2,25 @@ extends CharacterBody2D
 
 @onready var anim := $AnimatedSprite_Ana
 
-const WALK_SPEED := 100.0       # 🔁 Renombrado
-const RUN_SPEED := 180.0        # 🔁 Añadido
+const WALK_SPEED := 100.0       
+const RUN_SPEED := 180.0        
+
+var interaction_enabled := true  # Controla si Ana puede moverse e interactuar
+
+func set_interactable(enabled: bool) -> void:
+	interaction_enabled = enabled
+	# Si la interacción está deshabilitada, bloqueamos el movimiento
+	if not interaction_enabled:
+		velocity = Vector2.ZERO  # Detenemos el movimiento
+
+func _ready():
+	# Inicialización
+	pass
 
 func _physics_process(_delta):
+	if not interaction_enabled:
+		return  # No permite movimiento si la interacción está deshabilitada
+
 	var dir := Vector2.ZERO
 
 	# Captura teclas de dirección
@@ -18,9 +33,8 @@ func _physics_process(_delta):
 	elif Input.is_action_pressed("ui_up"):
 		dir.y = -1
 
-	var is_running := Input.is_action_pressed("ui_run")  # 🔁 Detecta Shift
+	var is_running := Input.is_action_pressed("ui_run")
 	var speed := RUN_SPEED if is_running else WALK_SPEED
-
 
 	velocity = dir.normalized() * speed
 	move_and_slide()
@@ -28,7 +42,6 @@ func _physics_process(_delta):
 	# Animaciones automáticas según dirección y estado de correr
 	if dir != Vector2.ZERO:
 		var prefix := "run_" if is_running else "walk_"
-
 		if dir.x > 0:
 			anim.play(prefix + "right")
 		elif dir.x < 0:

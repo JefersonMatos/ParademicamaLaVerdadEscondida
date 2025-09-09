@@ -2,85 +2,146 @@
 join JefeSunafil (Principal) leftmost
 join Investigador (Principal) rightmost [mirrored="true"]
 JefeSunafil: Gomez, ¿has escuchado de la cadena televisiva Parademicama?
+[wait time="2.0" hide_text="false"]
 Investigador: Claro que sí, señor. Son bastante conocidos… aunque también algo sensacionalistas.
+jump ¿Crees ser capaz de sacar la verdad a flote?
+[wait time="2.0" hide_text="false"]
 JefeSunafil: Hemos recibido denuncias anónimas sobre casos de acoso sexual dentro de sus instalaciones.
+[wait time="2.0" hide_text="false"]
 Investigador: ¿Acoso? ¿Y desde cuándo?
+[wait time="1.0" hide_text="false"]
 JefeSunafil: Desde hace 6 meses. Las denuncias llegan por correos anonimos.
+[wait time="2.0" hide_text="false"]
 JefeSunafil: Lo preocupante es que ya enviamos a dos inspectores antes que usted... y ambos regresaron sin nada que reportar.
+[wait time="2.0" hide_text="false"]
 JefeSunafil: Sin embargo, las denuncias siguen llegando. Algo no encaja.
+[wait time="2.0" hide_text="false"]
 Investigador: Entonces… ¿cree que se trató de simples errores en sus reportes?
+[wait time="2.0" hide_text="false"]
 Investigador: O que simplemente no vieron nada, o no quisieron ver.
+[wait time="1.0" hide_text="false"]
 JefeSunafil: Eso es lo que necesito que usted descubra.
+[wait time="1.0" hide_text="false"]
 Investigador: Entendido, señor.\
 Mañana a primera hora estare ahi.
+[wait time="2.0" hide_text="false"]
 leave Investigador
 leave JefeSunafil
 [background fade="0.0"]
 (El investigador entrevista a los empleados de la cadena televisiva Parademicama)
+[wait time="2.0" hide_text="false"]
 [background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
 join Investigador leftmost
 (El investigador entra en la oficina del jefe de Parademicama)
+[wait time="1.0" hide_text="false"]
 join JefeParademicama rightmost [mirrored="true"]
 Investigador: Hemos terminado la inspección. He hablado con varios trabajadores... y hay patrones que no se pueden ignorar.
+[wait time="2.0" hide_text="false"]
 JefeParademicama: ¿Patrones?
+[wait time="1.0" hide_text="false"]
 Investigador: Miedo. Silencio. Algunos se niegan a hablar. Otros solo lo hacen cuando están completamente seguros de que nadie los escucha.
+[wait time="2.0" hide_text="false"]
 JefeParademicama: ¿Y qué cree que eso significa?
+[wait time="1.0" hide_text="false"]
 Investigador: Que alguien con poder está abusando de él... y que todos aquí lo saben.
+[wait time="2.0" hide_text="false"]
 JefeParademicama: ¿Tiene pruebas?
+[wait time="1.0" hide_text="false"]
 Investigador: Tengo lo necesario para que vaya a la carcel por unos años.
+[wait time="2.0" hide_text="false"]
 JefeParademicama: Mire, inspector Gómez… todos tenemos un precio. Lo que me parece curioso es que los anteriores nunca regresaron con "indicios".
+[wait time="2.0" hide_text="false"]
 Investigador: Yo no soy como los anteriores.
+[wait time="1.0" hide_text="false"]
 JefeParademicama: No estoy tan seguro. Pero hagamos esto más sencillo. Digamos que… valoramos su tiempo. ¿Qué tal si le hago una propuesta para que lo reconsidere?
+[wait time="2.0" hide_text="false"]
 Investigador: ¿Me está ofreciendo un soborno?
+[wait time="1.0" hide_text="false"]
 JefeParademicama: No lo llame así. Digamos que es... una compensación por cerrar el expediente y seguir con su camino.
+[wait time="3.0" hide_text="false"]
 Investigador: Eso confirma todo lo que sospechaba.
+[wait time="2.0" hide_text="false"]
 JefeParademicama: Confirma que usted también tiene la oportunidad de decidir hasta dónde quiere llegar. Si acepta, todo se borra. Nadie se entera. Usted gana… todos ganan.
+[wait time="2.0" hide_text="false"]
 Investigador: Y si no acepto, supongo que lo que sigue es intimidación, ¿no?
+[wait time="2.0" hide_text="false"]
 JefeParademicama: S/. 80,000 en efectivo y sin rastros.
+[wait time="2.0" hide_text="false"]
 Investigador: ¿S/. 80,000?
+[wait time="1.0" hide_text="false"]
 JefeParademicama: He preguntado por usted, Gómez. No soy tonto. Sé que su hijo necesita tratamiento fuera del país.
+[wait time="2.0" hide_text="false"]
 Investigador: No mezcle a mi familia en esto.
+[wait time="2.0" hide_text="false"]
 JefeParademicama: No lo hago por maldad. Lo hago porque entiendo su posicion.
+[wait time="2.0" hide_text="false"]
 JefeParademicama: ¿De qué sirve un buen padre si no puede proteger a su hijo? Tome la decisión correcta. Hágalo por él.
+[wait time="2.0" hide_text="false"]
 Investigador: ...
+[wait time="1.0" hide_text="false"]
 leave Investigador
 leave JefeParademicama
 [background arg="res://assets/enviroments/OficinaSunafil.png" fade="0.0"]
 join Investigador leftmost
 join JefeSunafil rightmost [mirrored="true"]
 JefeSunafil: ¿Y bien Gómez, qué encontró?
+[wait time="2.0" hide_text="false"]
 Investigador: Hablé con varios trabajadores... pero nadie quiso declarar. Todo parecía en orden.
+[wait time="2.0" hide_text="false"]
 JefeSunafil: ¿En orden? ¿Después de seis meses de denuncias anónimas?
+[wait time="2.0" hide_text="false"]
 Investigador: Mire, jefe... no es tan simple. La gente allá tiene miedo. Es como si... alguien los estuviera vigilando constantemente.
+[wait time="2.0" hide_text="false"]
 JefeSunafil: ¿Y eso no le parece suficiente para escarbar más?
+[wait time="2.0" hide_text="false"]
 Investigador: Escarbé. Lo intenté. Pero todos están cerrados. Nadie confía. Nadie se arriesga.
+[wait time="2.0" hide_text="false"]
 JefeSunafil: Entiendo. Gracias por su trabajo, Gómez. Puede retirarse.
+[wait time="2.0" hide_text="false"]
 Investigador: (con la mirada baja) Lo siento, señor. Hice lo que pude.
+[wait time="2.0" hide_text="false"]
 leave Investigador
 JefeSunafil: Ya no puedo confiar en métodos tradicionales. Si seguimos como hasta ahora, no vamos a descubrir nada. Necesito a alguien que no sólo se limite a inspeccionar, sino que pueda llegar al fondo de todo esto.
+[wait time="2.0" hide_text="false"]
 JefeSunafil: No tengo tiempo que perder. Tengo que llamar a Ana. No puedo dejar que esto quede en la nada.
+[wait time="2.0" hide_text="false"]
 leave JefeSunafil
 [background fade="0.0"]
 Al dia siguiente en las oficinas de SUNAFIL
+[wait time="2.0" hide_text="false"]
 [background arg="res://assets/enviroments/OficinaSunafil.png" fade="0.0"]
 join JefeSunafil rightmost [mirrored="true"]
 join Ana leftmost
 JefeSunafil: Ana, gracias por venir tan pronto. Como habras podido ver en el informe que te envie la situación con PARADEMICAMA se complica cada vez más.
+[wait time="2.0" hide_text="false"]
 JefeSunafil: Los investigadores que enviamos no lograron encontrar nada.
+[wait time="2.0" hide_text="false"]
 Ana: Algo raro está pasando, pero no puedo decir qué exactamente.
+[wait time="2.0" hide_text="false"]
 JefeSunafil: Precisamente. Nadie puede señalar con certeza qué está mal, pero las denuncias de acoso sexual siguen llegando. Y lo peor es que todos parecen tener miedo de hablar.
+[wait time="2.0" hide_text="false"]
 Ana: ¿Miedo? ¿De qué? ¿Quién está controlando todo esto?
+[wait time="2.0" hide_text="false"]
 JefeSunafil: Eso es lo que quiero que averigües. Creo que dentro de PARADEMICAMA hay algo más grande y más oscuro que lo que imaginamos.
+[wait time="2.0" hide_text="false"]
 Ana: ¿Cómo puedo ayudar? ¿Qué quieren que haga?
+[wait time="2.0" hide_text="false"]
 JefeSunafil: Necesito que te infiltre en PARADEMICAMA. Aplica al puesto de asistente del jefe. Gánate su confianza, hazte indispensable. Y, sobre todo, recoge cualquier prueba que encuentres.
+[wait time="2.0" hide_text="false"]
 Ana: ¿Estás seguro de que soy la persona indicada para esto?
+[wait time="2.0" hide_text="false"]
 JefeSunafil: No tengo dudas, Ana. Necesito a alguien inteligente, astuta y que no se asuste con nada.
+[wait time="2.0" hide_text="false"]
 label ¿Crees ser capaz de sacar la verdad a flote?
 JefeSunafil: ¿Crees ser capaz de sacar la verdad a flote?
+[wait time="2.0" hide_text="false"]
 - Sí, confíe en mí, lo haré.
 	JefeSunafil: Excelente, Ana. Confío en ti.
+	[wait time="2.0" hide_text="false"]
 	[end_timeline]
 - No estoy segura, esto suena peligroso.
 	JefeSunafil: Entiendo tus dudas, pero piensa en lo que pasara si no hacemos nada.
+	[wait time="2.0" hide_text="false"]
 	JefeSunafil: Te lo preguntare de nuevo
+	[wait time="2.0" hide_text="false"]
 	jump ¿Crees ser capaz de sacar la verdad a flote?

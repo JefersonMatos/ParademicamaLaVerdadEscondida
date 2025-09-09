@@ -1,6 +1,22 @@
 [background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
-join JefeSunafil leftmost
+join JefeParademicama leftmost
 join Ana rightmost [mirrored="true"]
-JefeSunafil: Hola Ana, Bienvenida a Paradmeicama.
-JefeSunafil: Desde hoy empezaras como asistente.
-Ana: Muchas gracias por la oportunidad!!!
+
+Ana: Buenos días, soy Ana, su nueva asistente.
+[wait time="1.0" hide_text="false"]
+
+JefeParademicama: Ah, sí, Ana. Bienvenida a PARADEMICAMA. Me alegra tener a alguien tan capacitada en el equipo.
+[wait time="1.0" hide_text="false"]
+
+JefeParademicama: Verás, aquí nos gusta trabajar rápido. No tenemos tiempo para rodeos. Estoy seguro de que te adaptas rápido.
+[wait time="1.0" hide_text="false"]
+
+JefeParademicama:  Ve con Luisa, ella será tu guía hoy. Te explicará cómo manejamos las cosas aquí.
+[wait time="1.0" hide_text="false"]
+
+Ana: Entendido, muchas gracias.
+[wait time="1.0" hide_text="false"]
+
+JefeParademicama: ¡Buena suerte! Nos vemos luego.
+[wait time="1.0" hide_text="false"]
+[end_timeline]

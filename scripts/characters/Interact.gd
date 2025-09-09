@@ -19,7 +19,8 @@ func _on_entered(body: Node) -> void:
 	if body.name != "Ana": return
 	_inside = true
 	_who = body
-	_gs.hud_show_interact(prompt_text)
+	if !_gs.is_dialog_active:  # Asegura que solo se muestre si no hay diálogo activo
+		_gs.hud_show_interact(prompt_text)
 
 func _on_exited(body: Node) -> void:
 	if body != _who: return
@@ -31,4 +32,4 @@ func _unhandled_input(event: InputEvent) -> void:
 	if not _inside: return
 	if event.is_action_pressed(action):
 		_gs.hud_hide_interact()
-		emit_signal("interact", _who)
+		emit_signal("interact", _who)  # Emitir la señal al presionar "E"

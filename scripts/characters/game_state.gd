@@ -4,15 +4,18 @@ extends Node
 @onready var ana: Node = $Ana
 @onready var hud: Node = get_node_or_null("HUD")             # CanvasLayer del HUD
 @onready var quest: Node = get_node_or_null("QuestManager")  # Manager de objetivos
-
-# (Opcional) Coloca un DialogicGameHandler como hijo de GameState y nómbralo "DialogicRunner"
 @onready var dialogic_runner: Node = get_node_or_null("DialogicRunner")
 
 var spawn_name: String = "SpawnAna"
-var _last_scene_path: String = ""                 # para fallback de ubicación
-var _location_was_set_manually: bool = false      # evita que el fallback pise lo que puso la puerta
+var _last_scene_path: String = ""                 
+var _location_was_set_manually: bool = false      
 
-# Nombres “bonitos” por escena (fallback)
+# Nuevas variables para manejar la interacción
+var interaction_enabled: bool = true  
+var is_dialog_active: bool = false  # Variable que controla si el diálogo está activo.
+var jefe_dialogue_completed: bool = false  # Estado del diálogo con el jefe
+
+# Nombres “bonitos” por escena
 var location_names := {
 	"res://scenes/levels/NivelOficina.tscn": "Oficina Principal",
 	"res://scenes/levels/NivelOficinaJefe.tscn": "Oficina del Jefe",
@@ -23,7 +26,6 @@ var location_names := {
 	"res://scenes/levels/NivelEstudioGrabacion.tscn": "Estudio de Grabación"
 }
 
-# Alias para puertas (IDs simples)
 var location_aliases := {
 	"oficina": "Oficina Principal",
 	"oficina_jefe": "Oficina del Jefe",
@@ -34,7 +36,6 @@ var location_aliases := {
 	"estudio": "Estudio de Grabación"
 }
 
-# Referencias a escenas (pueden quedar en null si no precargas)
 var scenes := {
 	"res://scenes/levels/NivelOficina.tscn": null,
 	"res://scenes/levels/NivelOficinaJefe.tscn": null,
@@ -45,19 +46,16 @@ var scenes := {
 	"res://scenes/levels/NivelEstudioGrabacion.tscn": null
 }
 
-# ---------- Dialogic helper ----------
 var _timeline_cb: Callable = Callable()
 
+# ---------- Dialogic helper ----------
 func _ensure_dialogic() -> Node:
-	# 1) Usa el runner declarado
 	if dialogic_runner:
 		return dialogic_runner
-	# 2) Busca por nombre común "Dialogic"
 	var n := get_node_or_null("Dialogic")
 	if n:
 		dialogic_runner = n
 		return dialogic_runner
-	# 3) Busca un hijo que tenga método "start" (DialogicGameHandler)
 	for c in get_children():
 		if c.has_method("start"):
 			dialogic_runner = c
@@ -65,31 +63,41 @@ func _ensure_dialogic() -> Node:
 	return null
 
 func play_timeline(timeline_name: String, on_finished: Callable = Callable()) -> void:
+	is_dialog_active = true  # Marca que el diálogo ha comenzado
 	var dlg := _ensure_dialogic()
 	if dlg == null:
 		push_warning("Dialogic runner not found. Skipping timeline: %s" % timeline_name)
 		if on_finished != Callable():
 			on_finished.call()
 		return
-	# Conecta una sola vez
-	if dlg.has_signal("timeline_ended"):
-		if dlg.is_connected("timeline_ended", Callable(self, "_on_timeline_end")):
-			dlg.disconnect("timeline_ended", Callable(self, "_on_timeline_end"))
-		dlg.connect("timeline_ended", Callable(self, "_on_timeline_end"))
+
+	# Desconectar la señal si ya está conectada
+	if dlg.is_connected("timeline_ended", Callable(self, "_on_timeline_end")):
+		dlg.disconnect("timeline_ended", Callable(self, "_on_timeline_end"))
+
+	# Ahora conectar la señal
+	dlg.connect("timeline_ended", Callable(self, "_on_timeline_end"))
+
 	_timeline_cb = on_finished
 	dlg.call("start", timeline_name)
 
+
 func _on_timeline_end() -> void:
-	# Desconecta para evitar llamadas duplicadas
-	var dlg := _ensure_dialogic()
-	if dlg and dlg.has_signal("timeline_ended") and dlg.is_connected("timeline_ended", Callable(self, "_on_timeline_end")):
-		dlg.disconnect("timeline_ended", Callable(self, "_on_timeline_end"))
-	# Ejecuta callback si hay
+	is_dialog_active = false  # Marca que el diálogo ha terminado
 	var cb := _timeline_cb
 	_timeline_cb = Callable()
 	if cb != Callable():
 		cb.call()
 # -------------------------------------
+
+# Función para habilitar o deshabilitar la interacción
+func set_interaction_enabled(enabled: bool) -> void:
+	interaction_enabled = enabled
+
+# Bloqueo de movimiento de Ana mientras el diálogo esté activo
+func set_ana_movement(enabled: bool) -> void:
+	if ana and ana.has_method("set_interactable"):
+		ana.call("set_interactable", enabled)
 
 func _ready() -> void:
 	# Oculta a Ana y el contenedor del nivel durante MainMenu/Intro
@@ -103,7 +111,6 @@ func _ready() -> void:
 	if current_level is CanvasItem:
 		(current_level as CanvasItem).visible = false
 
-	# Conecta QuestManager → HUD (cambios de objetivo)
 	if quest:
 		if quest.has_signal("objective_changed"):
 			quest.connect("objective_changed", Callable(self, "_on_objective_changed"))
