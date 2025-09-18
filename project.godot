@@ -26,11 +26,14 @@ directories/dch_directory={
 "Investigador": "res://assets/characters/Investigador/Investigador.dch",
 "JefeParademicama": "res://assets/characters/JefeParademicama/JefeParademicama.dch",
 "JefeSunafil": "res://assets/characters/JefeSunafil/JefeSunafil.dch",
+"Luisa": "res://assets/characters/Luisa/Luisa.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "DialogoJefeBienvenida": "res://scenes/dialogs/DialogoJefeBienvenida.dtl",
 "DialogoJefeOcupado": "res://scenes/dialogs/DialogoJefeOcupado.dtl",
+"DialogoLuisaGenerico": "res://scenes/dialogs/DialogoLuisaGenerico.dtl",
+"DialogoLuisaIntroduccion": "res://scenes/dialogs/DialogoLuisaIntroduccion.dtl",
 "IntroDialog": "res://scenes/dialogs/IntroDialog.dtl"
 }
 layout/style_directory={}

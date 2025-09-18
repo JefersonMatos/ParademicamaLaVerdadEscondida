@@ -1,0 +1,27 @@
+[background arg="res://assets/enviroments/OficinaPrincipal.png" fade="0.0"]
+join Ana leftmost
+join Luisa rightmost [mirrored="true"]
+Ana: Hola, por casualidad eres Luisa?
+Luisa: Hola, si soy yo.
+Luisa: ¿Como puedo ayudarte?
+Ana: Hola, soy Ana. Es mi primer dia.
+Ana: El jefe me dijo que me ayudarias con mi induccion
+Luisa: Entiendo. Muy bien Ana, es un gusto conocerte.
+Luisa: Bienvenida a Parademicama, aca nos encargamos de toda la gestion del canal desde las pautas hasta las noticias.
+Luisa: En este piso esta es la oficina principal
+[background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
+Luisa: La oficina del jefe ya la conociste
+[background arg="res://assets/enviroments/SalaJuntas.png" fade="0.0"]
+Luisa: A la izquierda tenemos la sala de juntas
+[background arg="res://assets/enviroments/EstudioGrabacion.png" fade="0.0"]
+Luisa: Y a la derecha el estudio de grabacion.
+[background arg="res://assets/enviroments/Comedor.png" fade="0.0"]
+Luisa: En el piso inferior esta es el comedor
+[background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
+Luisa: A la izquierda del comedor esta el cuarto del conserje
+[background arg="res://assets/enviroments/SalaSeguridad.png" fade="0.0"]
+Luisa: Y a la derecha tenemos la sala de vigilancia.
+[background arg="res://assets/enviroments/OficinaPrincipal.png" fade="0.0"]
+Luisa: Si seras la nueva asistente del jefe debes conocer muy bien las instalaciones.
+Ana: Entiendo muchas gracias.
+[end_timeline]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c0cyw3iag6p7g"]
+[gd_scene load_steps=29 format=3 uid="uid://c0cyw3iag6p7g"]
 
 [ext_resource type="Texture2D" uid="uid://6umxoa0fb1ya" path="res://assets/enviroments/Room_Builder_32x32.png" id="1_0odus"]
 [ext_resource type="Texture2D" uid="uid://0vncdyviq60m" path="res://assets/enviroments/14_Basement_32x32.png" id="2_33663"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://ctsvb4qs7y8ov" path="res://scripts/systems/cambio_escena_hacia_comedor.gd" id="8_dl7ss"]
 [ext_resource type="Script" uid="uid://d10i4jbmpad8w" path="res://scripts/systems/cambio_escena_hacia_sala_juntas.gd" id="9_5ni1y"]
 [ext_resource type="Script" uid="uid://dx3wjvc5xb53d" path="res://scripts/systems/cambio_escena_hacia_estudio_grabacion.gd" id="10_hapum"]
+[ext_resource type="PackedScene" uid="uid://cr5ajdh5xpta0" path="res://scenes/characters/Luisa.tscn" id="11_c1e60"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dl7ss"]
 texture = ExtResource("1_0odus")
@@ -57565,3 +57566,7 @@ script = ExtResource("10_hapum")
 z_index = 2
 position = Vector2(1013, 320)
 shape = SubResource("RectangleShape2D_hapum")
+
+[node name="Luisa" parent="." instance=ExtResource("11_c1e60")]
+z_index = 4
+position = Vector2(688, 226)

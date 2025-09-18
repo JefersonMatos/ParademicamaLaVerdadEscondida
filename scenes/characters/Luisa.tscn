@@ -1,5 +1,6 @@
-[gd_scene load_steps=55 format=3 uid="uid://cr5ajdh5xpta0"]
+[gd_scene load_steps=56 format=3 uid="uid://cr5ajdh5xpta0"]
 
+[ext_resource type="Script" uid="uid://b76jq7f55srww" path="res://scripts/characters/Luisa.gd" id="1_7rm5f"]
 [ext_resource type="Texture2D" uid="uid://drjjedctyslwp" path="res://assets/characters/Luisa/Luisa.png" id="1_uwnk4"]
 [ext_resource type="Texture2D" uid="uid://ckbvkbjf3k7if" path="res://assets/characters/Ana/Ana 32x32.png" id="2_7rm5f"]
 [ext_resource type="Script" uid="uid://t563jt7balwi" path="res://scripts/characters/Interact.gd" id="3_rxnau"]
@@ -390,6 +391,7 @@ size = Vector2(20, 33)
 radius = 20.025
 
 [node name="Luisa" type="CharacterBody2D"]
+script = ExtResource("1_7rm5f")
 
 [node name="AnimatedSprite_Luisa" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7fsjp")
