@@ -48,6 +48,11 @@ var scenes := {
 
 var _timeline_cb: Callable = Callable()
 
+var day: int = 1
+var time_left: float = 240.0  # 4 minutos (240 segundos)
+var game_over: bool = false
+var time_progress: float = 1.0  # Barra de progreso del tiempo
+
 # ---------- Dialogic helper ----------
 func _ensure_dialogic() -> Node:
 	if dialogic_runner:
@@ -98,6 +103,45 @@ func set_interaction_enabled(enabled: bool) -> void:
 func set_ana_movement(enabled: bool) -> void:
 	if ana and ana.has_method("set_interactable"):
 		ana.call("set_interactable", enabled)
+
+func next_day() -> void:
+	day += 1
+	time_left = 240.0  # Reinicia los 4 minutos para el siguiente día
+
+	# Cambiar la misión después de hablar con Luisa
+	if quest.is_current("find_luisa"):
+		quest.call("complete", "find_luisa")  # Completa la misión
+		quest.call("add_objective", "explore_office", "Tómate el resto del día para conocer las instalaciones y a los trabajadores")
+	else:
+		# Si la misión ya está completa, puedes añadir nuevas misiones si lo deseas
+		pass
+
+	# Verifica si se ha llegado al día 10 para el "Game Over"
+	if day > 10:
+		game_over = true
+		hud.call("set_objective", "¡Has sido descubierto!")  # Muestra el mensaje en el HUD
+		print("¡Has sido descubierto! El juego ha terminado.")   
+		# Aquí cambiamos a la pantalla de inicio
+		get_tree().change_scene("res://scenes/ui/IntroScreen.tscn")  # Redirige al IntroScreen.tscn
+
+
+func _on_timer_timeout() -> void:
+	if game_over:
+		return  # No hacer nada si el juego terminó
+		
+	time_left -= 1
+	if time_left <= 0:
+		next_day()  # Pasa al siguiente día
+	
+	update_hud()  # Actualiza la interfaz del usuario
+
+func update_hud() -> void:
+	if hud:
+		hud.call("set_day", "Day: %d" % day)  # Muestra el día
+		hud.call("set_time_left", "Time Left: %.1f" % time_left)  # Muestra el tiempo restante
+		time_progress = 1.0 - (time_left / 240.0)  # Calcula el progreso del día
+		hud.call("set_progress_bar", time_progress)  # Actualiza la barra de progreso
+
 
 func _ready() -> void:
 	# Oculta a Ana y el contenedor del nivel durante MainMenu/Intro

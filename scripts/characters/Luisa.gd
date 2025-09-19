@@ -17,15 +17,23 @@ func _on_interacted(_player: Node) -> void:
 
 	# Verificar si la misión "Busca a Luisa" está activa
 	if gs.quest.is_current("find_luisa"):
+		# Reproducir el diálogo de introducción de Luisa
 		gs.play_timeline("DialogoLuisaIntroduccion", Callable(self, "_on_dialogue_end"))
 	else:
+		# Si la misión ya se completó, reproducir el diálogo genérico
 		gs.play_timeline("DialogoLuisaGenerico", Callable(self, "_on_dialogue_end"))
 
 	# Bloquear movimiento e interacción de Ana mientras el diálogo está activo
 	gs.set_interaction_enabled(false)
 	gs.set_ana_movement(false)
 
+# Callback para cuando el diálogo termina
 func _on_dialogue_end() -> void:
-	# Restaurar interacción y movimiento de Ana
+	# Si la misión "Busca a Luisa" está activa, completarla
+	if gs.quest.is_current("find_luisa"):
+		gs.quest.call("complete", "find_luisa")  # Completar la misión
+		gs.quest.call("add_objective", "explore_office", "Tómate el resto del día para conocer las instalaciones y a los trabajadores")  # Cambiar de misión
+
+	# Restaurar interacción y movimiento de Ana después del diálogo
 	gs.set_interaction_enabled(true)
 	gs.set_ana_movement(true)
