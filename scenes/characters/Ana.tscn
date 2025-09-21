@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://bhgx8ors0i5hy"]
+[gd_scene load_steps=74 format=3 uid="uid://bhgx8ors0i5hy"]
 
 [ext_resource type="Script" uid="uid://d1h26wmpfaw61" path="res://scripts/player/ana.gd" id="1_li1vg"]
 [ext_resource type="Texture2D" uid="uid://ckbvkbjf3k7if" path="res://assets/characters/Ana/Ana 32x32.png" id="2_n35hl"]
@@ -549,7 +549,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_li1vg"]
-size = Vector2(28, 40)
+size = Vector2(18, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n35hl"]
+size = Vector2(28, 19)
 
 [node name="Ana" type="CharacterBody2D"]
 z_index = 4
@@ -557,10 +560,14 @@ script = ExtResource("1_li1vg")
 
 [node name="AnimatedSprite_Ana" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_k3ps0")
-animation = &"run_down"
+animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_li1vg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11.5)
+shape = SubResource("RectangleShape2D_n35hl")

@@ -17,8 +17,8 @@ position = Vector2(472.754, 452.869)
 [node name="QuestManager" type="Node" parent="."]
 script = ExtResource("3_q8nh7")
 
+[node name="HUD" parent="." instance=ExtResource("4_xvdg6")]
+
 [node name="DialogicRunner" type="Node" parent="."]
 script = ExtResource("5_xvdg6")
 metadata/_custom_type_script = "uid://ds2q0uclmolvu"
-
-[node name="HUD" parent="." instance=ExtResource("4_xvdg6")]

@@ -1,9 +1,14 @@
-extends CharacterBody2D
+extends Node2D
 
 @onready var interact: Area2D = $Interact
 @onready var gs: Node = get_tree().root.get_node("GameState")
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite_Luisa # Asumiendo que el nodo de animación se llama 'AnimatedSprite'
 
 func _ready() -> void:
+	# Asegurarse de que la animación 'idle_down' se establece al comenzar
+	if animated_sprite:
+		animated_sprite.play("idle_down")  # Inicia la animación de idle_down por defecto
+	
 	# Conectar la señal de interacción
 	if interact and interact.has_signal("interact"):
 		interact.connect("interact", Callable(self, "_on_interacted"))
@@ -32,7 +37,7 @@ func _on_dialogue_end() -> void:
 	# Si la misión "Busca a Luisa" está activa, completarla
 	if gs.quest.is_current("find_luisa"):
 		gs.quest.call("complete", "find_luisa")  # Completar la misión
-		gs.quest.call("add_objective", "explore_office", "Tómate el resto del día para conocer las instalaciones y a los trabajadores")  # Cambiar de misión
+		gs.quest.call("add_objective", "explore_office", "Explora las instalaciones y habla con los trabajadores")  # Cambiar de misión
 
 	# Restaurar interacción y movimiento de Ana después del diálogo
 	gs.set_interaction_enabled(true)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://cr5ajdh5xpta0"]
+[gd_scene load_steps=57 format=3 uid="uid://cr5ajdh5xpta0"]
 
 [ext_resource type="Script" uid="uid://b76jq7f55srww" path="res://scripts/characters/Luisa.gd" id="1_7rm5f"]
 [ext_resource type="Texture2D" uid="uid://drjjedctyslwp" path="res://assets/characters/Luisa/Luisa.png" id="1_uwnk4"]
@@ -385,12 +385,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oli0f"]
-size = Vector2(20, 33)
+size = Vector2(16, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rm5f"]
+size = Vector2(26, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nwkfa"]
 radius = 20.025
 
-[node name="Luisa" type="CharacterBody2D"]
+[node name="Luisa" type="Node2D"]
 script = ExtResource("1_7rm5f")
 
 [node name="AnimatedSprite_Luisa" type="AnimatedSprite2D" parent="."]
@@ -398,9 +401,15 @@ sprite_frames = SubResource("SpriteFrames_7fsjp")
 animation = &"idle_down"
 frame_progress = 0.586454
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 7.5)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_oli0f")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_7rm5f")
 
 [node name="Interact" type="Area2D" parent="."]
 script = ExtResource("3_rxnau")

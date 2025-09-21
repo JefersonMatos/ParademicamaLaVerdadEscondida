@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dqeqcnpb3yol6"]
+[gd_scene load_steps=56 format=3 uid="uid://dqeqcnpb3yol6"]
 
 [ext_resource type="Texture2D" uid="uid://b6wr3eraj1646" path="res://assets/characters/Conserje/Conserje.png" id="1_bt78k"]
 [ext_resource type="Texture2D" uid="uid://ckbvkbjf3k7if" path="res://assets/characters/Ana/Ana 32x32.png" id="2_ljnur"]
@@ -384,21 +384,30 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5oaa"]
-size = Vector2(20, 33)
+size = Vector2(16, 36.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt78k"]
+size = Vector2(24, 23)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mfyfj"]
 radius = 20.025
 
-[node name="Conserje" type="CharacterBody2D"]
+[node name="Conserje" type="Node2D"]
 
 [node name="AnimatedSprite_Conserje" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_a1uqb")
 animation = &"idle_down"
 frame_progress = 0.860827
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 7.5)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 3.25)
 shape = SubResource("RectangleShape2D_m5oaa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_bt78k")
 
 [node name="Interact" type="Area2D" parent="."]
 script = ExtResource("3_uidre")

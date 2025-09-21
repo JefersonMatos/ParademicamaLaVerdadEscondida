@@ -1,6 +1,7 @@
 extends Control
 
 @onready var dialogic := $Dialogic
+@onready var hud = get_node("/root/GameState/HUD")  # Ruta al HUD
 
 func _ready():
 	# Conecta primero, luego inicia (evita perder la señal si el timeline es muy corto)
@@ -13,6 +14,7 @@ func _on_dialogo_terminado():
 	# Inicia el juego y entra a NivelOficina
 	gs.activar_modo_juego()
 	gs.spawn_name = "SpawnAna"
+	hud.visible = true
 	gs.load_level("res://scenes/levels/NivelOficina.tscn")
 
 	# Espera 1 frame porque load_level instancia con call_deferred

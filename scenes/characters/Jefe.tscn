@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dpmtx8mk2ccpn"]
+[gd_scene load_steps=57 format=3 uid="uid://dpmtx8mk2ccpn"]
 
 [ext_resource type="Script" uid="uid://6ug4u2y3qpob" path="res://scripts/characters/Jefe.gd" id="1_81af6"]
 [ext_resource type="Texture2D" uid="uid://bmox15xf1epxf" path="res://assets/characters/JefeParademicama/JefeParademicama.png" id="1_m68n6"]
@@ -385,22 +385,32 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fsuo1"]
-size = Vector2(20, 33)
+size = Vector2(16, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81af6"]
+size = Vector2(26, 24)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m68n6"]
 radius = 20.025
 
-[node name="Jefe" type="CharacterBody2D"]
+[node name="Jefe" type="Node2D"]
 z_index = 4
 script = ExtResource("1_81af6")
 
-[node name="AnimatedSprite_Ana" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite_Jefe" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kpmtg")
 animation = &"idle_down"
+frame_progress = 0.353544
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 7.5)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_fsuo1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_81af6")
 
 [node name="Interact" type="Area2D" parent="."]
 script = ExtResource("4_u7yhp")

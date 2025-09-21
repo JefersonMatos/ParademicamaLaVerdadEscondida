@@ -1,9 +1,14 @@
-extends CharacterBody2D
+extends Node2D
 
 @onready var interact: Area2D = $Interact
 @onready var gs: Node = get_tree().root.get_node("GameState")
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite_Jefe  # Suponiendo que el nodo AnimatedSprite2D se llama 'AnimatedSprite'
 
 func _ready() -> void:
+	# Asegurarse de que la animación 'idle_down' se establece al comenzar
+	if animated_sprite:
+		animated_sprite.play("idle_down")  # Inicia la animación de idle_down por defecto
+	
 	# Conecta al signal "interact" desde el script Interact.gd
 	if interact and interact.has_signal("interact"):
 		interact.connect("interact", Callable(self, "_on_interacted"))

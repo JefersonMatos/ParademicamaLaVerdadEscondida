@@ -68,6 +68,7 @@ func _ensure_dialogic() -> Node:
 	return null
 
 func play_timeline(timeline_name: String, on_finished: Callable = Callable()) -> void:
+	hud.visible = false
 	is_dialog_active = true  # Marca que el diálogo ha comenzado
 	var dlg := _ensure_dialogic()
 	if dlg == null:
@@ -88,12 +89,12 @@ func play_timeline(timeline_name: String, on_finished: Callable = Callable()) ->
 
 
 func _on_timeline_end() -> void:
+	hud.visible = true
 	is_dialog_active = false  # Marca que el diálogo ha terminado
 	var cb := _timeline_cb
 	_timeline_cb = Callable()
 	if cb != Callable():
 		cb.call()
-# -------------------------------------
 
 # Función para habilitar o deshabilitar la interacción
 func set_interaction_enabled(enabled: bool) -> void:
@@ -160,6 +161,24 @@ func _ready() -> void:
 			quest.connect("objective_changed", Callable(self, "_on_objective_changed"))
 		if quest.has_signal("all_objectives_done"):
 			quest.connect("all_objectives_done", Callable(self, "_on_all_objectives_done"))
+
+	# **Ocultamos el HUD mientras se está mostrando la pantalla de carga o haya un diálogo activo**
+	if hud:
+		hud.visible = false  # Ocultar el HUD al inicio (pantalla de carga)
+		if is_dialog_active:
+			hud.visible = false  # Asegurarnos de que el HUD esté oculto si hay un diálogo activo
+
+	# Conectar la señal de finalización del diálogo de introducción
+	var local_dialogic_runner = _ensure_dialogic()
+	if local_dialogic_runner:
+		local_dialogic_runner.connect("timeline_ended", Callable(self, "_on_intro_dialog_completed"))
+
+
+# Función para activar el HUD cuando el diálogo de introducción termine
+func _on_intro_dialog_completed():
+	# Asegura que el HUD se haga visible cuando el diálogo termine
+	if hud:
+		hud.visible = true  # Mostrar el HUD después de que el diálogo haya terminado
 
 # -------------------------
 #  Helpers del HUD (proxy)
