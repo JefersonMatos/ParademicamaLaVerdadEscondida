@@ -37,7 +37,7 @@ func _on_dialogue_end() -> void:
 	# Si la misión "Busca a Luisa" está activa, completarla
 	if gs.quest.is_current("find_luisa"):
 		gs.quest.call("complete", "find_luisa")  # Completar la misión
-		gs.quest.call("add_objective", "explore_office", "Explora las instalaciones y habla con los trabajadores")  # Cambiar de misión
+		gs.quest.call("add_objective", "explore_office", "Explora las instalaciones y habla con los trabajadores")
 
 	# Restaurar interacción y movimiento de Ana después del diálogo
 	gs.set_interaction_enabled(true)

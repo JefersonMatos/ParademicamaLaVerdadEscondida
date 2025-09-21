@@ -8,7 +8,9 @@ extends Node
 
 var spawn_name: String = "SpawnAna"
 var _last_scene_path: String = ""                 
-var _location_was_set_manually: bool = false      
+var _location_was_set_manually: bool = false
+
+var transition_scene = preload("res://scenes/ui/transicion_dia.tscn")
 
 # Nuevas variables para manejar la interacción
 var interaction_enabled: bool = true  
@@ -107,42 +109,66 @@ func set_ana_movement(enabled: bool) -> void:
 
 func next_day() -> void:
 	day += 1
-	time_left = 240.0  # Reinicia los 4 minutos para el siguiente día
+	time_left = 240.0 # Reinicia los 4 minutos para el siguiente día
 
-	# Cambiar la misión después de hablar con Luisa
-	if quest.is_current("find_luisa"):
-		quest.call("complete", "find_luisa")  # Completa la misión
-		quest.call("add_objective", "explore_office", "Tómate el resto del día para conocer las instalaciones y a los trabajadores")
-	else:
-		# Si la misión ya está completa, puedes añadir nuevas misiones si lo deseas
-		pass
-
-	# Verifica si se ha llegado al día 10 para el "Game Over"
+	# Si el día es mayor a 10, es Game Over
 	if day > 10:
 		game_over = true
-		hud.call("set_objective", "¡Has sido descubierto!")  # Muestra el mensaje en el HUD
-		print("¡Has sido descubierto! El juego ha terminado.")   
-		# Aquí cambiamos a la pantalla de inicio
-		get_tree().change_scene("res://scenes/ui/IntroScreen.tscn")  # Redirige al IntroScreen.tscn
+		hud.call("set_objective", "¡Has sido descubierto!")
+		print("¡Has sido descubierto! El juego ha terminado.")
+		get_tree().change_scene_to_packed(preload("res://scenes/ui/IntroScreen.tscn"))
+		return
 
+	# Muestra la pantalla de transición del día
+	hud.visible = false
+	show_day_transition()
+
+	# Lógica para la nueva misión del día 2
+	if day == 2:
+		quest.call("add_objective", "ask_boss", "Pregúntale al jefe por los pendientes del día")
+		hud.call("set_objective", "Pregúntale al jefe por los pendientes del día")
+
+func show_day_transition() -> void:
+	var transition_instance = transition_scene.instantiate()
+	get_tree().root.add_child(transition_instance)
+
+	# Muestra el número del día en la pantalla de transición
+	transition_instance.get_node("ColorRect/Label").text = "Día " + str(day)
+
+	# Usa un temporizador para ocultar la pantalla después de 3 segundos
+	var timer = Timer.new()
+	timer.wait_time = 3.0
+	timer.one_shot = true
+	add_child(timer)
+	timer.start()
+
+	await timer.timeout
+	transition_instance.queue_free()
+	timer.queue_free()
+	hud.visible = true
 
 func _on_timer_timeout() -> void:
 	if game_over:
-		return  # No hacer nada si el juego terminó
-		
+		return
+
 	time_left -= 1
+	# Lógica para finalizar el día
 	if time_left <= 0:
-		next_day()  # Pasa al siguiente día
-	
-	update_hud()  # Actualiza la interfaz del usuario
+		# Revisa si la misión "explore_office" ha sido completada o si no hay misiones pendientes
+		if quest and (quest.is_current("explore_office") or not quest.has_active_objective()):
+			next_day()
+		else:
+			# Si el jugador no ha completado las misiones del día, el tiempo no avanza
+			# Puedes mostrar un mensaje al jugador si lo deseas
+			time_left = 1.0 # Resetea el tiempo para que no sea 0 y se quede estancado
+
+	update_hud()
 
 func update_hud() -> void:
 	if hud:
-		hud.call("set_day", "Day: %d" % day)  # Muestra el día
-		hud.call("set_time_left", "Time Left: %.1f" % time_left)  # Muestra el tiempo restante
-		time_progress = 1.0 - (time_left / 240.0)  # Calcula el progreso del día
-		hud.call("set_progress_bar", time_progress)  # Actualiza la barra de progreso
-
+		hud.call("set_day", day)  # <-- Pasa directamente la variable 'day' (int)
+		time_progress = 1.0 - (time_left / 240.0)
+		hud.call("set_progress_bar", time_progress)
 
 func _ready() -> void:
 	# Oculta a Ana y el contenedor del nivel durante MainMenu/Intro

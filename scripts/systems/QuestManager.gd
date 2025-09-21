@@ -104,3 +104,6 @@ func _find_index_by_id(id: String) -> int:
 func _emit_change() -> void:
 	var d := _sequence[_idx]
 	emit_signal("objective_changed", d["id"], d["text"], _idx, _sequence.size())
+
+func has_active_objective() -> bool:
+	return _idx >= 0

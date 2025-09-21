@@ -22,3 +22,7 @@ script = ExtResource("3_q8nh7")
 [node name="DialogicRunner" type="Node" parent="."]
 script = ExtResource("5_xvdg6")
 metadata/_custom_type_script = "uid://ds2q0uclmolvu"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

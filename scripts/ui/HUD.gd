@@ -35,9 +35,9 @@ func set_location(text: String) -> void:
 		location_label.text = text
 
 # ---- actualización del día y barra de progreso ----
-func set_day(text: String) -> void:
+func set_day(day: int) -> void:
 	if day_label:
-		day_label.text = text
+		day_label.text = "Día " + str(day)     # Asegura que se muestre como "Día 1", "Día 2", etc.
 
 func set_time_left(text: String) -> void:
 	# Esto actualizará el texto del tiempo restante
@@ -47,4 +47,16 @@ func set_time_left(text: String) -> void:
 func set_progress_bar(progress: float) -> void:
 	# Establece el valor de la barra de progreso del tiempo
 	if progress_bar:
-		progress_bar.value = progress * 100  # La barra de progreso espera un valor entre 0 y 100
+		progress_bar.value = progress * 100     # La barra de progreso espera un valor entre 0 y 100
+
+# ----- Funciones para actualizar desde GameState -----
+# Actualiza el tiempo restante (time_left) y el progreso
+func update_progress_bar(time_left: float) -> void:
+	# Calcular el porcentaje del tiempo restante y actualizar la barra
+	var progress = 1.0 - (time_left / 240.0)     # 240 es el tiempo total del día (4 minutos)
+	set_progress_bar(progress)     # Actualiza la barra de progreso
+	# Se elimina la llamada a set_time_left para evitar sobrescribir el texto del día.
+
+# Actualiza el día
+func update_day(day: int) -> void:
+	set_day(day)     # Actualiza el texto del día con el formato "Día X"
