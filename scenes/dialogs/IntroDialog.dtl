@@ -1,10 +1,10 @@
 [background arg="res://assets/enviroments/OficinaSunafil.png" fade="0.0"]
 join JefeSunafil (Principal) leftmost
 join Investigador (Principal) rightmost [mirrored="true"]
+jump ¿Crees ser capaz de sacar la verdad a flote?
 JefeSunafil: Gomez, ¿has escuchado de la cadena televisiva Parademicama?
 [wait time="2.0" hide_text="false"]
 Investigador: Claro que sí, señor. Son bastante conocidos… aunque también algo sensacionalistas.
-jump ¿Crees ser capaz de sacar la verdad a flote?
 [wait time="2.0" hide_text="false"]
 JefeSunafil: Hemos recibido denuncias anónimas sobre casos de acoso sexual dentro de sus instalaciones.
 [wait time="2.0" hide_text="false"]
