@@ -125,8 +125,11 @@ func next_day() -> void:
 
 	# Lógica para la nueva misión del día 2
 	if day == 2:
+		quest.call("complete", "explore_office")
 		quest.call("add_objective", "ask_boss", "Pregúntale al jefe por los pendientes del día")
-		hud.call("set_objective", "Pregúntale al jefe por los pendientes del día")
+		quest.call("skip_to", "ask_boss")  # <-- esto la pone como misión activa
+		# No llames hud.set_objective aquí; el HUD se actualizará solo por la señal objective_changed
+
 
 func show_day_transition() -> void:
 	var transition_instance = transition_scene.instantiate()
@@ -148,20 +151,22 @@ func show_day_transition() -> void:
 	hud.visible = true
 
 func _on_timer_timeout() -> void:
-	if game_over:
+	if game_over or is_dialog_active: # No avanzar el tiempo si hay diálogo
 		return
 
 	time_left -= 1
 	# Lógica para finalizar el día
 	if time_left <= 0:
-		# Revisa si la misión "explore_office" ha sido completada o si no hay misiones pendientes
-		if quest and (quest.is_current("explore_office") or not quest.has_active_objective()):
+		# 1. Lógica para el final del Día 1: Requiere una misión específica.
+		if day == 1:
+			if quest and quest.is_current("explore_office"):
+				next_day()
+			else:
+				# Si no se cumple la misión M4, congelamos el tiempo para forzar al jugador a completarla.
+				time_left = 1.0
+		# 2. Lógica para los Días 2 en adelante: Pasa sin condiciones de misión.
+		elif day > 1:
 			next_day()
-		else:
-			# Si el jugador no ha completado las misiones del día, el tiempo no avanza
-			# Puedes mostrar un mensaje al jugador si lo deseas
-			time_left = 1.0 # Resetea el tiempo para que no sea 0 y se quede estancado
-
 	update_hud()
 
 func update_hud() -> void:

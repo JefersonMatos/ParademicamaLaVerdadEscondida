@@ -12,7 +12,7 @@
 },
 &"default_portrait": "Principal",
 &"description": "",
-&"display_name": "Jefe Parademicama",
+&"display_name": "Victor - Jefe",
 &"mirror": false,
 &"nicknames": ["Jefe de PARADEMICAMA"],
 &"offset": Vector2(0, 0),
@@ -20,6 +20,15 @@
 "Principal": {
 "export_overrides": {
 "image": "\"res://assets/characters/JefeParademicama/Principal.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+},
+"Telefono": {
+"export_overrides": {
+"image": "\"res://assets/characters/JefeParademicama/Telefono.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

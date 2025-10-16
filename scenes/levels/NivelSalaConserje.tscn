@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bfnyr0bv5odxl"]
+[gd_scene load_steps=24 format=3 uid="uid://bfnyr0bv5odxl"]
 
 [ext_resource type="Texture2D" uid="uid://6umxoa0fb1ya" path="res://assets/enviroments/Room_Builder_32x32.png" id="1_wadn5"]
 [ext_resource type="Texture2D" uid="uid://0vncdyviq60m" path="res://assets/enviroments/14_Basement_32x32.png" id="2_5gevu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dvcwlphsji2fq" path="res://assets/enviroments/B-C-D-E_Kitchen_02.png" id="3_ies10"]
 [ext_resource type="Texture2D" uid="uid://dkcnhg8kdmudj" path="res://assets/enviroments/1_Generic_32x32.png" id="4_6wb5p"]
 [ext_resource type="Script" uid="uid://ctsvb4qs7y8ov" path="res://scripts/systems/cambio_escena_hacia_comedor.gd" id="5_ygs4v"]
+[ext_resource type="PackedScene" uid="uid://dqeqcnpb3yol6" path="res://scenes/characters/Conserje.tscn" id="7_ies10"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hio5"]
 texture = ExtResource("1_wadn5")
@@ -49147,3 +49148,7 @@ script = ExtResource("5_ygs4v")
 [node name="cambio_escena_salaconserje_comedor" type="CollisionShape2D" parent="CambioEscena_SalaConserje_Comedor"]
 position = Vector2(1099, 336)
 shape = SubResource("RectangleShape2D_o1eqv")
+
+[node name="Conserje" parent="." instance=ExtResource("7_ies10")]
+z_index = 4
+position = Vector2(913, 354)

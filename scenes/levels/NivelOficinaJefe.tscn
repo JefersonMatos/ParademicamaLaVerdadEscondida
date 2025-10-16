@@ -1,10 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://biw1iekiopwlb"]
+[gd_scene load_steps=23 format=3 uid="uid://biw1iekiopwlb"]
 
+[ext_resource type="Script" uid="uid://cxltp0mna6tk" path="res://scripts/objects/OficinaJefe.gd" id="1_rt67a"]
 [ext_resource type="Texture2D" uid="uid://6umxoa0fb1ya" path="res://assets/enviroments/Room_Builder_32x32.png" id="1_xfygq"]
 [ext_resource type="Texture2D" uid="uid://0vncdyviq60m" path="res://assets/enviroments/14_Basement_32x32.png" id="2_socfk"]
 [ext_resource type="Texture2D" uid="uid://dmrfs2kywpy52" path="res://assets/enviroments/Modern_Office_Black_Shadow_32x32.png" id="3_r8i0b"]
 [ext_resource type="Script" uid="uid://1655lmv7acq2" path="res://scripts/systems/cambio_escena_hacia_oficina.gd" id="4_socfk"]
 [ext_resource type="PackedScene" uid="uid://dpmtx8mk2ccpn" path="res://scenes/characters/Jefe.tscn" id="5_r8i0b"]
+[ext_resource type="Script" uid="uid://t563jt7balwi" path="res://scripts/characters/Interact.gd" id="6_ej4xi"]
+[ext_resource type="PackedScene" uid="uid://r4r0fm72eh1j" path="res://scenes/characters/Carla.tscn" id="8_sodq4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_socfk"]
 texture = ExtResource("1_xfygq")
@@ -53261,8 +53264,12 @@ sources/3 = SubResource("TileSetAtlasSource_0i4li")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8i0b"]
 size = Vector2(64, 9)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ej4xi"]
+size = Vector2(112, 16)
+
 [node name="NivelOficinaJefe" type="Node2D"]
 position = Vector2(0, -800)
+script = ExtResource("1_rt67a")
 
 [node name="Piso_Mapa" type="TileMap" parent="."]
 position = Vector2(-16, 72)
@@ -53308,5 +53315,16 @@ script = ExtResource("4_socfk")
 position = Vector2(576, 655.5)
 shape = SubResource("RectangleShape2D_r8i0b")
 
+[node name="Interact_PC" type="Area2D" parent="."]
+script = ExtResource("6_ej4xi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_PC"]
+position = Vector2(579, 431)
+shape = SubResource("RectangleShape2D_ej4xi")
+
 [node name="Jefe" parent="." instance=ExtResource("5_r8i0b")]
 position = Vector2(579, 504)
+
+[node name="Carla" parent="." instance=ExtResource("8_sodq4")]
+z_index = 4
+position = Vector2(542, 504)

@@ -1,0 +1,11 @@
+[background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+Ana: Buenos dias, soy Ana y es mi primer dia.
+Ana: Estoy buscando la oficina de Victor el Jefe para hablar con el.  ¿Crees que me puedas ayudar?
+"Miguel - Conserje": Si quieres llegar a la oficina de Victor debes subir las escaleras e ir defrente, por la puerta de en medio.
+Ana: Muchas gracias!
+"Miguel - Conserje": No te preocupes es un placer ayudar.
+"Miguel - Conserje": Siempre que necesites ayuda o tengas un problema no dudes en acudir a mi.
+"Miguel - Conserje": Hare lo posible por ayudarte.
+[end_timeline]

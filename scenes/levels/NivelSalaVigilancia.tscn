@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d2x0w07x8gtvc"]
+[gd_scene load_steps=25 format=3 uid="uid://d2x0w07x8gtvc"]
 
 [ext_resource type="Texture2D" uid="uid://6umxoa0fb1ya" path="res://assets/enviroments/Room_Builder_32x32.png" id="1_ssyon"]
 [ext_resource type="Texture2D" uid="uid://0vncdyviq60m" path="res://assets/enviroments/14_Basement_32x32.png" id="2_kk3w2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://15ovmulgybm6" path="res://assets/enviroments/B-C-D-E_Jail_01.png" id="4_qw4vx"]
 [ext_resource type="Texture2D" uid="uid://dmrfs2kywpy52" path="res://assets/enviroments/Modern_Office_Black_Shadow_32x32.png" id="5_877cm"]
 [ext_resource type="Script" uid="uid://ctsvb4qs7y8ov" path="res://scripts/systems/cambio_escena_hacia_comedor.gd" id="7_6ww8k"]
+[ext_resource type="PackedScene" uid="uid://vjfv7tice56i" path="res://scenes/characters/Seguridad.tscn" id="7_ssyon"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fpk6o"]
 texture = ExtResource("1_ssyon")
@@ -50412,3 +50413,7 @@ script = ExtResource("7_6ww8k")
 [node name="cambio_escena_salavigilacia_comedor" type="CollisionShape2D" parent="CambioEscena_SalaVigilancia_Comedor"]
 position = Vector2(61, 336)
 shape = SubResource("RectangleShape2D_1rw1s")
+
+[node name="Seguridad" parent="." instance=ExtResource("7_ssyon")]
+z_index = 4
+position = Vector2(143, 249)

@@ -2,21 +2,37 @@
 join JefeParademicama leftmost
 join Ana rightmost [mirrored="true"]
 
-Ana: Buenos días, soy Ana, su nueva asistente.
+# Ana se presenta formalmente.
+Ana: Buenos días, soy Ana, su nueva asistente. Lista para empezar.
 [wait time="1.0" hide_text="false"]
 
-JefeParademicama: Ah, sí, Ana. Bienvenida a PARADEMICAMA. Me alegra tener a alguien tan capacitada en el equipo.
+# El Jefe establece el tono de superioridad, usando una ligera pausa y un énfasis en la espera.
+JefeParademicama: Ah, sí, Ana. Pasa, pasa. [pause=0.5] [i]Te esperaba.[/i] Bienvenida a [b]PARADEMICAMA[/b].
 [wait time="1.0" hide_text="false"]
 
-JefeParademicama: Verás, aquí nos gusta trabajar rápido. No tenemos tiempo para rodeos. Estoy seguro de que te adaptas rápido.
+# El Jefe usa un adjetivo incómodo, estableciendo la dinámica de poder (uso 'portrait' para reflejar el cambio de ánimo).
+#[portrait=JefeParademicama_SonrisaFalsa]
+JefeParademicama: Me alegra tener a alguien tan... [pause=0.3] [b]presentable[/b] en el equipo.
 [wait time="1.0" hide_text="false"]
 
-JefeParademicama: Ve con Luisa, ella será tu guía hoy. Te explicará cómo manejamos las cosas aquí.
+# Ana siente un primer indicio de incomodidad (diálogo interno/pensamiento).
+Ana: (Pensamiento) [i]El tono me incomoda, pero debo mantener la fachada.[/i]
 [wait time="1.0" hide_text="false"]
 
-Ana: Entendido, muchas gracias.
+# El Jefe recalca la presión y la falta de "sensibilidades" (dando una pista de la cultura laboral tóxica).
+JefeParademicama: Verás, aquí vamos a otro ritmo. No tenemos tiempo para rodeos ni para [pause=0.4] [b]sensibilidades[/b]. Tienes que adaptarte rápido si quieres quedarte.
 [wait time="1.0" hide_text="false"]
 
-JefeParademicama: ¡Buena suerte! Nos vemos luego.
+# Asigna la tarea de forma tajante.
+JefeParademicama: Ve con [b]Luisa[/b], la productora. [pause=0.4] Ella te enseñará las instalaciones y cómo manejamos las cosas.
+[wait time="1.0" hide_text="false"]
+
+# Ana acepta, manteniendo su papel.
+Ana: Entendido, Jefe. Iré ahora mismo.
+[wait time="1.0" hide_text="false"]
+
+# El Jefe finaliza la interacción, demandando proactividad (uso 'portrait' para mostrar seriedad).
+#[portrait=JefeParademicama_Serio]
+JefeParademicama: ¡Eso es todo! Muestra [b]iniciativa[/b], Ana. Nos vemos luego.
 [wait time="1.0" hide_text="false"]
 [end_timeline]

@@ -26,7 +26,6 @@ offset_right = 84.0
 offset_bottom = 34.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "DIA 1"
 label_settings = SubResource("LabelSettings_gl4cq")
 horizontal_alignment = 1
 vertical_alignment = 1

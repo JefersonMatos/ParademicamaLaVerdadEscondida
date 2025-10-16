@@ -1,0 +1,11 @@
+[background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+Ana: Buenos dias, estoy buscando a Luisa.  ¿Crees que me puedas ayudar?
+"Miguel - Conserje": Hola, me parecio ver Luisa en la oficina principal.
+"Miguel - Conserje": Es una chica de blazer rojo y cabello castaño
+Ana: Muchas gracias!
+"Miguel - Conserje": No te preocupes es un placer ayudar.
+"Miguel - Conserje": Siempre que necesites ayuda o tengas un problema no dudes en acudir a mi.
+"Miguel - Conserje": Hare lo posible por ayudarte.
+[end_timeline]

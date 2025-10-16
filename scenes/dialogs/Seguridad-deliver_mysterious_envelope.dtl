@@ -1,0 +1,41 @@
+[background arg="res://assets/enviroments/SalaSeguridad.png" fade="0.0"]
+join Seguridad rightmost [mirrored="true"]
+join Ana leftmost
+
+# Ana se presenta rápidamente y confirma la identidad.
+Ana: Buen día. Soy Ana, la nueva asistente del Jefe [b]Víctor[/b].
+[wait time="1.0" hide_text="false"]
+Ana: ¿Usted debe ser Sergio, el jefe de seguridad?
+[wait time="1.0" hide_text="false"]
+
+# Sergio es cortante y desconfiado.
+# #[mood=desconfiado]
+Seguridad: Sí, soy yo. [pause=0.3] ¿Para qué me buscas, si se puede saber?
+[wait time="1.0" hide_text="false"]
+
+# Ana entrega el sobre de forma discreta.
+Ana: Víctor me pidió que le entregara esto [i]personalmente[/i].
+[wait time="1.0" hide_text="false"]
+*Ana entrega el item 'SOBRE MISTERIOSO' a Seguridad.*
+[wait time="1.0" hide_text="false"]
+
+# Sergio lo recibe con alivio, pero lo oculta de inmediato, dejando entrever que es dinero.
+# #[mood=aliviado]
+Seguridad: [pause=0.5] Ah, bien. [i]Justo lo que esperaba.[/i]
+[wait time="1.0" hide_text="false"]
+
+# Sergio vuelve a la desconfianza, escudriñando a Ana y lanzando su advertencia.
+# #[mood=autoritario]
+Seguridad: Escúchame bien, Ana. [shake] Este es un lugar donde se respeta la [b]privacidad[/b].
+[wait time="1.0" hide_text="false"]
+Seguridad: [color=red]Si llegas a comentar algo de lo que viste o entregaste, no seré yo quien tenga problemas.[/color] ¿Entendido?
+[wait time="1.5" hide_text="false"]
+
+Ana: (Pensamiento) [i]Hay algo turbio entre el Jefe y el Seguridad.[/i]
+[wait time="1.0" hide_text="false"]
+Ana: Entendido, señor. Haré mi trabajo, y solo mi trabajo.
+[wait time="1.0" hide_text="false"]
+
+Seguridad: Bien. Puedes retirarte.
+[wait time="1.0" hide_text="false"]
+[end_timeline]

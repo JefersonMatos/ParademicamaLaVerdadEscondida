@@ -1,5 +1,6 @@
-[gd_scene load_steps=55 format=3 uid="uid://vjfv7tice56i"]
+[gd_scene load_steps=57 format=3 uid="uid://vjfv7tice56i"]
 
+[ext_resource type="Script" uid="uid://bi42oqgh2npid" path="res://scripts/characters/Seguridad.gd" id="1_pocn2"]
 [ext_resource type="Texture2D" uid="uid://whxnymh4q4g2" path="res://assets/characters/Seguridad/Seguridad.png" id="1_t2x77"]
 [ext_resource type="Texture2D" uid="uid://ckbvkbjf3k7if" path="res://assets/characters/Ana/Ana 32x32.png" id="2_pocn2"]
 [ext_resource type="Script" uid="uid://t563jt7balwi" path="res://scripts/characters/Interact.gd" id="3_33lsa"]
@@ -384,24 +385,34 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3lbf"]
-size = Vector2(20, 37)
+size = Vector2(16, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33lsa"]
+size = Vector2(26, 33)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jerk6"]
 radius = 20.025
 
-[node name="Seguridad" type="CharacterBody2D"]
+[node name="Seguridad" type="Node2D"]
+script = ExtResource("1_pocn2")
 
 [node name="AnimatedSprite_Seguridad" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gh3ur")
 animation = &"idle_up"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5.5)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_v3lbf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_33lsa")
 
 [node name="Interact" type="Area2D" parent="."]
 script = ExtResource("3_33lsa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]
-position = Vector2(0, 8)
+position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_jerk6")

@@ -1,27 +1,66 @@
 [background arg="res://assets/enviroments/OficinaPrincipal.png" fade="0.0"]
 join Ana leftmost
 join Luisa rightmost [mirrored="true"]
-Ana: Hola, por casualidad eres Luisa?
-Luisa: Hola, si soy yo.
-Luisa: ¿Como puedo ayudarte?
-Ana: Hola, soy Ana. Es mi primer dia.
-Ana: El jefe me dijo que me ayudarias con mi induccion
-Luisa: Entiendo. Muy bien Ana, es un gusto conocerte.
-Luisa: Bienvenida a Parademicama, aca nos encargamos de toda la gestion del canal desde las pautas hasta las noticias.
-Luisa: En este piso esta es la oficina principal
+
+# Ana inicia la conversación, buscando a Luisa.
+Ana: Hola, [pause=0.2] por casualidad eres Luisa?
+[wait time="1.0" hide_text="false"]
+
+# Luisa es cordial, pero con un ligero aire de reserva.
+Luisa: Hola, sí, soy yo. [pause=0.3] ¿Cómo puedo ayudarte?
+[wait time="1.0" hide_text="false"]
+
+Ana: Soy Ana. [pause=0.2] Es mi primer día. El jefe me dijo que me ayudarías con la inducción.
+[wait time="1.0" hide_text="false"]
+
+# Luisa confirma y establece la fachada.
+Luisa: Ah, la nueva asistente. Entiendo. [pause=0.5] Muy bien Ana, es un gusto conocerte.
+[wait time="1.0" hide_text="false"]
+
+# Luisa introduce el tema del 27 de febrero como contexto para la exploración.
+Luisa: Bienvenida a [b]PARADECIMAMA[/b]. Estos dias hay mucho movimiento, estamos preparando el [b]reportaje especial[/b] por el Día de la Concientización contra el Acoso Laboral, [pause=0.5] el 27 de febrero.
+[wait time="1.5" hide_text="false"]
+Luisa: Por eso verás a muchos hablando del tema. Nos toca mostrar que somos una empresa que [i]cumple[/i].
+[wait time="1.5" hide_text="false"]
+
+# Luisa comienza el tour, que ya tenías bien estructurado.
+Luisa: Te mostrare de forma rapida las instalaciones.
+Luisa: En este piso está la oficina principal...
+[wait time="0.5" hide_text="false"]
 [background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
-Luisa: La oficina del jefe ya la conociste
+Luisa: La oficina del jefe [b]Víctor[/b], ya la conociste.
+[wait time="0.5" hide_text="false"]
 [background arg="res://assets/enviroments/SalaJuntas.png" fade="0.0"]
-Luisa: A la izquierda tenemos la sala de juntas
+Luisa: A la izquierda tenemos la sala de juntas...
+[wait time="0.5" hide_text="false"]
 [background arg="res://assets/enviroments/EstudioGrabacion.png" fade="0.0"]
-Luisa: Y a la derecha el estudio de grabacion.
+Luisa: Y a la derecha el estudio de grabación, [pause=0.3] donde se hace la [b]magia[/b].
+[wait time="1.0" hide_text="false"]
 [background arg="res://assets/enviroments/Comedor.png" fade="0.0"]
-Luisa: En el piso inferior esta es el comedor
+Luisa: En el piso inferior tienes el comedor...
+[wait time="0.5" hide_text="false"]
 [background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
-Luisa: A la izquierda del comedor esta el cuarto del conserje
+Luisa: A la izquierda del comedor está el cuarto del conserje...
+[wait time="0.5" hide_text="false"]
+Luisa: Si tienes alguna duda de como realizar alguna tarea le puedes preguntar a Miguel el conserje...
+[wait time="0.5" hide_text="false"]
+join "Miguel - Conserje" center
+Luisa: LLeva muchos años trabajando aca y creeria que ya entiende como funciona todo.
+[wait time="0.5" hide_text="false"]
+Luisa: Es una persona muy querida por todos.
+leave "Miguel - Conserje" [animation="Instant Out"]
 [background arg="res://assets/enviroments/SalaSeguridad.png" fade="0.0"]
-Luisa: Y a la derecha tenemos la sala de vigilancia.
+Luisa: Finalmente, a la derecha esta la [b]sala de vigilancia[/b]. [pause=0.5] [i]Ese lugar es mejor evitarlo.[/i]
+[wait time="1.5" hide_text="false"]
+
 [background arg="res://assets/enviroments/OficinaPrincipal.png" fade="0.0"]
-Luisa: Si seras la nueva asistente del jefe debes conocer muy bien las instalaciones.
-Ana: Entiendo muchas gracias.
+
+# Luisa lanza su advertencia sutil y asigna la tarea de exploración.
+Luisa: Ya que serás la asistente del jefe, debes conocer muy bien las instalaciones... y [b]a la gente[/b].
+[wait time="1.0" hide_text="false"]
+Luisa: Te aconsejo [color=yellow]Observar todo[/color] y ten mucho cuidado con quién hablas y de qué hablas. [shake] La television no es un lugar fácil, hay que saber con quienes contamos.
+[wait time="1.0" hide_text="false"]
+
+Ana: Entiendo, muchas gracias por la advertencia, Luisa. Me tomaré el resto del día para explorar.
+[wait time="1.0" hide_text="false"]
 [end_timeline]

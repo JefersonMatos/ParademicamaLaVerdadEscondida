@@ -1,0 +1,41 @@
+[background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
+join JefeParademicama (Telefono) leftmost
+# El Jefe está en una llamada, tenso, justo cuando Ana entra. Se usa el 'mood' para indicar que está furioso.
+# #[mood=enojado]
+JefeParademicama: ... [b]no es negociable[/b]. Ya sabes cuánto arriesgas.
+[wait time="1.0" hide_text="false"]
+JefeParademicama: [i]Esta es la última vez que me subes el precio[/i]. [pause=0.7] La próxima, tendremos problemas [b]serios[/b].
+[wait time="1.5" hide_text="false"]
+JefeParademicama: Te envío lo acordado [pause=0.3] [b]ahora mismo[/b].
+[wait time="0.5" hide_text="false"]
+JefeParademicama (Principal): *cuelga el teléfono*
+[wait time="1.0" hide_text="false"]
+
+# Ana aparece, el Jefe cambia de actitud rápidamente, pero sigue tenso.
+join Ana rightmost [mirrored="true"]
+# #[mood=serio]
+Ana: Buenos días, señor. Vengo por los pendientes del día.
+[wait time="1.0" hide_text="false"]
+
+JefeParademicama: Ah, Ana. [pause=0.3] Sí, sí. Disculpa, eran unos asuntos urgentes de programación.
+[wait time="1.0" hide_text="false"]
+Ana: No se preocupe, entiendo.
+[wait time="1.0" hide_text="false"]
+
+# El Jefe se pone muy serio y le da el sobre.
+# #[mood=autoritario]
+JefeParademicama: Ana, necesito que tomes este sobre. [b]Es personal y confidencial[/b].
+[wait time="1.0" hide_text="false"]
+JefeParademicama: Entrégaselo a [b]Sergio[/b], el jefe de seguridad, [pause=0.4] en la sala de vigilancia.
+[wait time="1.0" hide_text="false"]
+
+# La advertencia clave que define el riesgo.
+JefeParademicama: Y escucha bien. [color=red][b]Bajo ninguna circunstancia se te ocurra abrirlo[/b][/color]. [shake] ¿Queda claro?
+[wait time="1.5" hide_text="false"]
+
+Ana: (Pensamiento) [i]El Jefe me está poniendo a prueba.[/i]
+[wait time="1.0" hide_text="false"]
+Ana: Entendido, señor. No lo haré. [pause=0.3] Voy enseguida.
+[wait time="1.0" hide_text="false"]
+*Ana recibe el item 'SOBRE MISTERIOSO' y sale de la oficina.*
+[end_timeline]

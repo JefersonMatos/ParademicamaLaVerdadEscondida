@@ -1,0 +1,4 @@
+[background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
+join JefeParademicama (Principal) leftmost
+JefeParademicama: Esta es la mision report_agenda
+JefeParademicama: Se activa la mision find_carla

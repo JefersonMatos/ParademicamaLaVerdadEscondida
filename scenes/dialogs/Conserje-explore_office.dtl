@@ -1,0 +1,8 @@
+[background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+Ana: Buenos dias, soy Ana la nueva asistente de Victor el Jefe.
+"Miguel - Conserje": Buen dia Ana, soy Miguel el encargado de mantenimiento.
+"Miguel - Conserje": Siempre que necesites ayuda o tengas un problema no dudes en acudir a mi.
+"Miguel - Conserje": Hare lo posible por ayudarte.
+[end_timeline]

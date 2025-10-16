@@ -23,18 +23,36 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "Ana": "res://assets/characters/Ana/Ana.dch",
+"Carla": "res://assets/characters/Carla/Carla.dch",
 "Investigador": "res://assets/characters/Investigador/Investigador.dch",
 "JefeParademicama": "res://assets/characters/JefeParademicama/JefeParademicama.dch",
 "JefeSunafil": "res://assets/characters/JefeSunafil/JefeSunafil.dch",
 "Luisa": "res://assets/characters/Luisa/Luisa.dch",
+"Miguel - Conserje": "res://assets/characters/Conserje/Miguel - Conserje.dch",
+"Seguridad": "res://assets/characters/Seguridad/Seguridad.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Ana-search_proof_1": "res://scenes/dialogs/Ana-search_proof_1.dtl",
+"Carla-find_carla": "res://scenes/dialogs/Carla-find_carla.dtl",
+"Carla-generico": "res://scenes/dialogs/Carla-generico.dtl",
+"Conserje-ask_boss": "res://scenes/dialogs/Conserje-ask_boss.dtl",
+"Conserje-deliver_mysterious_envelope": "res://scenes/dialogs/Conserje-deliver_mysterious_envelope.dtl",
+"Conserje-explore_office": "res://scenes/dialogs/Conserje-explore_office.dtl",
+"Conserje-find_luisa": "res://scenes/dialogs/Conserje-find_luisa.dtl",
+"Conserje-go_boss_office": "res://scenes/dialogs/Conserje-go_boss_office.dtl",
+"Conserje-talk_boss": "res://scenes/dialogs/Conserje-talk_boss.dtl",
 "DialogoJefeBienvenida": "res://scenes/dialogs/DialogoJefeBienvenida.dtl",
 "DialogoJefeOcupado": "res://scenes/dialogs/DialogoJefeOcupado.dtl",
 "DialogoLuisaGenerico": "res://scenes/dialogs/DialogoLuisaGenerico.dtl",
 "DialogoLuisaIntroduccion": "res://scenes/dialogs/DialogoLuisaIntroduccion.dtl",
-"IntroDialog": "res://scenes/dialogs/IntroDialog.dtl"
+"IntroDialog": "res://scenes/dialogs/IntroDialog.dtl",
+"Jefe-ask_boss": "res://scenes/dialogs/Jefe-ask_boss.dtl",
+"Jefe-report_agenda": "res://scenes/dialogs/Jefe-report_agenda.dtl",
+"Jefe-report_envelope": "res://scenes/dialogs/Jefe-report_envelope.dtl",
+"PC-generico": "res://scenes/dialogs/PC-generico.dtl",
+"Seguridad-deliver_mysterious_envelope": "res://scenes/dialogs/Seguridad-deliver_mysterious_envelope.dtl",
+"Seguridad-generico": "res://scenes/dialogs/Seguridad-generico.dtl"
 }
 layout/style_directory={}
 layout/style_list=[]
