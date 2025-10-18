@@ -33,7 +33,12 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Ana-extract_proof_4": "res://scenes/dialogs/Ana-extract_proof_4.dtl",
 "Ana-search_proof_1": "res://scenes/dialogs/Ana-search_proof_1.dtl",
+"Ana-search_proof_3": "res://scenes/dialogs/Ana-search_proof_3.dtl",
+"Caja-generico": "res://scenes/dialogs/Caja-generico.dtl",
+"Camaras-generico": "res://scenes/dialogs/Camaras-generico.dtl",
+"Carla-convince_carla": "res://scenes/dialogs/Carla-convince_carla.dtl",
 "Carla-find_carla": "res://scenes/dialogs/Carla-find_carla.dtl",
 "Carla-generico": "res://scenes/dialogs/Carla-generico.dtl",
 "Conserje-ask_boss": "res://scenes/dialogs/Conserje-ask_boss.dtl",
@@ -42,17 +47,22 @@ directories/dtl_directory={
 "Conserje-find_luisa": "res://scenes/dialogs/Conserje-find_luisa.dtl",
 "Conserje-go_boss_office": "res://scenes/dialogs/Conserje-go_boss_office.dtl",
 "Conserje-go_to_janitor": "res://scenes/dialogs/Conserje-go_to_janitor.dtl",
+"Conserje-meet_miguel_again": "res://scenes/dialogs/Conserje-meet_miguel_again.dtl",
 "Conserje-talk_boss": "res://scenes/dialogs/Conserje-talk_boss.dtl",
+"Conserje-talk_to_miguel": "res://scenes/dialogs/Conserje-talk_to_miguel.dtl",
 "DialogoJefeBienvenida": "res://scenes/dialogs/DialogoJefeBienvenida.dtl",
 "DialogoJefeOcupado": "res://scenes/dialogs/DialogoJefeOcupado.dtl",
 "DialogoLuisaGenerico": "res://scenes/dialogs/DialogoLuisaGenerico.dtl",
 "DialogoLuisaIntroduccion": "res://scenes/dialogs/DialogoLuisaIntroduccion.dtl",
 "IntroDialog": "res://scenes/dialogs/IntroDialog.dtl",
 "Jefe-ask_boss": "res://scenes/dialogs/Jefe-ask_boss.dtl",
+"Jefe-ask_boss2": "res://scenes/dialogs/Jefe-ask_boss2.dtl",
+"Jefe-confrontation": "res://scenes/dialogs/Jefe-confrontation.dtl",
 "Jefe-observe_proof_2": "res://scenes/dialogs/Jefe-observe_proof_2.dtl",
 "Jefe-report_agenda": "res://scenes/dialogs/Jefe-report_agenda.dtl",
 "Jefe-report_envelope": "res://scenes/dialogs/Jefe-report_envelope.dtl",
 "PC-generico": "res://scenes/dialogs/PC-generico.dtl",
+"Seguridad-boss_needs_sergio": "res://scenes/dialogs/Seguridad-boss_needs_sergio.dtl",
 "Seguridad-deliver_mysterious_envelope": "res://scenes/dialogs/Seguridad-deliver_mysterious_envelope.dtl",
 "Seguridad-generico": "res://scenes/dialogs/Seguridad-generico.dtl"
 }

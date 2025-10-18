@@ -1,5 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://bfnyr0bv5odxl"]
+[gd_scene load_steps=27 format=3 uid="uid://bfnyr0bv5odxl"]
 
+[ext_resource type="Script" uid="uid://bhta5tl3agxfu" path="res://scripts/objects/SalaConserje.gd" id="1_6wb5p"]
 [ext_resource type="Texture2D" uid="uid://6umxoa0fb1ya" path="res://assets/enviroments/Room_Builder_32x32.png" id="1_wadn5"]
 [ext_resource type="Texture2D" uid="uid://0vncdyviq60m" path="res://assets/enviroments/14_Basement_32x32.png" id="2_5gevu"]
 [ext_resource type="Texture2D" uid="uid://brx5fpesilgdc" path="res://assets/enviroments/3_Bathroom_32x32.png" id="3_5gevu"]
@@ -7,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dkcnhg8kdmudj" path="res://assets/enviroments/1_Generic_32x32.png" id="4_6wb5p"]
 [ext_resource type="Script" uid="uid://ctsvb4qs7y8ov" path="res://scripts/systems/cambio_escena_hacia_comedor.gd" id="5_ygs4v"]
 [ext_resource type="PackedScene" uid="uid://dqeqcnpb3yol6" path="res://scenes/characters/Conserje.tscn" id="7_ies10"]
+[ext_resource type="Script" uid="uid://t563jt7balwi" path="res://scripts/characters/Interact.gd" id="9_ygs4v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hio5"]
 texture = ExtResource("1_wadn5")
@@ -49098,8 +49100,12 @@ sources/0 = SubResource("TileSetAtlasSource_5gevu")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1eqv"]
 size = Vector2(10, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ies10"]
+size = Vector2(31, 92)
+
 [node name="NivelSalaConserje" type="Node2D"]
 position = Vector2(-1150, 800)
+script = ExtResource("1_6wb5p")
 
 [node name="Piso_Mapa" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_hhctk")
@@ -49152,3 +49158,11 @@ shape = SubResource("RectangleShape2D_o1eqv")
 [node name="Conserje" parent="." instance=ExtResource("7_ies10")]
 z_index = 4
 position = Vector2(913, 354)
+
+[node name="Interact_Cajas" type="Area2D" parent="."]
+position = Vector2(667, 411)
+script = ExtResource("9_ygs4v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_Cajas"]
+position = Vector2(5.5, -3)
+shape = SubResource("RectangleShape2D_ies10")

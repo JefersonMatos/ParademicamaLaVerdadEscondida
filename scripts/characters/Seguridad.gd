@@ -1,3 +1,4 @@
+# Seguridad.gd (Corregido)
 extends Node2D
 
 @onready var interact: Area2D = $Interact
@@ -6,7 +7,7 @@ extends Node2D
 
 func _ready() -> void:
 	if animated_sprite:
-		animated_sprite.play("idle_up") 
+		animated_sprite.play("idle_up")
 	
 	if interact and interact.has_signal("interact"):
 		interact.connect("interact", Callable(self, "_on_interacted"))
@@ -17,27 +18,46 @@ func _on_interacted(_player: Node) -> void:
 	if gs.is_dialog_active:
 		return
 
-	# Esta lógica ya es correcta: elige el diálogo según la misión.
-	if gs.quest and gs.quest.is_current("deliver_mysterious_envelope"):
-		gs.play_timeline("Seguridad-deliver_mysterious_envelope", Callable(self, "_on_dialogue_end_deliver_envelope"))
-	else:
-		gs.play_timeline("Seguridad-generico", Callable(self, "_on_dialogue_end_generico"))
+	var dialogue_timeline = "Seguridad-generico" # Default
+	var callback_function = Callable(self, "_on_dialogue_end_generico") # Default
 
-	gs.set_interaction_enabled(false)
-	gs.set_ana_movement(false)
+	# Check current mission
+	if gs.quest:
+		if gs.quest.is_current("deliver_mysterious_envelope"): # M6
+			dialogue_timeline = "Seguridad-deliver_mysterious_envelope"
+			callback_function = Callable(self, "_on_dialogue_end_deliver_envelope")
+		elif gs.quest.is_current("boss_needs_sergio"): # M16
+			dialogue_timeline = "Seguridad-boss_needs_sergio"
+			callback_function = Callable(self, "_on_dialogue_end_boss_needs_sergio")
 
-# 🟡 CAMBIADO: La función ahora solo COMPLETA la misión.
+	# Play dialogue if found
+	if not dialogue_timeline.is_empty():
+		gs.play_timeline(dialogue_timeline, callback_function)
+		gs.set_interaction_enabled(false)
+		gs.set_ana_movement(false)
+
+# Callback para M6 -> M7
 func _on_dialogue_end_deliver_envelope() -> void:
-	# Si la misión actual es la de entregar el sobre, la completa.
-	# El QuestManager se encargará automáticamente de activar "report_envelope".
 	if gs.quest and gs.quest.is_current("deliver_mysterious_envelope"):
 		gs.quest.complete("deliver_mysterious_envelope")
-		
-	# El resto del código no cambia.
 	gs.set_interaction_enabled(true)
 	gs.set_ana_movement(true)
 
-# Esta función no necesita cambios.
+# Callback para M16 -> M17 ('extract_proof_4')
+func _on_dialogue_end_boss_needs_sergio() -> void:
+	if gs.has_method("reload_current_scene_with_transition"):
+		gs.reload_current_scene_with_transition()
+	
+	# Completa M16. El QuestManager (al recibir esto) activará M17 ('extract_proof_4').
+	if gs.quest and gs.quest.is_current("boss_needs_sergio"):
+		gs.quest.complete("boss_needs_sergio")
+
+	# El código para restaurar interacción se ejecutará, 
+	# pero la recarga de escena lo interrumpirá 
+	gs.set_interaction_enabled(true)
+	gs.set_ana_movement(true)
+
+# Callback genérico
 func _on_dialogue_end_generico() -> void:
 	gs.set_interaction_enabled(true)
 	gs.set_ana_movement(true)

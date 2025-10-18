@@ -1,10 +1,17 @@
+# NivelOficinaJefe.gd
 extends Node2D
 
-# Asegúrate de que todas tus referencias @onready estén correctas.
 @onready var interact_pc: Area2D = $Interact_PC
 @onready var gs: Node = get_tree().root.get_node("GameState")
 @onready var carla: Node2D = $Carla
 @onready var jefe_node: Node2D = $Jefe
+@onready var seguridad: Node2D = $Seguridad 
+
+# Lista de misiones donde Carla SÍ debe estar en esta escena.
+const CARLA_VISIBLE_MISSIONS = ["observe_proof_2", "go_to_janitor", "search_proof_3", "talk_to_miguel"]
+
+# Lista de misiones donde Sergio SÍ debe estar en esta escena.
+const SERGIO_VISIBLE_MISSIONS = ["extract_proof_4", "meet_miguel_again"]
 
 func _ready() -> void:
 	if interact_pc and interact_pc.has_signal("interact"):
@@ -20,19 +27,45 @@ func _on_objective_changed(id: String, _text: String, _index: int, _total: int) 
 	_update_scene_state(id)
 
 func _update_scene_state(quest_id: String) -> void:
-	if not carla or not jefe_node: return
-	
-	# En esta escena, Carla SOLO está activa DURANTE 'observe_proof_2'.
-	var should_be_active = (quest_id == "observe_proof_2")
-	_set_character_active(carla, should_be_active)
-	
-	if should_be_active:
-		var carla_sprite = carla.get_node_or_null("AnimatedSprite_Carla")
-		if carla_sprite: carla_sprite.play("idle_right")
-		var jefe_sprite = jefe_node.get_node_or_null("AnimatedSprite_Jefe")
-		if jefe_sprite: jefe_sprite.play("idle_left")
+	if not carla or not jefe_node or not seguridad: 
+		push_warning("NivelOficinaJefe: Faltan nodos de personaje (Carla, Jefe o Seguridad).")
+		return
 
-# La misma función agresiva para desactivar todas las colisiones.
+	# --- 1. Lógica de Visibilidad ---
+	
+	# Lógica de Carla (se mantiene):
+	var carla_should_be_active = (quest_id in CARLA_VISIBLE_MISSIONS)
+	_set_character_active(carla, carla_should_be_active)
+	
+	# Sergio estará activo (visible) si la misión SÍ está en su lista de visibilidad.
+	var sergio_should_be_active = (quest_id in SERGIO_VISIBLE_MISSIONS)
+	# --- FIN DE CORRECCIÓN ---
+	_set_character_active(seguridad, sergio_should_be_active)
+
+	# --- 2. Lógica de Animación (Refactorizada) ---
+	
+	var jefe_sprite = jefe_node.get_node_or_null("AnimatedSprite_Jefe")
+	var carla_sprite = carla.get_node_or_null("AnimatedSprite_Carla")
+	var seguridad_sprite = seguridad.get_node_or_null("AnimatedSprite_Seguridad")
+
+	if sergio_should_be_active:
+		# Estado: Misiones 'extract_proof_4' o 'meet_miguel_again'.
+		# Jefe y Sergio están reunidos.
+		if jefe_sprite: jefe_sprite.play("idle_right")
+		if seguridad_sprite: seguridad_sprite.play("idle_left")
+		
+	elif carla_should_be_active:
+		# Estado: Misiones de Carla ('observe_proof_2', etc.)
+		# Jefe y Carla están reunidos.
+		if jefe_sprite: jefe_sprite.play("idle_left")
+		if carla_sprite: carla_sprite.play("idle_right")
+		
+	else:
+		# Estado: Default. Ni Carla ni Sergio están. (Jefe solo)
+		if jefe_sprite: jefe_sprite.play("idle_down") # O la animación default que prefieras
+
+
+# La función auxiliar no necesita cambios.
 func _set_character_active(character_node: Node2D, is_active: bool) -> void:
 	if not character_node: return
 	character_node.visible = is_active

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://biw1iekiopwlb"]
+[gd_scene load_steps=24 format=3 uid="uid://biw1iekiopwlb"]
 
 [ext_resource type="Script" uid="uid://cxltp0mna6tk" path="res://scripts/objects/OficinaJefe.gd" id="1_rt67a"]
 [ext_resource type="Texture2D" uid="uid://6umxoa0fb1ya" path="res://assets/enviroments/Room_Builder_32x32.png" id="1_xfygq"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dpmtx8mk2ccpn" path="res://scenes/characters/Jefe.tscn" id="5_r8i0b"]
 [ext_resource type="Script" uid="uid://t563jt7balwi" path="res://scripts/characters/Interact.gd" id="6_ej4xi"]
 [ext_resource type="PackedScene" uid="uid://r4r0fm72eh1j" path="res://scenes/characters/Carla.tscn" id="8_sodq4"]
+[ext_resource type="PackedScene" uid="uid://vjfv7tice56i" path="res://scenes/characters/Seguridad.tscn" id="9_baria"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_socfk"]
 texture = ExtResource("1_xfygq")
@@ -53328,3 +53329,7 @@ position = Vector2(579, 504)
 [node name="Carla" parent="." instance=ExtResource("8_sodq4")]
 z_index = 4
 position = Vector2(542, 504)
+
+[node name="Seguridad" parent="." instance=ExtResource("9_baria")]
+z_index = 4
+position = Vector2(616, 504)

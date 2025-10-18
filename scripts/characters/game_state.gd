@@ -102,13 +102,14 @@ func _initialize_quests() -> void:
 		{"id": "go_to_janitor", "text": "Ve al cuarto del conserje"},
 		{"id": "search_proof_3", "text": "Busca en las cajas"}, # Prueba 3
 		{"id": "talk_to_miguel", "text": "Habla con Miguel sobre la bitácora encontrada"},
+		{"id": "wait_for_opportunity", "text": "Esperemos la oportunidad de conseguir pistas"},
 		# Día siguiente
-		{"id": "wait_for_opportunity", "text": "Pregúntale al jefe por los pendientes del día"},
+		{"id": "ask_boss2", "text": "Pregúntale al jefe por los pendientes del día"},
 		{"id": "boss_needs_sergio", "text": "Busca a Sergio"},
 		{"id": "extract_proof_4", "text": "Descarga las grabaciones de la sala de vigilancia"}, # Prueba 4
 		{"id": "meet_miguel_again", "text": "Reunete con Miguel"},
-		{"id": "convince_carla", "text": "Registra el testimonio final de Carla"}, # Prueba 5
-		{"id": "the_27_february", "text": "Entrega las pruebas"} # Desenlace
+		{"id": "convince_carla", "text": "Muestra las pruebas a Carla y convéncela de testificar"}, # Prueba 5
+		{"id": "confrontation", "text": "Confronta a Victor"} # Desenlace
 	]
 	quest.set_sequence(mission_sequence)
 
@@ -172,18 +173,16 @@ func show_day_transition() -> void:
 	transition_instance.queue_free()
 	hud.visible = true
 
-# En GameState.gd
-
 func _on_timer_timeout() -> void:
 	if game_over:
 		return
 
-	# El tiempo disminuye INCLUSO si hay diálogo.
+	# El tiempo SIEMPRE disminuye, sin importar el diálogo.
 	time_left -= 1
 
 	# Comprobamos si se acabó el tiempo.
 	if time_left <= 0:
-		# Ahora, ANTES de cambiar de día, verificamos si hay un diálogo.
+		# ANTES de cambiar de día, verificamos si hay un diálogo.
 		if is_dialog_active:
 			# Si hay diálogo, congelamos el tiempo en 1 segundo hasta que termine.
 			time_left = 1.0
@@ -194,11 +193,16 @@ func _on_timer_timeout() -> void:
 					quest.complete("explore_office")
 					next_day()
 				else:
-					# Si la misión del día 1 no es correcta, congela.
-					time_left = 1.0
+					time_left = 1.0 # Congela si la misión no es correcta
 			elif day > 1:
-				# Para días > 1, avanza automáticamente si no hay diálogo.
+				# Comprobar si hay que completar M15 antes de pasar de día.
+				if quest and quest.is_current("wait_for_opportunity"):
+					quest.complete("wait_for_opportunity")
+					# El QuestManager activará automáticamente 'ask_boss2'.
+				
+				# Pasa al siguiente día.
 				next_day()
+
 	update_hud()
 
 func update_hud() -> void:
@@ -338,3 +342,31 @@ func reload_current_scene_with_transition() -> void:
 	transition_instance.queue_free() # Elimina la pantalla de transición.
 	if hud: 
 		hud.visible = true # Vuelve a mostrar el HUD.
+
+# Función para mostrar la pantalla final del juego.
+func show_end_screen() -> void:
+	# Oculta el HUD y detiene el tiempo/movimiento si es necesario.
+	if hud:
+		hud.visible = false
+	set_interaction_enabled(false)
+	set_ana_movement(false)
+	# Podrías detener el temporizador del día aquí también si quieres:
+	# $Timer.stop() # Asumiendo que tu Timer se llama "Timer"
+
+	# Instancia la escena de transición.
+	var end_screen_instance = transition_scene.instantiate()
+
+	# Accede al Label y establece el texto "FIN".
+	var label = end_screen_instance.get_node_or_null("ColorRect/Label")
+	if label:
+		label.text = "FIN"
+		# Opcional: Cambiar tamaño de fuente, color, etc.
+		# label.add_theme_font_size_override("font_size", 64)
+
+	# Añade la pantalla final al árbol de escenas.
+	get_tree().root.add_child(end_screen_instance)
+
+	# Opcional: Podrías añadir un temporizador para volver al menú principal después de unos segundos.
+	# var return_timer = get_tree().create_timer(5.0)
+	# await return_timer.timeout
+	# get_tree().change_scene_to_file("res://scenes/ui/MainMenu.tscn") # Ajusta la ruta a tu menú

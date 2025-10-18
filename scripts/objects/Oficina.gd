@@ -5,7 +5,7 @@ extends Node2D
 @onready var door_collision_shape: CollisionShape2D = $CambioEscena_Oficina_OficinaJefe/cambioescena_oficina_oficinajefe
 
 # Lista de misiones donde Carla está invisible en ESTA escena
-const CARLA_INVISIBLE_MISSIONS = ["observe_proof_2", "go_to_janitor", "search_proof_3", "talk_to_miguel"]
+const CARLA_INVISIBLE_MISSIONS = ["observe_proof_2", "go_to_janitor", "search_proof_3", "talk_to_miguel", "wait_for_opportunity"]
 # Lista de misiones donde la PUERTA a la oficina del jefe está BLOQUEADA
 const DOOR_BLOCKED_MISSIONS = ["go_to_janitor", "search_proof_3", "talk_to_miguel"]
 

@@ -36,20 +36,41 @@ func _on_interacted(_player: Node) -> void:
 		"deliver_mysterious_envelope": 
 			dialogue_timeline = "Conserje-deliver_mysterious_envelope"
 		"go_to_janitor":
-			dialogue_timeline = "Conserje-go_to_janitor" # El diálogo donde Ana explica la orden
-			callback_function = Callable(self, "_on_dialogue_end_go_to_janitor") # Callback que avanza la misión
+			dialogue_timeline = "Conserje-go_to_janitor"
+			callback_function = Callable(self, "_on_dialogue_end_go_to_janitor")
+		"talk_to_miguel":
+			dialogue_timeline = "Conserje-talk_to_miguel"
+			callback_function = Callable(self, "_on_dialogue_end_talk_to_miguel")
+		"meet_miguel_again":
+			dialogue_timeline = "Conserje-meet_miguel_again" # Crea este diálogo
+			callback_function = Callable(self, "_on_dialogue_end_meet_miguel_again") # Nuevo callback
 
 	# Solo reproduce si se encontró un diálogo relevante.
 	if not dialogue_timeline.is_empty():
-		gs.play_timeline(dialogue_timeline, callback_function) # Usa el callback asignado
+		gs.play_timeline(dialogue_timeline, callback_function)
 		gs.set_interaction_enabled(false)
 		gs.set_ana_movement(false)
 
 # Callback específico para M12 -> M13
 func _on_dialogue_end_go_to_janitor() -> void:
-	# El QuestManager activará automáticamente M13 ('search_proof_3').
 	if gs.quest and gs.quest.is_current("go_to_janitor"):
 		gs.quest.complete("go_to_janitor")
+	gs.set_interaction_enabled(true)
+	gs.set_ana_movement(true)
+
+# Callback específico para M14 -> M15
+func _on_dialogue_end_talk_to_miguel() -> void:
+	if gs.quest and gs.quest.is_current("talk_to_miguel"):
+		gs.quest.complete("talk_to_miguel")
+	gs.set_interaction_enabled(true)
+	gs.set_ana_movement(true)
+
+# Callback específico para M19 -> M20
+func _on_dialogue_end_meet_miguel_again() -> void:
+	# Completa la misión actual (M19).
+	# El QuestManager activará automáticamente M20 ('convince_carla').
+	if gs.quest and gs.quest.is_current("meet_miguel_again"):
+		gs.quest.complete("meet_miguel_again")
 
 	# Restaura control.
 	gs.set_interaction_enabled(true)

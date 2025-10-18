@@ -1,5 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://d2x0w07x8gtvc"]
+[gd_scene load_steps=28 format=3 uid="uid://d2x0w07x8gtvc"]
 
+[ext_resource type="Script" uid="uid://danibdxsphbvu" path="res://scripts/objects/SalaVigilancia.gd" id="1_kk3w2"]
 [ext_resource type="Texture2D" uid="uid://6umxoa0fb1ya" path="res://assets/enviroments/Room_Builder_32x32.png" id="1_ssyon"]
 [ext_resource type="Texture2D" uid="uid://0vncdyviq60m" path="res://assets/enviroments/14_Basement_32x32.png" id="2_kk3w2"]
 [ext_resource type="Texture2D" uid="uid://dkcnhg8kdmudj" path="res://assets/enviroments/1_Generic_32x32.png" id="3_hmmx1"]
@@ -7,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dmrfs2kywpy52" path="res://assets/enviroments/Modern_Office_Black_Shadow_32x32.png" id="5_877cm"]
 [ext_resource type="Script" uid="uid://ctsvb4qs7y8ov" path="res://scripts/systems/cambio_escena_hacia_comedor.gd" id="7_6ww8k"]
 [ext_resource type="PackedScene" uid="uid://vjfv7tice56i" path="res://scenes/characters/Seguridad.tscn" id="7_ssyon"]
+[ext_resource type="Script" uid="uid://t563jt7balwi" path="res://scripts/characters/Interact.gd" id="9_hmmx1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fpk6o"]
 texture = ExtResource("1_ssyon")
@@ -50369,8 +50371,12 @@ sources/2 = SubResource("TileSetAtlasSource_hmmx1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1rw1s"]
 size = Vector2(18, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qw4vx"]
+size = Vector2(107, 36)
+
 [node name="NivelSalaVigilancia" type="Node2D"]
 position = Vector2(1200, 700)
+script = ExtResource("1_kk3w2")
 
 [node name="Piso_Mapa" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_q3hf3")
@@ -50417,3 +50423,11 @@ shape = SubResource("RectangleShape2D_1rw1s")
 [node name="Seguridad" parent="." instance=ExtResource("7_ssyon")]
 z_index = 4
 position = Vector2(143, 249)
+
+[node name="Interact_Camaras" type="Area2D" parent="."]
+position = Vector2(319, 241)
+script = ExtResource("9_hmmx1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_Camaras"]
+position = Vector2(0.5, 7)
+shape = SubResource("RectangleShape2D_qw4vx")
