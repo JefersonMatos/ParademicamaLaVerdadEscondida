@@ -1,0 +1,4 @@
+[background arg="res://assets/enviroments/OficinaPrincipal.png" fade="0.0"]
+join Carla (Principal) leftmost
+Carla: Esta es la mision observe_proof_2
+Carla: Se activa la mision go_to_janitor

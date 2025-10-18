@@ -2,22 +2,31 @@ extends Node
 
 @onready var current_level: Node = $CurrentLevel
 @onready var ana: Node = $Ana
-@onready var hud: Node = get_node_or_null("HUD")             # CanvasLayer del HUD
-@onready var quest: Node = get_node_or_null("QuestManager")  # Manager de objetivos
+@onready var hud: Node = get_node_or_null("HUD")
+@onready var quest: Node = get_node_or_null("QuestManager")
 @onready var dialogic_runner: Node = get_node_or_null("DialogicRunner")
 
 var spawn_name: String = "SpawnAna"
-var _last_scene_path: String = ""                 
+
+# Variable para guardar la posición de Ana antes de recargar.
+var _reload_ana_position: Vector2 = Vector2.INF # Usamos INF como valor "inválido"
+
+var _last_scene_path: String = ""
 var _location_was_set_manually: bool = false
 
 var transition_scene = preload("res://scenes/ui/transicion_dia.tscn")
 
-# Nuevas variables para manejar la interacción
-var interaction_enabled: bool = true  
-var is_dialog_active: bool = false  # Variable que controla si el diálogo está activo.
-var jefe_dialogue_completed: bool = false  # Estado del diálogo con el jefe
+var interaction_enabled: bool = true
+var is_dialog_active: bool = false
 
-# Nombres “bonitos” por escena
+var day: int = 1
+var time_left: float = 240.0
+var game_over: bool = false
+var time_progress: float = 1.0
+
+var _timeline_cb: Callable = Callable()
+
+# Diccionarios de escenas (sin cambios)
 var location_names := {
 	"res://scenes/levels/NivelOficina.tscn": "Oficina Principal",
 	"res://scenes/levels/NivelOficinaJefe.tscn": "Oficina del Jefe",
@@ -27,7 +36,6 @@ var location_names := {
 	"res://scenes/levels/NivelSalaJuntas.tscn": "Sala de Juntas",
 	"res://scenes/levels/NivelEstudioGrabacion.tscn": "Estudio de Grabación"
 }
-
 var location_aliases := {
 	"oficina": "Oficina Principal",
 	"oficina_jefe": "Oficina del Jefe",
@@ -37,7 +45,6 @@ var location_aliases := {
 	"sala_juntas": "Sala de Juntas",
 	"estudio": "Estudio de Grabación"
 }
-
 var scenes := {
 	"res://scenes/levels/NivelOficina.tscn": null,
 	"res://scenes/levels/NivelOficinaJefe.tscn": null,
@@ -48,135 +55,8 @@ var scenes := {
 	"res://scenes/levels/NivelEstudioGrabacion.tscn": null
 }
 
-var _timeline_cb: Callable = Callable()
-
-var day: int = 1
-var time_left: float = 240.0  # 4 minutos (240 segundos)
-var game_over: bool = false
-var time_progress: float = 1.0  # Barra de progreso del tiempo
-
-# ---------- Dialogic helper ----------
-func _ensure_dialogic() -> Node:
-	if dialogic_runner:
-		return dialogic_runner
-	var n := get_node_or_null("Dialogic")
-	if n:
-		dialogic_runner = n
-		return dialogic_runner
-	for c in get_children():
-		if c.has_method("start"):
-			dialogic_runner = c
-			return dialogic_runner
-	return null
-
-func play_timeline(timeline_name: String, on_finished: Callable = Callable()) -> void:
-	hud.visible = false
-	is_dialog_active = true  # Marca que el diálogo ha comenzado
-	var dlg := _ensure_dialogic()
-	if dlg == null:
-		push_warning("Dialogic runner not found. Skipping timeline: %s" % timeline_name)
-		if on_finished != Callable():
-			on_finished.call()
-		return
-
-	# Desconectar la señal si ya está conectada
-	if dlg.is_connected("timeline_ended", Callable(self, "_on_timeline_end")):
-		dlg.disconnect("timeline_ended", Callable(self, "_on_timeline_end"))
-
-	# Ahora conectar la señal
-	dlg.connect("timeline_ended", Callable(self, "_on_timeline_end"))
-
-	_timeline_cb = on_finished
-	dlg.call("start", timeline_name)
-
-
-func _on_timeline_end() -> void:
-	hud.visible = true
-	is_dialog_active = false  # Marca que el diálogo ha terminado
-	var cb := _timeline_cb
-	_timeline_cb = Callable()
-	if cb != Callable():
-		cb.call()
-
-# Función para habilitar o deshabilitar la interacción
-func set_interaction_enabled(enabled: bool) -> void:
-	interaction_enabled = enabled
-
-# Bloqueo de movimiento de Ana mientras el diálogo esté activo
-func set_ana_movement(enabled: bool) -> void:
-	if ana and ana.has_method("set_interactable"):
-		ana.call("set_interactable", enabled)
-
-func next_day() -> void:
-	day += 1
-	time_left = 240.0 # Reinicia los 4 minutos para el siguiente día
-
-	# Si el día es mayor a 10, es Game Over
-	if day > 10:
-		game_over = true
-		hud.call("set_objective", "¡Has sido descubierto!")
-		print("¡Has sido descubierto! El juego ha terminado.")
-		get_tree().change_scene_to_packed(preload("res://scenes/ui/IntroScreen.tscn"))
-		return
-
-	# Muestra la pantalla de transición del día
-	hud.visible = false
-	show_day_transition()
-
-	# Lógica para la nueva misión del día 2
-	if day == 2:
-		quest.call("complete", "explore_office")
-		quest.call("add_objective", "ask_boss", "Pregúntale al jefe por los pendientes del día")
-		quest.call("skip_to", "ask_boss")  # <-- esto la pone como misión activa
-		# No llames hud.set_objective aquí; el HUD se actualizará solo por la señal objective_changed
-
-
-func show_day_transition() -> void:
-	var transition_instance = transition_scene.instantiate()
-	get_tree().root.add_child(transition_instance)
-
-	# Muestra el número del día en la pantalla de transición
-	transition_instance.get_node("ColorRect/Label").text = "Día " + str(day)
-
-	# Usa un temporizador para ocultar la pantalla después de 3 segundos
-	var timer = Timer.new()
-	timer.wait_time = 3.0
-	timer.one_shot = true
-	add_child(timer)
-	timer.start()
-
-	await timer.timeout
-	transition_instance.queue_free()
-	timer.queue_free()
-	hud.visible = true
-
-func _on_timer_timeout() -> void:
-	if game_over or is_dialog_active: # No avanzar el tiempo si hay diálogo
-		return
-
-	time_left -= 1
-	# Lógica para finalizar el día
-	if time_left <= 0:
-		# 1. Lógica para el final del Día 1: Requiere una misión específica.
-		if day == 1:
-			if quest and quest.is_current("explore_office"):
-				next_day()
-			else:
-				# Si no se cumple la misión M4, congelamos el tiempo para forzar al jugador a completarla.
-				time_left = 1.0
-		# 2. Lógica para los Días 2 en adelante: Pasa sin condiciones de misión.
-		elif day > 1:
-			next_day()
-	update_hud()
-
-func update_hud() -> void:
-	if hud:
-		hud.call("set_day", day)  # <-- Pasa directamente la variable 'day' (int)
-		time_progress = 1.0 - (time_left / 240.0)
-		hud.call("set_progress_bar", time_progress)
-
 func _ready() -> void:
-	# Oculta a Ana y el contenedor del nivel durante MainMenu/Intro
+	# Oculta a Ana y el nivel durante MainMenu/Intro
 	if ana is CanvasItem:
 		(ana as CanvasItem).visible = false
 		if ana.has_node("Camera2D"):
@@ -193,132 +73,268 @@ func _ready() -> void:
 		if quest.has_signal("all_objectives_done"):
 			quest.connect("all_objectives_done", Callable(self, "_on_all_objectives_done"))
 
-	# **Ocultamos el HUD mientras se está mostrando la pantalla de carga o haya un diálogo activo**
 	if hud:
-		hud.visible = false  # Ocultar el HUD al inicio (pantalla de carga)
-		if is_dialog_active:
-			hud.visible = false  # Asegurarnos de que el HUD esté oculto si hay un diálogo activo
+		hud.visible = false
 
-	# Conectar la señal de finalización del diálogo de introducción
 	var local_dialogic_runner = _ensure_dialogic()
 	if local_dialogic_runner:
 		local_dialogic_runner.connect("timeline_ended", Callable(self, "_on_intro_dialog_completed"))
 
+	# Inicializa y comienza la secuencia de misiones al inicio del juego.
+	_initialize_quests()
+	quest.start()
 
-# Función para activar el HUD cuando el diálogo de introducción termine
-func _on_intro_dialog_completed():
-	# Asegura que el HUD se haga visible cuando el diálogo termine
+# 🟢 AGREGADO: Centraliza toda la secuencia de misiones.
+func _initialize_quests() -> void:
+	var mission_sequence = [
+		# Día 1
+		{"id": "talk_boss", "text": "Habla con el jefe"},
+		{"id": "find_luisa", "text": "Busca a Luisa"},
+		{"id": "explore_office", "text": "Explora las instalaciones y conversa con los trabajadores"},
+		# Día 2 en adelante
+		{"id": "ask_boss", "text": "Pregúntale al jefe por los pendientes del día"},
+		{"id": "deliver_mysterious_envelope", "text": "Entrega el SOBRE MISTERIOSO a Sergio"},
+		{"id": "report_envelope", "text": "Reporta al Jefe la entrega del sobre"},
+		{"id": "search_proof_1", "text": "Accede a la computadora del jefe para organizar su agenda"},
+		{"id": "report_agenda", "text": "Avisa al jefe que terminaste"},
+		{"id": "find_carla", "text": "Busca a Carla"},
+		{"id": "observe_proof_2", "text": "Reúnete con el Jefe y Carla"},
+		{"id": "go_to_janitor", "text": "Ve al cuarto del conserje"},
+		{"id": "search_proof_3", "text": "Busca en las cajas"}, # Prueba 3
+		{"id": "talk_to_miguel", "text": "Habla con Miguel sobre la bitácora encontrada"},
+		# Día siguiente
+		{"id": "wait_for_opportunity", "text": "Pregúntale al jefe por los pendientes del día"},
+		{"id": "boss_needs_sergio", "text": "Busca a Sergio"},
+		{"id": "extract_proof_4", "text": "Descarga las grabaciones de la sala de vigilancia"}, # Prueba 4
+		{"id": "meet_miguel_again", "text": "Reunete con Miguel"},
+		{"id": "convince_carla", "text": "Registra el testimonio final de Carla"}, # Prueba 5
+		{"id": "the_27_february", "text": "Entrega las pruebas"} # Desenlace
+	]
+	quest.set_sequence(mission_sequence)
+
+# ---------- Dialogic helper (sin cambios) ----------
+func _ensure_dialogic() -> Node:
+	if dialogic_runner: return dialogic_runner
+	var n := get_node_or_null("Dialogic")
+	if n: dialogic_runner = n; return dialogic_runner
+	for c in get_children():
+		if c.has_method("start"): dialogic_runner = c; return dialogic_runner
+	return null
+
+func play_timeline(timeline_name: String, on_finished: Callable = Callable()) -> void:
+	hud.visible = false
+	is_dialog_active = true
+	var dlg := _ensure_dialogic()
+	if dlg == null:
+		push_warning("Dialogic runner not found. Skipping timeline: %s" % timeline_name)
+		if on_finished.is_valid(): on_finished.call()
+		return
+	if dlg.is_connected("timeline_ended", Callable(self, "_on_timeline_end")):
+		dlg.disconnect("timeline_ended", Callable(self, "_on_timeline_end"))
+	dlg.connect("timeline_ended", Callable(self, "_on_timeline_end"))
+	_timeline_cb = on_finished
+	dlg.call("start", timeline_name)
+
+func _on_timeline_end() -> void:
+	hud.visible = true
+	is_dialog_active = false
+	var cb := _timeline_cb
+	_timeline_cb = Callable()
+	if cb.is_valid(): cb.call()
+
+# ----- Control de Jugador y Día (con cambios) -----
+func set_interaction_enabled(enabled: bool) -> void:
+	interaction_enabled = enabled
+
+func set_ana_movement(enabled: bool) -> void:
+	if ana and ana.has_method("set_interactable"):
+		ana.call("set_interactable", enabled)
+
+func next_day() -> void:
+	day += 1
+	time_left = 240.0
+	if day > 10:
+		game_over = true
+		hud_set_objective("¡Has sido descubierto!")
+		get_tree().change_scene_to_packed(preload("res://scenes/ui/IntroScreen.tscn"))
+		return
+	spawn_name = "SpawnAna"
+	hud.visible = false
+	show_day_transition()
+	call_deferred("load_level", "res://scenes/levels/NivelOficina.tscn")
+
+func show_day_transition() -> void:
+	var transition_instance = transition_scene.instantiate()
+	get_tree().root.add_child(transition_instance)
+	transition_instance.get_node("ColorRect/Label").text = "Día " + str(day)
+	var timer = get_tree().create_timer(3.0)
+	await timer.timeout
+	transition_instance.queue_free()
+	hud.visible = true
+
+# En GameState.gd
+
+func _on_timer_timeout() -> void:
+	if game_over:
+		return
+
+	# El tiempo disminuye INCLUSO si hay diálogo.
+	time_left -= 1
+
+	# Comprobamos si se acabó el tiempo.
+	if time_left <= 0:
+		# Ahora, ANTES de cambiar de día, verificamos si hay un diálogo.
+		if is_dialog_active:
+			# Si hay diálogo, congelamos el tiempo en 1 segundo hasta que termine.
+			time_left = 1.0
+		else:
+			# Si NO hay diálogo, procedemos a la lógica normal de fin de día.
+			if day == 1:
+				if quest and quest.is_current("explore_office"):
+					quest.complete("explore_office")
+					next_day()
+				else:
+					# Si la misión del día 1 no es correcta, congela.
+					time_left = 1.0
+			elif day > 1:
+				# Para días > 1, avanza automáticamente si no hay diálogo.
+				next_day()
+	update_hud()
+
+func update_hud() -> void:
 	if hud:
-		hud.visible = true  # Mostrar el HUD después de que el diálogo haya terminado
+		hud.set_day(day)
+		time_progress = 1.0 - (time_left / 240.0)
+		hud.set_progress_bar(time_progress)
 
-# -------------------------
-#  Helpers del HUD (proxy)
-# -------------------------
+func _on_intro_dialog_completed():
+	if hud:
+		hud.visible = true
+
+# ---------- Helpers del HUD (sin cambios) ----------
 func hud_set_objective(text: String) -> void:
-	if hud and hud.has_method("set_objective"):
-		hud.call("set_objective", text)
-
+	if hud: hud.set_objective(text)
 func hud_show_interact(text: String = "[E] Interactuar") -> void:
-	if hud and hud.has_method("show_interact"):
-		hud.call("show_interact", text)
-
+	if hud: hud.show_interact(text)
 func hud_hide_interact() -> void:
-	if hud and hud.has_method("hide_interact"):
-		hud.call("hide_interact")
-
+	if hud: hud.hide_interact()
 func hud_set_location(text: String) -> void:
-	if hud and hud.has_method("set_location"):
-		hud.call("set_location", text)
-
-# --------- Ubicación controlada por puertas / alias ---------
+	if hud: hud.set_location(text)
 func hud_set_location_alias(alias: String) -> void:
 	var fallback: String = alias.capitalize().replace("_", " ")
 	var nice: String = String(location_aliases.get(alias, fallback))
 	_location_was_set_manually = true
 	hud_set_location(nice)
-
 func hud_set_location_by_path(scene_path: String) -> void:
 	var nice_from_map: Variant = location_names.get(scene_path, "")
-	var nice: String = (nice_from_map as String)
-	if nice == "" or nice == null:
-		var base: String = scene_path.get_file().get_basename() # p.ej. "NivelOficina"
+	var nice = (nice_from_map as String) if nice_from_map is String else ""
+	if nice.is_empty():
+		var base: String = scene_path.get_file().get_basename()
 		nice = base.replace("Nivel", "").replace("_", " ").strip_edges()
 	hud_set_location(nice)
-# -----------------------------------------------------------
 
-# --------------------------------
-#  Helpers del QuestManager (proxy)
-# --------------------------------
-func quest_set_sequence(seq: Array) -> void:
-	if quest and quest.has_method("set_sequence"):
-		quest.call("set_sequence", seq)
-
-func quest_start() -> void:
-	if quest and quest.has_method("start"):
-		quest.call("start")
-
-func quest_complete(id: String) -> void:
-	if quest and quest.has_method("complete"):
-		quest.call("complete", id)
-
-func quest_skip_to(id: String) -> void:
-	if quest and quest.has_method("skip_to"):
-		quest.call("skip_to", id)
-
-func quest_add_objective(id: String, text: String) -> void:
-	if quest and quest.has_method("add_objective"):
-		quest.call("add_objective", id, text)
-
-func quest_add_next(id: String, text: String) -> void:
-	if quest and quest.has_method("add_next"):
-		quest.call("add_next", id, text)
-
-# Callbacks desde QuestManager para actualizar HUD
+# ---------- Callbacks de QuestManager (sin cambios) ----------
 func _on_objective_changed(_id: String, text: String, _index: int, _total: int) -> void:
 	hud_set_objective(text)
-
 func _on_all_objectives_done() -> void:
-	hud_set_objective("")  # o "Objetivos completados"
+	hud_set_objective("")
 
-# --------------------------------
-#  Activar juego y carga de nivel
-# --------------------------------
+# ---------- Carga de Nivel (sin cambios) ----------
 func activar_modo_juego() -> void:
 	if ana is CanvasItem:
 		(ana as CanvasItem).visible = true
 		if ana.has_node("Camera2D"):
 			var cam: Node = ana.get_node("Camera2D")
-			if "enabled" in cam:
-				cam.set("enabled", true)
-
+			if "enabled" in cam: cam.set("enabled", true)
 	if current_level is CanvasItem:
 		(current_level as CanvasItem).visible = true
 
-# Cargar un nivel desde el diccionario o directamente
 func load_level(scene_path: String) -> void:
-	# Elimina el nivel actual si existe
 	if current_level.get_child_count() > 0:
 		current_level.get_child(0).queue_free()
-
-	var scene_res: PackedScene = scenes.get(scene_path, null) as PackedScene
+	var scene_res = scenes.get(scene_path, null)
 	if scene_res == null:
-		scene_res = load(scene_path) as PackedScene
-
+		scene_res = load(scene_path)
 	_last_scene_path = scene_path
-	call_deferred("_load_new_scene", scene_res)  # evita conflictos con física
+	call_deferred("_load_new_scene", scene_res)
 
-# Instancia nueva escena y coloca a Ana en el punto de aparición
 func _load_new_scene(scene_res: PackedScene) -> void:
 	var new_scene: Node = scene_res.instantiate()
 	current_level.add_child(new_scene)
 
-	var spawn = new_scene.get_node_or_null(spawn_name) # puede ser null
-	if spawn and ana:
-		if "global_position" in ana and "global_position" in spawn:
-			ana.set("global_position", spawn.get("global_position"))
-
-	# Fallback de Location: solo si ninguna puerta ya la fijó manualmente
-	if _location_was_set_manually:
-		_location_was_set_manually = false
-	else:
+	# Lógica para colocar a Ana.
+	if ana:
+		# 1. ¿Hay una posición guardada de la recarga?
+		if _reload_ana_position != Vector2.INF:
+			ana.global_position = _reload_ana_position
+			# ¡Importante! Limpiar la posición guardada para la próxima carga.
+			_reload_ana_position = Vector2.INF 
+		# 2. Si no, usa el spawn_name normal.
+		else:
+			var spawn = new_scene.get_node_or_null(spawn_name)
+			if spawn and "global_position" in spawn:
+				ana.global_position = spawn.global_position
+	if not _location_was_set_manually:
 		hud_set_location_by_path(_last_scene_path)
+	_location_was_set_manually = false
+
+# Función para recargar la escena con transición negra.
+# La función ahora debe ser 'async' para usar 'await' con los Tweens.
+func reload_current_scene_with_transition() -> void:
+	if _last_scene_path.is_empty():
+		push_warning("No hay _last_scene_path para recargar.")
+		return
+		
+	if hud:
+		hud.visible = false
+
+	# Instancia la escena de transición
+	var transition_instance = transition_scene.instantiate()
+	#    OBTENER EL NODO A ANIMAR: Asumimos que es un ColorRect en la raíz o un hijo directo.
+	var fade_rect = transition_instance.get_node_or_null("ColorRect") 
+	if not fade_rect:
+		push_error("Nodo 'ColorRect' no encontrado en transition_scene. No se puede hacer fade.")
+		transition_instance.queue_free() # Limpiar si no podemos animar
+		load_level(_last_scene_path) # Carga normal sin fade como fallback
+		return
+
+	# CONFIGURACIÓN INICIAL: Empieza totalmente transparente.
+	fade_rect.modulate.a = 0.0 
+	var label = fade_rect.get_node_or_null("Label") # Asumiendo que el Label es hijo del ColorRect
+	if label:
+		label.text = "" # Sin texto
+
+	# Añade la transición (aún transparente) al árbol de escenas.
+	get_tree().root.add_child(transition_instance)
+
+	# Guarda la posición de Ana ANTES de cualquier espera.
+	if ana:
+		_reload_ana_position = ana.global_position
+
+	# --- Animación de Fade In ---
+	var tween_fade_in = create_tween()
+	# Anima la propiedad 'modulate:a' (alfa) de 0 a 1 en 0.5 segundos.
+	tween_fade_in.tween_property(fade_rect, "modulate:a", 1.0, 0.5) 
+	# Espera a que termine el fade in.
+	await tween_fade_in.finished
+
+	# --- Espera en Negro ---
+	# Ahora que está negro, espera los 2 segundos.
+	await get_tree().create_timer(1.0).timeout 
+
+	# --- Recarga la Escena ---
+	load_level(_last_scene_path)
+	# Dale tiempo al motor para cargar y colocar a Ana.
+	await get_tree().process_frame 
+
+	# --- Animación de Fade Out ---
+	var tween_fade_out = create_tween()
+	# Anima la propiedad 'modulate:a' de 1 a 0 en 0.5 segundos.
+	tween_fade_out.tween_property(fade_rect, "modulate:a", 0.0, 0.5)
+	# Espera a que termine el fade out.
+	await tween_fade_out.finished
+
+	# --- Limpieza ---
+	transition_instance.queue_free() # Elimina la pantalla de transición.
+	if hud: 
+		hud.visible = true # Vuelve a mostrar el HUD.

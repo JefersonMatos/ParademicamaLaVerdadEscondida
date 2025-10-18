@@ -4,6 +4,7 @@ extends Node2D
 @onready var gs: Node = get_tree().root.get_node("GameState")
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite_Jefe
 
+# Esta variable sigue siendo útil para saber qué diálogo se acaba de reproducir.
 var _last_branch: String = ""
 
 func _ready() -> void:
@@ -18,61 +19,57 @@ func _on_interacted(_player: Node) -> void:
 	if gs.is_dialog_active:
 		return
 
-	# La lógica de interacción no necesita cambios, ya está bien estructurada.
-	if gs.quest and gs.quest.is_current("report_agenda"):
+	# Lógica M11 - observe_proof_2 (Máxima prioridad)
+	if gs.quest and gs.quest.is_current("observe_proof_2"):
+		_last_branch = "observe_proof_2"
+		# Reproduce el diálogo a tres bandas
+		gs.play_timeline("Jefe-observe_proof_2", Callable(self, "_on_dialogue_end"))
+
+	# Lógica M9: report_agenda
+	elif gs.quest and gs.quest.is_current("report_agenda"):
 		_last_branch = "report_agenda"
 		gs.play_timeline("Jefe-report_agenda", Callable(self, "_on_dialogue_end"))
+		
+	# Lógica M7: report_envelope
 	elif gs.quest and gs.quest.is_current("report_envelope"):
 		_last_branch = "report_envelope"
 		gs.play_timeline("Jefe-report_envelope", Callable(self, "_on_dialogue_end"))
+		
+	# Lógica M5: ask_boss
 	elif gs.quest and gs.quest.is_current("ask_boss"):
 		_last_branch = "ask_boss"
 		gs.play_timeline("Jefe-ask_boss", Callable(self, "_on_dialogue_end"))
+		
+	# Lógica M2: talk_boss (Bienvenida inicial)
+	elif gs.quest and gs.quest.is_current("talk_boss"):
+		_last_branch = "bienvenida"
+		gs.play_timeline("DialogoJefeBienvenida", Callable(self, "_on_dialogue_end"))
+		
+	# Diálogo Genérico/Ocupado
 	else:
-		if gs.jefe_dialogue_completed:
-			_last_branch = "ocupado"
-			gs.play_timeline("DialogoJefeOcupado", Callable(self, "_on_dialogue_end"))
-		else:
-			_last_branch = "bienvenida"
-			gs.play_timeline("DialogoJefeBienvenida", Callable(self, "_on_dialogue_end"))
+		_last_branch = "ocupado"
+		gs.play_timeline("DialogoJefeOcupado", Callable(self, "_on_dialogue_end"))
 
 	gs.set_interaction_enabled(false)
 	gs.set_ana_movement(false)
 
 func _on_dialogue_end() -> void:
+	var completed_mission_id = ""
+
 	match _last_branch:
 		"bienvenida":
-			# M2 a M3: 'talk_boss' a 'find_luisa'
-			if not gs.jefe_dialogue_completed:
-				if gs.quest and gs.quest.has_method("add_next"):
-					gs.quest.add_next("find_luisa", "Busca a Luisa")
-				if gs.quest and gs.quest.has_method("complete"):
-					gs.quest.complete("talk_boss")
-				gs.jefe_dialogue_completed = true
-
+			completed_mission_id = "talk_boss"
 		"ask_boss":
-			# M5 a M6: 'ask_boss' a 'deliver_mysterious_envelope'
-			if gs.quest and gs.quest.has_method("add_next"):
-				gs.quest.add_next("deliver_mysterious_envelope", "Entrega el SOBRE MISTERIOSO a Sergio")
-			if gs.quest and gs.quest.has_method("complete"):
-				gs.quest.complete("ask_boss")
-
+			completed_mission_id = "ask_boss"
 		"report_envelope":
-			# M7 a M8: 'report_envelope' a 'search_proof_1'
-			if gs.quest and gs.quest.has_method("add_next"):
-				gs.quest.add_next("search_proof_1", "Accede a la computadora del jefe para organizar su agenda")
-			if gs.quest and gs.quest.has_method("complete"):
-				gs.quest.complete("report_envelope")
-		
+			completed_mission_id = "report_envelope"
 		"report_agenda":
-			# M9 a M10: 'report_agenda' a 'find_carla'
-			if gs.quest and gs.quest.has_method("add_next"):
-				gs.quest.add_next("find_carla", "Ve a buscar a Carla y pídele que venga a la oficina del jefe")
-			if gs.quest and gs.quest.has_method("complete"):
-				gs.quest.complete("report_agenda")
-		
-		"ocupado", _:
-			pass
+			completed_mission_id = "report_agenda"
+		"observe_proof_2":
+			completed_mission_id = "observe_proof_2"
+	
+	if completed_mission_id != "" and gs.quest:
+		gs.quest.complete(completed_mission_id)
 
 	gs.set_interaction_enabled(true)
 	gs.set_ana_movement(true)

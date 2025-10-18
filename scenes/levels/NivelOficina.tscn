@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://c0cyw3iag6p7g"]
+[gd_scene load_steps=32 format=3 uid="uid://c0cyw3iag6p7g"]
 
 [ext_resource type="Texture2D" uid="uid://6umxoa0fb1ya" path="res://assets/enviroments/Room_Builder_32x32.png" id="1_0odus"]
+[ext_resource type="Script" uid="uid://d2cu04c5n4ti8" path="res://scripts/objects/Oficina.gd" id="1_rhi3l"]
 [ext_resource type="Texture2D" uid="uid://0vncdyviq60m" path="res://assets/enviroments/14_Basement_32x32.png" id="2_33663"]
 [ext_resource type="PackedScene" uid="uid://cvnw7pqkfbx2w" path="res://scenes/objects/Puerta.tscn" id="2_vfoq5"]
 [ext_resource type="Texture2D" uid="uid://dmrfs2kywpy52" path="res://assets/enviroments/Modern_Office_Black_Shadow_32x32.png" id="4_a0seg"]
@@ -57491,7 +57492,11 @@ size = Vector2(124, 18)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hapum"]
 size = Vector2(13.5, 65)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rhi3l"]
+size = Vector2(64, 20)
+
 [node name="NivelOficina" type="Node2D"]
+script = ExtResource("1_rhi3l")
 
 [node name="Piso_Mapa" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_33663")
@@ -57579,3 +57584,9 @@ position = Vector2(688, 226)
 [node name="Carla" parent="." instance=ExtResource("12_508le")]
 z_index = 4
 position = Vector2(175, 354)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(576, 21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_rhi3l")

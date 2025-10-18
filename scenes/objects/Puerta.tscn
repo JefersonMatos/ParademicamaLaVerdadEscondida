@@ -132,7 +132,7 @@ script = ExtResource("1_qcot6")
 sprite_frames = SubResource("SpriteFrames_4nq4d")
 animation = &"abrir"
 
-[node name="CollisionPuerta" type="CollisionShape2D" parent="."]
+[node name="SensorProximidad" type="CollisionShape2D" parent="."]
 scale = Vector2(2.5, 2.5)
 shape = SubResource("RectangleShape2D_gnecp")
 

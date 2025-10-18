@@ -1,0 +1,4 @@
+[background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" (Principal) leftmost
+Carla: Esta es la mision go_to_janitor
+Carla: Se activa la mision search_proof_3
