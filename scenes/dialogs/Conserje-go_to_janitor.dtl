@@ -1,4 +1,32 @@
 [background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
 join "Miguel - Conserje" (Principal) leftmost
-Carla: Esta es la mision go_to_janitor
-Carla: Se activa la mision search_proof_3
+join Ana (Principal) rightmost [mirrored="true"]
+
+# Ana llega al cuarto del conserje, todavía tensa por la escena anterior.
+Ana: Miguel, [pause=0.3] buenos días.
+[wait time="1.0" hide_text="false"]
+
+# Miguel es amable, pero nota la tensión de Ana.
+"Miguel - Conserje" (Principal): Señorita Ana, buen día. ¿Se le ofrece algo? [pause=0.4] Se le ve un poco preocupada.
+[wait time="1.0" hide_text="false"]
+[wait time="1.0" hide_text="false"]
+Ana: No, [pause=0.2] estoy bien, gracias. [pause=0.5] Es que el Jefe Víctor me pidió un favor.
+[wait time="1.0" hide_text="false"]
+Ana: Me mandó a buscar un manual para una cámara XJ-5. [pause=0.3] Dijo que estaba en unas [b]cajas viejas[/b] que guardan aquí.
+[wait time="1.5" hide_text="false"]
+
+# Miguel sabe exactamente de qué habla.
+"Miguel - Conserje" (Principal): Ah... [pause=0.3] las "cajas viejas" del jefe. [pause=0.5] Claro.
+[wait time="1.0" hide_text="false"]
+"Miguel - Conserje" (Principal): Son las cajas que estan en la esquina, [pause=0.3] al lado de mi escritorio. Tenga cuidado, debe haber mucho polvo.
+[wait time="1.0" hide_text="false"]
+
+# Ana reafirma su conflicto interno (culpa por Carla) y su objetivo (investigar).
+Ana: (Pensamiento) [i]Me saca de la oficina para esto... [pause=0.4] mientras él se queda con Carla...[/i] [shake rate=5.0 level=3.0 duration=0.3]
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Perdón, Carla. [pause=0.5] Tengo que encontrar algo que lo inculpe de manera irrefutable.[/i]
+[wait time="1.0" hide_text="false"]
+
+Ana: Perfecto, muchas gracias, Miguel. Iré a revisar.
+[wait time="1.0" hide_text="false"]
+[end_timeline]

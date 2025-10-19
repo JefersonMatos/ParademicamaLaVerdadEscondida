@@ -1,4 +1,32 @@
 [background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
 join JefeParademicama (Principal) leftmost
-JefeParademicama: Esta es la mision ask_boss2
-JefeParademicama: Se activa la mision boss_needs_sergio
+join Ana rightmost [mirrored="true"]
+
+# Ana entra para su chequeo matutino.
+Ana: Buenos días, Jefe. [pause=0.3] ¿Cuáles son los pendientes para hoy?
+[wait time="1.0" hide_text="false"]
+
+# Víctor está visiblemente agitado, mirando su teléfono o un papel.
+# [portrait=JefeParademicama_Enojado]
+JefeParademicama: [shake rate=5.0 level=5.0 duration=0.3] ¡Ana! Bien. [pause=0.5] Deja lo que estés haciendo.
+[wait time="1.0" hide_text="false"]
+
+# Murmura para sí mismo, conectando con el soborno del sobre.
+JefeParademicama: (Murmura) [i]Ese imbécil de Seguridad cree que puede seguir jugando conmigo...[/i]
+[wait time="1.0" hide_text="false"]
+
+# Da la orden.
+JefeParademicama: Necesito que vayas a la [b]sala de vigilancia[/b]. [pause=0.5] Busca a [b]Sergio[/b].
+[wait time="1.0" hide_text="false"]
+JefeParademicama: Dile que lo quiero en mi oficina [color=red][b]AHORA MISMO[/b][/color]. [pause=0.3] Que ni se le ocurra demorarse. ¡Es urgente!
+[wait time="1.5" hide_text="false"]
+
+# Ana se da cuenta de la oportunidad de oro.
+Ana: (Pensamiento) [i]Si Sergio deja la sala de seguridad, significa que... [pause=0.4] ¡Esta es la oportunidad que necesitaba![/i]
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Si él viene para acá... [pause=0.3] la sala de vigilancia quedará vacía. [pause=0.5] Es mi oportunidad.[/i]
+[wait time="1.0" hide_text="false"]
+
+Ana: Entendido, Jefe. Voy volando.
+[wait time="1.0" hide_text="false"]
+[end_timeline]

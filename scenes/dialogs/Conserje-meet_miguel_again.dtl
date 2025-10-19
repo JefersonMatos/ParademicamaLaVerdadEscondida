@@ -1,4 +1,51 @@
 [background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
 join "Miguel - Conserje" (Principal) leftmost
-Carla: Esta es la mision meet_miguel_again
-Carla: Se activa la mision convince_carla
+join Ana (Principal) rightmost [mirrored="true"]
+
+# Ana entra al cuarto del conserje. Miguel la espera, visiblemente nervioso.
+"Miguel - Conserje" (Principal): ¿Ana? ¿Pudiste...? ¿[color=yellow]Qué pasó[/color]?
+[wait time="1.0" hide_text="false"]
+
+# Ana saca el USB
+Ana: Lo tengo, Miguel. [pause=0.5] Lo conseguí.
+[wait time="1.0" hide_text="false"]
+
+#[portrait=Miguel_Aliviado]
+"Miguel - Conserje" (Principal): ¡Gracias a Dios! [pause=0.5] ¿Lo viste?
+[wait time="1.0" hide_text="false"]
+
+Ana: (Asiente, seria) Es peor de lo que imaginaba. [pause=0.5] La estuvo acosando sexualmente. Esta es la prueba irrefutable que necesitábamos.
+[wait time="1.5" hide_text="false"]
+
+"Miguel - Conserje" (Principal): ¡Sabía que esa cámara lo [color=yellow]había[/color] grabado! ¡Ese desgraciado! [shake]
+[wait time="1.0" hide_text="false"]
+
+Ana: Con esto, más tu bitácora... [pause=0.5] tenemos un caso casi completo.
+[wait time="1.5" hide_text="false"]
+
+"Miguel - Conserje" (Principal): ¿Casi? ¿[color=yellow]Qué[/color] falta ahora? ¿Lo denunciamos?
+[wait time="1.0" hide_text="false"]
+
+Ana: Nos falta la pieza más importante: [b]el testimonio de Carla.[/b]
+[wait time="1.0" hide_text="false"]
+
+# La determinación de Miguel flaquea un poco.
+"Miguel - Conserje" (Principal): Uf... [pause=0.3] eso va a ser difícil, Ana. [pause=0.5] Carla está aterrada. [i]Apenas me mira a los ojos.[/i] [pause=0.3] Si Víctor sospecha que ella habló...
+[wait time="2.0" hide_text="false"]
+
+Ana: Por eso ya no podemos dejarla sola. [pause=0.5] Tenemos que mostrarle esto.
+[wait time="1.0" hide_text="false"]
+
+"Miguel - Conserje" (Principal): ¿Mostrarle todas las pruebas?
+[wait time="1.0" hide_text="false"]
+
+Ana: Sí. Necesita ver que no está inventando nada. [pause=0.5] Necesita saber que la podemos proteger y que [b]esta vez Víctor no va a ganar.[/b]
+[wait time="1.5" hide_text="false"]
+
+#[portrait=Miguel_Determinado]
+"Miguel - Conserje" (Principal): Tienes razón. [pause=0.5] Ella confía en mí. [pause=0.3] Si voy contigo, quizás... quizás se sienta más segura para hablar.
+[wait time="1.5" hide_text="false"]
+
+Ana: Eso esperaba. [pause=0.5] [color=yellow]Busquémosla[/color] y le mostraremos todo.
+[wait time="1.0" hide_text="false"]
+[end_timeline]

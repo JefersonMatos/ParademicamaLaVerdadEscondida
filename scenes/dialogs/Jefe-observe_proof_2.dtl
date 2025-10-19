@@ -1,4 +1,57 @@
-[background arg="res://assets/enviroments/OficinaPrincipal.png" fade="0.0"]
-join Carla (Principal) leftmost
-Carla: Esta es la mision observe_proof_2
-Carla: Se activa la mision go_to_janitor
+[background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
+# Ana entra a la oficina. Carla ya está allí, de pie, visiblemente tensa.
+join Ana leftmost
+join JefeParademicama (Principal) left
+join Carla (Principal) rightmost [mirrored="true"]
+
+# El Jefe está sentado, dominante.
+JefeParademicama: Ah, Ana. Pasa, cierra la puerta. [pause=0.5] Carla, qué bueno que [i]finalmente[/i] te unes.
+[wait time="1.0" hide_text="false"]
+
+Carla (Principal): Señor, pero Ana acaba de avisar...
+[wait time="1.0" hide_text="false"]
+
+JefeParademicama: [shake] ¡Shh! No me interrumpas cuando estoy hablando.
+[wait time="1.0" hide_text="false"]
+
+# Víctor ignora a Carla y se dirige solo a Ana, como si Carla no estuviera (Triangulación).
+JefeParademicama: Verás, Ana, en [b]PARADECIMAMA[/b] valoramos la excelencia. [pause=0.3] Pero algunos... [pause=0.2] [i]algunas[/i]... parece que no entienden lo que significa "urgente" ni "calidad".
+[wait time="2.0" hide_text="false"]
+
+Ana: (Pensamiento) [i]Está hablándome a mí, pero el ataque es para Carla. La está humillando deliberadamente.[/i]
+[wait time="1.0" hide_text="false"]
+
+# Víctor ahora se dirige a Carla con un tono condescendiente.
+JefeParademicama: Carla, tu propuesta de guion es... [pause=0.4] [i]adorable[/i]. [pause=0.3] Pero no sirve para nada.
+[wait time="1.0" hide_text="false"]
+
+Carla (Principal): [shake] Pero, señor, usé los datos que usted mismo me...
+[wait time="1.0" hide_text="false"]
+
+JefeParademicama: (Golpea la mesa suavemente) [shake rate=5.0 level=5.0 duration=0.3] ¿Me estás contradiciendo? [pause=0.5] ¿Delante de mi nueva asistente?
+[wait time="1.5" hide_text="false"]
+
+Carla (Principal): No... [pause=0.3] no, señor. Lo siento.
+[wait time="1.0" hide_text="false"]
+[wait time="1.0" hide_text="false"]
+JefeParademicama: Carla, [pause=0.3] [b]tú[/b] te quedas hoy conmigo después de que todos se vayan. [pause=0.4] [color=red][i]Necesito asegurarme de que esta vez lo hagas bien.[/i][/color]
+[wait time="2.0" hide_text="false"]
+
+# Ana registra la prueba
+Ana: (Pensamiento) [i]La aísla, la descalifica en público y la obliga a quedarse a solas. [pause=0.4] Este es el patrón de acoso que estaba buscando.[/i]
+[wait time="1.0" hide_text="false"]
+[wait time="1.0" hide_text="false"]
+
+# --- DIÁLOGO DE VÍCTOR QUE INICIA LA PRÓXIMA MISIÓN ---
+JefeParademicama: Ah, Ana, una cosa más.
+[wait time="1.0" hide_text="false"]
+JefeParademicama: Necesito un manual de la cámara modelo XJ-5. [pause=0.3] Debe estar en unas cajas viejas en el [b]cuarto del conserje[/b]. [pause=0.5] Ve a buscarlo ahora.
+[wait time="2.0" hide_text="false"]
+
+Ana: (Pensamiento) [i]Me esta botando disimuladamente para quedarse a solas con Carla.[/i]
+Ana: (Pensamiento) [i]¿Que hago?. Quiero ayudarla pero si me delato ahora no cuento con las pruebas suficientes para incriminar a Victor[/i]
+Ana: (Pensamiento) [i]Creo que lo mejor sera retirarme por ahora. Perdon Carla[/i]
+[wait time="1.0" hide_text="false"]
+Ana: Entendido, Jefe.
+[wait time="0.5" hide_text="false"]
+[end_timeline]

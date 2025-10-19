@@ -1,3 +1,62 @@
 [background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
+join Ana (Principal) rightmost [mirrored="true"]
 join JefeParademicama (Principal) leftmost
-JefeParademicama: Fin del juego
+
+# Ana entra a la oficina de Víctor. Él está revisando papeles, ajeno.
+Ana: Víctor. [pause=0.5] Tenemos que hablar.
+[wait time="1.0" hide_text="false"]
+
+# Víctor levanta la vista, molesto por la interrupción y la falta de formalidad.
+JefeParademicama:  ¿"Víctor"? ¿Desde cuándo tanta confianza, Ana? [pause=0.3] Y se dice "Jefe Víctor". [pause=0.5] ¿Qué quieres ahora? Estoy ocupado.
+[wait time="1.5" hide_text="false"]
+
+Ana: Soy Inspectora de la Superintendencia Nacional de Fiscalización Laboral. [b]SUNAFIL[/b].
+[wait time="2.0" hide_text="false"]
+Ana: Y usted está bajo investigación por acoso sexual laboral sistemático.
+[wait time="1.5" hide_text="false"]
+
+# Reacción de shock y negación de Víctor.
+JefeParademicama: [shake rate=10.0 level=8.0 duration=0.8] ¿Qué...? ¡¿SUNAFIL?! ¡Usted está loca! [pause=0.5] ¡Esto es un disparate! ¡Seguridad! ¡Saquen a esta mujer de aquí!
+[wait time="2.0" hide_text="false"]
+
+Ana: (Calmada, firme) Nadie vendrá a ayudarlo, Víctor. [pause=0.5] Tenemos pruebas.
+[wait time="1.0" hide_text="false"]
+Ana: Tenemos el [color=yellow]chat borrado[/color] con sus amenazas a Carla. [pause=0.5] Tengo mi [color=yellow]testimonio presencial[/color] de cómo la humilló.
+[wait time="2.0" hide_text="false"]
+Ana: Tenemos la [color=yellow]bitácora de Miguel[/color], con años de registros de sus "reuniones" y los despidos injustificados de Laura y Elena.
+[wait time="2.5" hide_text="false"]
+Ana: Tenemos la [color=yellow]grabación de la cámara de seguridad[/color] de la Sala de Juntas, donde la acosó físicamente y sexualmente.
+[wait time="2.5" hide_text="false"]
+Ana: Y lo más importante... [pause=0.5] [b]Tenemos el testimonio completo de Carla[/b]. [pause=0.3] Ya no tiene miedo.
+[wait time="2.5" hide_text="false"]
+
+# Víctor se da cuenta de que está acabado. Su ira se convierte en desesperación.
+JefeParademicama: No... [pause=0.5] ¡No puede ser! ¡Esa grabación es ilegal! ¡La bitácora no prueba nada! ¡Carla miente!
+[wait time="2.0" hide_text="false"]
+
+Ana: Se acabó el juego, Víctor. [pause=0.5] Se acabó el abuso de poder.
+[wait time="1.0" hide_text="false"]
+
+# Se escuchan pasos firmes acercándose a la puerta (o sirenas lejanas).
+[wait time="1.5" hide_text="false"]
+[background fade="0.0"]
+leave JefeSunafil
+leave Ana
+
+Entra la policia y arresta a Victor.
+Al dia siguiente...
+Hoy es 27 de febrero. [pause=0.5] Celebramos el Día de la Concientización y Lucha contra la Violencia y el Acoso Sexual Laboral en Perú.
+[wait time="2.0" hide_text="false"]
+Y gracias a Carla, a Miguel, y a las pruebas... [pause=0.5] hoy, en [b]PARADECIMAMA[/b], se hará justicia.
+[wait time="2.0" hide_text="false"]
+[wait time="2.0" hide_text="false"]
+"Y en noticias de último minuto, hoy, 27 de febrero, Día Nacional de Lucha contra el Acoso Sexual Laboral, las autoridades han intervenido la conocida cadena televisiva PARADECIMAMA."
+[wait time="4.0"]
+"El director general de la cadena televisiva, Víctor Rojas, ha sido detenido tras una investigación de SUNAFIL que destapó un patrón sistemático de acoso sexual y abuso de poder."
+[wait time="4.0"]
+"Fuentes internas confirman que la valiente denuncia de una trabajadora, apoyada por evidencia contundente recopilada por un inspector infiltrado, fue clave para desmantelar esta red de silencio."
+[wait time="5.0"]
+"Un día simbólico que nos recuerda que la lucha contra el acoso laboral es responsabilidad de todos... y que la justicia, aunque tarde, llega."
+[wait time="4.0"]
+
+[end_timeline]

@@ -1,4 +1,25 @@
 [background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
 join JefeParademicama (Principal) leftmost
-JefeParademicama: Esta es la mision report_agenda
-JefeParademicama: Se activa la mision find_carla
+join Ana rightmost [mirrored="true"]
+
+# Ana reporta que ha terminado la tarea asignada.
+Ana: Jefe, ya terminé de organizar su agenda en la computadora.
+[wait time="1.0" hide_text="false"]
+
+# El Jefe está satisfecho, pero ya está pensando en otra cosa.
+JefeParademicama: Bien, Ana. Eficiente. [pause=0.3] Buen trabajo.
+[wait time="1.0" hide_text="false"]
+
+# El Jefe mira por la oficina (o hacia la puerta) y asigna la siguiente tarea.
+JefeParademicama: Ahora necesito que hagas algo por mí. [pause=0.5] Busca a [b]Carla[/b], la de producción.
+[wait time="1.0" hide_text="false"]
+JefeParademicama: Dile que venga a mi oficina [b]inmediatamente[/b]. [pause=0.3] Tenemos que revisar unas pautas urgentes del reportaje del 27.
+[wait time="1.5" hide_text="false"]
+
+# Ana conecta la Prueba 1 (el chat) con esta orden.
+Ana: (Pensamiento) [i]"Revisar pautas"... [pause=0.3] ¿O tendra algo que ver con la "reunión" de las 8 de la que hablaba el chat?[/i]
+[wait time="1.0" hide_text="false"]
+
+Ana: Entendido, señor. La buscaré ahora mismo.
+[wait time="1.0" hide_text="false"]
+[end_timeline]

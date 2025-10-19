@@ -1,4 +1,103 @@
 [background arg="res://assets/enviroments/OficinaPrincipal.png" fade="0.0"]
-join Carla (Principal) leftmost
-Carla: Esta es la mision Carla-convince_carla
-Carla: Se activa la mision the_27_february
+join "Miguel - Conserje" leftmost
+join Ana (Principal) left
+join Carla (Principal) rightmost [mirrored="true"]
+
+# Ana y Miguel se acercan a Carla, que está en su escritorio, sola.
+Ana: Carla. [pause=0.5] Necesitamos hablar contigo. Es urgente.
+[wait time="1.0" hide_text="false"]
+
+"Miguel - Conserje" (Principal): Estamos contigo, Carla. [pause=0.5] [color=yellow]Escúchanos[/color], por favor.
+[wait time="1.0" hide_text="false"]
+
+# 1. NEGACIÓN (Miedo y desconfianza)
+# [portrait=Carla_Asustada]
+Carla (Principal): [shake rate=10.0 level=8.0 duration=0.5] ¿De [color=yellow]qué[/color] quieren hablar? [pause=0.3] No [color=yellow]sé[/color] de [color=yellow]qué[/color] hablan.
+[wait time="1.0" hide_text="false"]
+Carla (Principal): (Mira a Miguel) ¿Miguel, por [color=yellow]qué[/color]...? [pause=0.4] ¡Te dije que me dejaras en paz, que no te metieras en mis problemas!
+[wait time="1.0" hide_text="false"]
+Carla (Principal): Si Víctor nos ve... [pause=0.3] si se entera de que [color=yellow]están[/color] hablando conmigo de... [pause=0.2] [i]de eso[/i]... [pause=0.4] [b]me va a despedir.[/b]
+[wait time="1.5" hide_text="false"]
+
+Ana: Carla, se acabaron las excusas. [pause=0.5] No [color=yellow]estás[/color] loca. No lo [color=yellow]estás[/color] imaginando. [pause=0.3] Lo sabemos.
+[wait time="1.0" hide_text="false"]
+Carla (Principal): ¡Ustedes no saben nada! ¡Solo son rumores!
+[wait time="1.0" hide_text="false"]
+
+# 2. EXPLICACIÓN (Vulnerabilidad y miedo a las represalias)
+Ana: Sabemos lo que has estado pasando.
+[wait time="1.0" hide_text="false"]
+Carla (Principal): [shake] ¡Ustedes no lo entienden! ¿Y si lo saben, [color=yellow]qué[/color]? [pause=0.5] ¡Él es el jefe!
+[wait time="1.0" hide_text="false"]
+Carla (Principal): (Voz quebrada) [color=yellow]Tengo un hijo que mantener.[/color] [pause=0.5] [color=yellow]Mi madre [color=yellow]está[/color] enferma y sus medicinas son caras.[/color]
+[wait time="2.0" hide_text="false"]
+Carla (Principal): ¿Creen que es [color=yellow]fácil[/color]? ¿Creen que puedo simplemente... denunciar?
+[wait time="1.0" hide_text="false"]
+Carla (Principal): ¡Él es dueño de [b]PARADECIMAMA[/b]! [pause=0.3] Si hablo... [pause=0.3] ¡me pondrá en una lista negra! ¡No [color=yellow]volveré[/color] a trabajar en [color=yellow]ningún[/color] medio! [pause=0.5] [b]¡Él me destruirá![/b]
+[wait time="2.5" hide_text="false"]
+Carla (Principal): (Murmura) [i]Solo... solo tengo que aguantar. [pause=0.5] [color=yellow]Quizás[/color] se canse de mí.[/i]
+[wait time="1.0" hide_text="false"]
+
+# 3. LAS PRUEBAS y LA CONFESIÓN (Catarsis)
+"Miguel - Conserje" (Principal): ¿Aguantar, Carla? ¿Hasta [color=yellow]cuándo[/color]? [pause=0.5] ¿Hasta que te pase lo que les pasó a Laura y a Elena?
+[wait time="1.5" hide_text="false"]
+Carla (Principal): ¿[color=yellow]Qué[/color]...?
+[wait time="1.0" hide_text="false"]
+
+# Miguel muestra la bitácora (Prueba 3)
+"Miguel - Conserje" (Principal): Llevo años viendo esto. [pause=0.5] (Lee) 'Laura M. - Despedida por bajo rendimiento, pero el Jefe la llamaba a solas.' [pause=0.5] 'Elena G. - [color=yellow]Renunció[/color] dos semanas [color=yellow]después[/color] de que el Jefe le dio un regalo.'
+[wait time="2.5" hide_text="false"]
+"Miguel - Conserje" (Principal): No [color=yellow]estás[/color] sola, Carla. [pause=0.5] Él es un depredador.
+[wait time="1.0" hide_text="false"]
+
+Ana: Y no es solo la palabra de Miguel contra la suya. [pause=0.5] Es la tuya. [pause=0.3] Y es la mía.
+[wait time="1.0" hide_text="false"]
+Ana: Y, sobre todo... [pause=0.5] [b]es esto.[/b] (Ana saca el USB).
+[wait time="1.0" hide_text="false"]
+Ana: Conseguí la grabación de la cámara de seguridad.
+[wait time="1.0" hide_text="false"]
+Ana: [color=red]Sala de Juntas. 7:30 p.m.[/color] [pause=0.5] Vimos [color=yellow]cómo[/color] te [color=yellow]acorraló[/color] contra la pared. [pause=0.3] Vimos [color=yellow]cómo[/color] te [color=yellow]sujetó[/color] del brazo cuando intentaste irte.
+[wait time="2.5" hide_text="false"]
+
+# El punto de quiebre. Carla ve que la evidencia es real.
+# [portrait=Carla_Llorando]
+Carla (Principal): (Solloza) [i]No... [pause=0.3] no fue solo esa vez...[/i] [pause=0.8] Han sido meses.
+[wait time="1.5" hide_text="false"]
+Carla (Principal): [b][color=yellow]Empezó[/color] con los 'cumplidos'[/b]... [pause=0.5] sobre mi ropa, [pause=0.3] sobre [color=yellow]cómo[/color] "necesitaba sonreír [color=yellow]más[/color]".
+[wait time="1.5" hide_text="false"]
+Carla (Principal): [b]Luego los mensajes[/b]... [pause=0.5] me [color=yellow]escribía[/color] al chat personal por la noche, [pause=0.3] "evaluaciones de desempeño" que no [color=yellow]tenían[/color] nada que ver con el trabajo.
+[wait time="2.0" hide_text="false"]
+Carla (Principal): [b]Y las 'reuniones' a solas[/b]... [pause=0.5] como la del otro [color=yellow]día[/color]. [pause=0.3] Siempre [color=yellow]pidiéndome[/color] que me quede "un ratito [color=yellow]más[/color]".
+[wait time="1.5" hide_text="false"]
+Carla (Principal): [shake] [color=red]Me [color=yellow]amenazó[/color] con quitarme el trabajo si le [color=yellow]decía[/color] a alguien.[/color] [pause=0.5] Me hizo sentir... [pause=0.3] sucia. [pause=0.5] Como si yo tuviera la culpa.
+[wait time="2.0" hide_text="false"]
+
+# 4. ACEPTACIÓN (Prueba 5)
+# [portrait=Miguel_Determinado]
+"Miguel - Conserje" (Principal): Ya no [color=yellow]más[/color], Carla. [pause=0.5] Se [color=yellow]acabó[/color] todo esto.
+[wait time="1.0" hide_text="false"]
+
+Ana: Carla, [pause=0.3] [b]mi nombre es Ana, y soy inspectora de SUNAFIL.[/b] [pause=0.5] Estoy [color=yellow]aquí[/color] infiltrada para detener a Víctor.
+[wait time="2.0" hide_text="false"]
+Ana: Tenemos la bitácora de Miguel [pause=0.3] y la grabación de la cámara. [pause=0.5] Son pruebas irrefutables.
+[wait time="2.0" hide_text="false"]
+Ana: [b]Solo falta tu voz.[/b] [pause=0.5] Tu testimonio es lo [color=yellow]único[/color] que falta.
+[wait time="1.5" hide_text="false"]
+
+Carla (Principal): (Levanta la mirada, [color=yellow]aún[/color] con miedo) [i]¿Y... y [color=yellow]están[/color] seguros? [pause=0.5] ¿Seguros de que esto funcionará? ¿De que no podrá hacerme [color=yellow]más[/color] daño?[/i]
+[wait time="2.0" hide_text="false"]
+
+Ana: Te doy mi palabra. [pause=0.5] Con tu testimonio, Víctor no solo [color=yellow]será[/color] despedido. [pause=0.3] [color=yellow]Enfrentará[/color] a la justicia. [pause=0.5] Y nos aseguraremos de que tengas protección total.
+[wait time="2.0" hide_text="false"]
+
+"Miguel - Conserje" (Principal): Estaremos contigo en cada paso, Carla.
+[wait time="1.0" hide_text="false"]
+
+# Carla toma la decisión.
+# [portrait=Carla_Decidida]
+Carla (Principal): (Respira hondo, una [color=yellow]lágrima[/color] final cae) [i][color=yellow]Está[/color] bien.[/i]
+[wait time="1.0" hide_text="false"]
+Carla (Principal): [b]Lo haré.[/b] [pause=0.5] Les contaré todo. [pause=0.3] Cada detalle de lo que ese monstruo me hizo.
+[wait time="1.5" hide_text="false"]
+
+[end_timeline]

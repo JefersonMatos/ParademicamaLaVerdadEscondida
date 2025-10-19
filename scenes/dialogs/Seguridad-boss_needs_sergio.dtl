@@ -1,4 +1,25 @@
 [background arg="res://assets/enviroments/SalaSeguridad.png" fade="0.0"]
-join Seguridad (Principal) leftmost
-JefeParademicama: Esta es la mision boss_needs_sergio
-JefeParademicama: Se activa la mision extract_proof_4
+join Seguridad (Principal) rightmost [mirrored="true"]
+join Ana leftmost
+
+# Ana llega a la sala de vigilancia. Sergio está en su puesto, molesto.
+Ana: Sergio.
+[wait time="1.0" hide_text="false"]
+
+# Sergio está a la defensiva, probablemente esperando más dinero.
+Seguridad (Principal): [shake rate=5.0 level=5.0 duration=0.3] ¿Tú otra vez? ¿Qué quiere ahora? Estoy ocupado.
+[wait time="1.0" hide_text="false"]
+
+# Ana entrega el mensaje de forma directa.
+Ana: El Jefe Víctor te necesita. [pause=0.5] Me ordenó decirte que vayas a su oficina [color=red][b]AHORA MISMO[/b][/color].
+[wait time="1.5" hide_text="false"]
+Ana: Dijo que era [b]urgente[/b].
+[wait time="1.0" hide_text="false"]
+
+# Sergio se molesta, pero sabe que no puede negarse.
+Seguridad (Principal): (Murmura) [i]Maldita sea...[/i] [pause=0.5] ¿No puede esperar?
+[wait time="1.0" hide_text="false"]
+Seguridad (Principal): Tsk. [pause=0.3] Bien. [pause=0.5] ¡Ya voy!
+[wait time="1.0" hide_text="false"]
+
+[end_timeline]

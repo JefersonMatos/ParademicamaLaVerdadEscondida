@@ -1,4 +1,36 @@
 [background arg="res://assets/enviroments/OficinaPrincipal.png" fade="0.0"]
 join Carla (Principal) leftmost
-Carla: Esta es la mision find_carla
-Carla: Se activa la mision observe_proof_2
+join Ana rightmost [mirrored="true"]
+
+# Ana se acerca a Carla, que está concentrada en su escritorio.
+Ana: Hola Carla, [pause=0.3] ¿tienes un minuto?
+[wait time="1.0" hide_text="false"]
+
+# Carla levanta la vista, con una tensión habitual.
+Carla (Principal): Ah, hola Ana. Sí, claro. [pause=0.3] ¿Qué necesitas?
+[wait time="1.0" hide_text="false"]
+
+Ana: El Jefe Víctor me pidió que te buscara. [pause=0.5] Dice que vayas a su oficina [b]inmediatamente[/b].
+[wait time="1.0" hide_text="false"]
+Ana: Mencionó algo sobre revisar unas pautas urgentes del reportaje del 27.
+[wait time="1.5" hide_text="false"]
+
+# Al oír el llamado, la reacción de Carla es notoria. Su sonrisa desaparece.
+# [portrait=Carla_Asustada]
+Carla (Principal): [shake rate=10.0 level=8.0 duration=0.5] ¿A-ahora? 
+[wait time="1.0" hide_text="false"]
+
+# Carla intenta recomponerse y disimular.
+# [portrait=Carla_Nerviosa]
+Carla (Principal): (Respira hondo) [i]Claro, [pause=0.2] las... las pautas. [pause=0.4] Siempre hay urgencia con ese reportaje.[/i]
+[wait time="1.0" hide_text="false"]
+
+# Ana nota la disonancia entre sus palabras y su lenguaje corporal.
+Ana: (Pensamiento) [i]Le cambio la cara al mencionar a Victor. [pause=0.4] Esto confirma lo del chat.[/i]
+[wait time="1.0" hide_text="false"]
+
+Carla (Principal): Dile que... [pause=0.3] dile que ya voy. Gracias por avisar, Ana.
+[wait time="1.0" hide_text="false"]
+
+# Carla se levanta lentamente y se dirige a la oficina del jefe.
+[end_timeline]

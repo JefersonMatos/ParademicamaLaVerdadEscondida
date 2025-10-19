@@ -1,4 +1,32 @@
 [background arg="res://assets/enviroments/OficinaJefe.png" fade="0.0"]
 join Ana (PC) leftmost
-JefeParademicama: Esta es la mision search_proof_1
-Ana: Se activa la mision report_agenda
+
+# Ana está en la computadora, su rostro iluminado por la pantalla.
+Ana: (Pensamiento) [i]Bien, "organizando la agenda". La excusa perfecta.[/i]
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Reunión de marketing... almuerzo de producción... [pause=0.5] todo parece normal.[/i]
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Ahora, a lo que vine. [pause=0.5] No puedo acceder a sus correos, pero el chat interno...[/i]
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Veamos... ¿Una carpeta oculta de "archivos temporales" del chat? [pause=0.3][/i]
+[wait time="1.0" hide_text="false"]
+
+# Simula la acción de Ana abriendo el archivo o chat borrado.
+# (Aquí podrías mostrar una UI simple de la computadora si quisieras)
+
+Ana: (Pensamiento) [i]Bingo. Un log de chats borrados. [pause=0.5] La mayoría son triviales... pero este último...[/i]
+[wait time="1.0" hide_text="false"]
+
+# Se muestra la prueba al jugador
+[color=red][b]"Para CARLA"[/b][/color]
+[color=red][b]"Mensaje\: [i]Te espero a las 8 en la sala de juntas. Ya sabes qué pasará si no vienes.[/i]"[/b][/color]
+[wait time="2.5" hide_text="false"]
+
+Ana: (Pensamiento) [shake] [i]Esto no es una citación de trabajo. Es una amenaza velada.[/i]
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Por sí solo no prueba nada, [pause=0.3] pero es bastante turbio.[/i]
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Necesito saber qué pasa entre ellos dos. [pause=0.5][/i]
+[wait time="1.0" hide_text="false"]
+
+[end_timeline]

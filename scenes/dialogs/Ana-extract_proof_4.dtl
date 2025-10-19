@@ -1,4 +1,29 @@
 [background arg="res://assets/enviroments/SalaSeguridad.png" fade="0.0"]
 join Ana (PC) leftmost
-JefeParademicama: Esta es la mision search_proof_1
-Ana: Se activa la mision report_agenda
+
+# Ana está en la computadora de seguridad, su rostro iluminado por los monitores.
+Ana: (Pensamiento) [i]Bien. Sergio está con Víctor. [pause=0.3] No tengo mucho tiempo.[/i]
+[wait time="1.0" hide_text="false"]
+
+# Ana busca la fecha y hora exactas que Miguel le dio.
+Ana: (Pensamiento) [i]Vamos... [pause=0.5] Accediendo al archivo de grabaciones...[/i]
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Fecha\: Día 3. Hora\: 7\:30 p.m. [pause=0.3] Cámara\:  Sala de Juntas.[/i]
+[wait time="1.5" hide_text="false"]
+
+# Encuentra la grabación.
+Ana: (Pensamiento) [shake] [b]¡Ahí está![/b]
+[wait time="1.0" hide_text="false"]
+
+# (Opcional: Breve descripción de lo que ve en el monitor)
+Ana: (Pensamiento) [i]Víctor... y Carla. [pause=0.5] Él la está acorralando contra la pared... ¡La está sujetando![/i]
+[wait time="1.5" hide_text="false"]
+
+Ana: (Pensamiento) [i]Esto es irrefutable. [pause=0.3] Es acoso sexual físico.[/i]
+[wait time="1.0" hide_text="false"]
+
+# Simula la acción de descarga.
+Ana: (Pensamiento) [i]Descargando al USB... [pause=0.5] Rápido, rápido...[/i]
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]¡Descarga completa!
+[end_timeline]

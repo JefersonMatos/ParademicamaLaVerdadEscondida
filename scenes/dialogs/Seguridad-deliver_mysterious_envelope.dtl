@@ -1,6 +1,6 @@
 [background arg="res://assets/enviroments/SalaSeguridad.png" fade="0.0"]
-join Seguridad rightmost [mirrored="true"]
-join Ana leftmost
+join Seguridad leftmost
+join Ana rightmost [mirrored="true"]
 
 # Ana se presenta rápidamente y confirma la identidad.
 Ana: Buen día. Soy Ana, la nueva asistente del Jefe [b]Víctor[/b].

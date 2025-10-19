@@ -1,4 +1,58 @@
 [background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
 join "Miguel - Conserje" (Principal) leftmost
-Carla: Esta es la mision talk_to_miguel
-Carla: Se activa la mision wait_for_opportunity
+join Ana (Principal) rightmost [mirrored="true"]
+
+# Ana confronta a Miguel directamente. El ambiente es tenso.
+Ana: Miguel, [pause=0.5] tenemos que hablar.
+[wait time="1.0" hide_text="false"]
+# [portrait=Miguel_Confundido]
+"Miguel - Conserje" (Principal): ¿De qué, señorita Ana? Ya encontró el manual de la cámara, ¿verdad?
+[wait time="1.0" hide_text="false"]
+
+Ana: (Muestra la bitácora) No. [pause=0.5] Quiero hablar de [b]esto[/b].
+[wait time="1.0" hide_text="false"]
+
+# Reacción de pánico y negación de Miguel.
+"Miguel - Conserje" (Principal): [shake rate=15.0 level=10.0 duration=1.0] [color=red]¡Esa no es mía! ¡Yo no sé qué es eso![/color] ¡P-por favor, déjelo!
+[wait time="1.5" hide_text="false"]
+
+Ana: ¡Basta, Miguel! [pause=0.5] Sé que es tuya. [pause=0.5] Vi las fechas. Vi los nombres\: [b]Laura, Elena... Carla[/b].
+[wait time="1.5" hide_text="false"]
+
+"Miguel - Conserje" (Principal): [i]No... No debió ver eso. [pause=0.7] Por favor, Victor me despedirá...[/i]
+[wait time="1.0" hide_text="false"]
+
+# Ana revela su verdadera identidad para ganar su confianza. Momento de alta intensidad.
+Ana: [color=blue][b]No soy solo una asistente de oficina. Soy una inspectora en cubierto de SUNAFIL.[/b][/color]
+[wait time="1.0" hide_text="false"]
+Ana: [b]Estoy aquí por las denuncias anónimas sobre Víctor.
+Ana: [b]Denuncias de las que estoy segura que usted [color=yellow]está[/color] al tanto.[/b]
+[wait time="2.0" hide_text="false"]
+
+# La barrera de Miguel se rompe. Confesión de impotencia.
+# [portrait=Miguel_Llorando]
+"Miguel - Conserje" (Principal): [b]¡Dios mío![/b] ¡Alguien tenía que hacer algo! Llevo años viendo cómo abusa, cómo las intimida... [pause=0.8] y no puedo hacer nada. [i]Soy solo un conserje, si me despiden, ¿quién le da de comer a mi familia?[/i]
+[wait time="2.5" hide_text="false"]
+"Miguel - Conserje" (Principal): Esas notas... son mi manera de aguantar la [b]impotencia[/b]. [shake] Lo veo todo, [color=yellow]quién[/color] entra, [color=yellow]quién[/color] sale... y no soporto el abuso.
+[wait time="2.0" hide_text="false"]
+
+Ana: Necesito tu ayuda. [pause=0.5] Necesito algo irrefutable para poder exponer a Victor ante la justicia. [pause=0.7]
+[wait time="1.0" hide_text="false"]
+
+# Miguel da la información clave.
+"Miguel - Conserje" (Principal): ¡Necesitamos las grabaciones de seguridad! [pause=0.5] Hace unos [color=yellow]días[/color], una noche Victor [color=yellow]obligó[/color] a [b]Carla[/b] a quedarse. [pause=0.5] La hizo volver a la [b]Sala de Juntas[/b] con él con la excusa de "revisar unos documentos".
+[wait time="2.0" hide_text="false"]
+"Miguel - Conserje" (Principal): La fecha fue la semana pasada, [color=yellow][b]el día 3 de este mes, a las 7\:30 p.m.[/b][/color] [pause=1.5] En el pasillo principal, la cámara lo habrá grabado.
+[wait time="2.0" hide_text="false"]
+
+Ana: [i](Pensamiento) Día 3 a las 7\:30 p.m. Sala de Juntas. Perfecto.[/i]
+[wait time="1.0" hide_text="false"]
+
+Ana: Si conseguimos esa grabación, se acabó, Miguel. [b]Víctor caerá.[/b]
+[wait time="1.0" hide_text="false"]
+
+# [portrait=Miguel_Determinado]
+"Miguel - Conserje" (Principal): Lo que sea, Ana. [pause=0.5] Lo que sea para que esa pobre chica y las demás... [pause=0.3] tengan justicia.
+[wait time="1.5" hide_text="false"]
+
+[end_timeline]
