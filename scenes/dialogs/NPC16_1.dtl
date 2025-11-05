@@ -1,0 +1,10 @@
+# Ana se acerca a Gabriel en la Sala de Juntas
+NPC16: Buenos días, Ana. Estoy revisando el borrador del guion para el reportaje del 27.
+[wait time="1.0" hide_text="false"]
+NPC16: Y francamente, cada línea que leo es una posible demanda. "Cultura tóxica", "ambiente hostil"... ¡son términos legales muy peligrosos!
+[wait time="1.0" hide_text="false"]
+NPC16: Mi trabajo es proteger a la empresa de demandas, pero el equipo de contenidos parece que quiere *invitarlas*.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Él no ve el acoso como un daño a las personas, sino como un 'término legal peligroso'. Su trabajo es proteger a la empresa, no a la víctima.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

@@ -1,0 +1,10 @@
+[background arg="res://assets/enviroMENTS/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+"Miguel - Conserje": Ana... ¿Lo... lo conseguiste? ¿La grabación?
+Ana: (Asiente, determinada) Lo tengo todo. Tengo las 4 pruebas.
+"Miguel - Conserje": Increíble. Sabía que podías hacerlo.
+"Miguel - Conserje": Ahora... ahora viene lo difícil. ¿Vas a hablar con Carla?
+Ana: Es el único camino. Necesito su testimonio.
+"Miguel - Conserje": Ve. Con todo lo que tienes, estoy seguro de que entenderá. Es su oportunidad.
+[end_timeline]

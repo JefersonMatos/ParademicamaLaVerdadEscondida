@@ -1,0 +1,10 @@
+# Ana se acerca a Matías, que está revisando el visor de su cámara.
+NPC22: Hola, Ana. Justo estamos cuadrando las tomas para los testimonios del especial del 27.
+[wait time="1.0" hide_text="false"]
+NPC22: Es complicado. El director quiere un primerísimo primer plano "justo cuando la víctima llora".
+[wait time="1.0" hide_text="false"]
+NPC22: Siento que es un poco... explotador. Pero bueno, es televisión, ¿no? El drama vende.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Ve el dolor de una víctima como 'drama que vende'. No está pensando en la persona, sino en la toma.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

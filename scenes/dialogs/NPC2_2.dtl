@@ -1,0 +1,17 @@
+# Ana se acerca a Sofía
+NPC2: Oye, Ana, estoy revisando los perfiles para el reportaje del 27.
+[wait time="1.0" hide_text="false"]
+NPC2: El guion habla de cómo el acoso afecta a todos, pero, sinceramente...
+[wait time="1.0" hide_text="false"]
+NPC2: Si eres una mujer fuerte, profesional, exitosa... ¿cómo vas a dejar que te acosen? Yo creo que la gente débil es la que se mete en esos problemas, ¿tú qué opinas?
+[wait time="1.0" hide_text="false"]
+- Tienes razón. La gente fuerte no permite que la acosen.
+	[wait time="1.0" hide_text="false"]
+	NPC2: ¡Exacto! [pause=0.5] Pero el guion dice que [color=red]el acoso no tiene nada que ver con la 'fuerza' de la víctima[/color], [pause=0.2] sino con el 'abuso de poder' del acosador. [pause=0.2] Dicen que cualquiera puede ser víctima.
+- El acoso es abuso de poder, no importa si la víctima es 'fuerte' o 'débil'.
+	[wait time="1.0" hide_text="false"]
+	NPC2: [color=green]¿'Abuso de poder'? Sí, justo eso dice el guion[/color]. [pause=0.5] Que [b]el acosador busca víctimas sin importar su rango[/b], [pause=0.2] solo busca a quien puede controlar o aislar. [pause] Tiene sentido, una productora exitosa también puede ser aislada.
+- Si eres exitosa y te acosan, es porque usaste eso para escalar.
+	[wait time="1.0" hide_text="false"]
+	NPC2: Uf, qué duro. [pause=0.5] El guion [color=red]cataloga esa idea como un mito peligroso[/color]. [pause=0.2] Dicen que eso es culpar a la víctima por su éxito [pause=0.2] y que el único responsable es el acosador.
+[end_timeline]

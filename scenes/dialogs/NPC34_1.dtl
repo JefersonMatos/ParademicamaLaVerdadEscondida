@@ -1,0 +1,17 @@
+# Ana se acerca a Sebastián
+NPC34: Hola, Ana. Estoy mezclando el audio para el reportaje del 27 y hay una frase en el guion que me confunde.
+[wait time="1.0" hide_text="false"]
+NPC34: Dice que "el acoso se define por el impacto en la víctima, no por la intención del acosador".
+[wait time="1.0" hide_text="false"]
+NPC34: Pero, si un compañero hace un chiste pesado, pero [b]sin mala intención[/b], ¿eso es acoso? Para mí, la intención es lo que cuenta, ¿no?
+[wait time="1.0" hide_text="false"]
+- Lo que importa es cómo se siente la víctima, no la intención del otro.
+	[wait time="1.0" hide_text="false"]
+	NPC34: [color=green]Ah, ¿así funciona? Justo eso dice el guion[/color]. [pause=0.5] Que la clave es [b]el impacto[/b] en la persona. [pause=0.2] O sea, si haces que alguien se sienta intimidado, [pause=0.2] es acoso, aunque tú 'solo estuvieras bromeando'. Entendido.
+- No es acoso si no tuvo la intención de herir.
+	[wait time="1.0" hide_text="false"]
+	NPC34: ¡Eso es lo que yo creo! [pause=0.5] Pero el guion dice que [color=red]la "intención" no es una defensa legal[/color]. [pause=0.2] Dicen que el acoso se mide por [b]el impacto[/b] que tiene en la víctima, [pause=0.2] no por la intención del acosador.
+- Solo es acoso si se lo dijiste una vez y lo repite.
+	[wait time="1.0" hide_text="false"]
+	NPC34: Mmm, sí, la repetición es clave. [pause=0.5] Pero el guion dice que [color=red]incluso si no tenías 'intención' la primera vez[/color], [pause=0.2] si la conducta hace sentir mal a la persona, [pause] igual cuenta como acoso.
+[end_timeline]

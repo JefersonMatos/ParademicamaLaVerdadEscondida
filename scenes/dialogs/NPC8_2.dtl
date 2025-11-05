@@ -1,0 +1,17 @@
+# Ana se acerca a Daniela
+NPC8: Ana, estoy trabajando en la parte del guion del 27 que dice "rompe el silencio".
+[wait time="1.0" hide_text="false"]
+NPC8: Pero es fácil decirlo. En mi trabajo anterior, vi cómo despidieron a una chica por quejarse de un gerente.
+[wait time="1.0" hide_text="false"]
+NPC8: Si denuncias, ¿no estás básicamente arruinando tu carrera? ¿Quién te va a contratar después?
+[wait time="1.0" hide_text="false"]
+- Tienes razón. Es mejor callar y buscar otro trabajo en silencio.
+	[wait time="1.0" hide_text="false"]
+	NPC8: Es lo que yo hice... [pause=0.5] pero el guion del reportaje dice que [color=red]eso es lo que el acosador quiere[/color]. [pause] Que si callas, lo volverá a hacer con alguien más.
+- La ley te protege contra represalias, como el despido por denunciar.
+	[wait time="1.0" hide_text="false"]
+	NPC8: [color=green]¿Protección legal? Justo eso dice el guion[/color]. [pause=0.5] Que la [b]Ley 27942[/b] [pause] prohíbe explícitamente [b]las represalias[/b] [pause] y que SUNAFIL puede multar a la empresa si te despiden por denunciar. [pause] Ojalá hubiera sabido eso antes.
+- Sí, tu carrera se arruina. Es el precio que pagas por denunciar.
+	[wait time="1.0" hide_text="false"]
+	NPC8: Es un precio muy alto... [pause=0.5] pero el guion del reportaje dice que [color=red]la ley prohíbe las represalias[/color]. [pause] Que si te despiden por denunciar, [b]es un despido nulo[/b] y puedes demandar. [pause] Ojalá más gente lo supiera.
+[end_timeline]

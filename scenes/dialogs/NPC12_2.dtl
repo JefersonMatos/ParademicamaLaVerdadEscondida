@@ -1,0 +1,17 @@
+# Ana se acerca a Alejandro
+NPC12: Ana, tú eres asistente de Víctor, debes saber manejar situaciones...
+[wait time="1.0" hide_text="false"]
+NPC12: Para el reportaje del 27 están diciendo algo que me parece absurdo: que si un cliente acosa a uno de nuestros reporteros en un evento, ¡es culpa nuestra!
+[wait time="1.0" hide_text="false"]
+NPC12: Yo digo que la empresa no puede controlar lo que hace un cliente externo. ¿O usted qué opina?
+[wait time="1.0" hide_text="false"]
+- Tiene razón. Si el acosador es un cliente, la empresa no es responsable.
+	[wait time="1.0" hide_text="false"]
+	NPC12: ¡Claro! [pause=0.5] Pero el guion del reportaje dice que [color=red]la empresa SÍ es responsable de proteger a su empleado[/color], [pause=0.2] incluso si el acosador es un tercero (cliente). [pause=0.2] Dicen que debemos retirarlo de esa cuenta. ¡Una locura!
+- La empresa debe proteger a su empleado, sin importar quién sea el acosador.
+	[wait time="1.0" hide_text="false"]
+	NPC12: ¿En serio? ¿Incluso si perdemos la cuenta? [pause=0.5] [color=green]Pues sí, eso mismo dice el guion del reportaje[/color]. [pause=0.2] Que la seguridad del empleado es primero. [pause=0.2] Qué dolor de cabeza.
+- Solo es responsabilidad de la empresa si pasa en la oficina.
+	[wait time="1.0" hide_text="false"]
+	NPC12: ¡Exacto! [pause=0.5] Pero los abogados del canal dicen que [color=red]un evento externo o un almuerzo de negocios sigue siendo "entorno laboral"[/color]. [pause=0.2] Básicamente, no podemos ganar.
+[end_timeline]

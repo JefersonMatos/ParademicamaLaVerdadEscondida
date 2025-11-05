@@ -1,0 +1,8 @@
+[background arg="res://assets/enviroMENTS/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+"Miguel - Conserje": (Nervioso) ¿Qué haces aquí, Ana? ¡Ya le avisaste a Sergio!
+"Miguel - Conserje": ¡La sala de vigilancia está vacía AHORA! ¡No tienes mucho tiempo!
+Ana: ¡Lo sé, lo sé, ya voy!
+"Miguel - Conserje": ¡Corre! ¡Consigue esa grabación!
+[end_timeline]

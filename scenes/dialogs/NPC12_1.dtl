@@ -1,0 +1,10 @@
+# Ana se acerca a Alejandro en la Sala de Juntas
+NPC12: ¡Esto es un desastre, Ana! ¡Un desastre!
+[wait time="1.0" hide_text="false"]
+NPC12: ¿Sabes lo que cuesta cerrar un contrato? Estamos en plena preventa y a la gente de contenidos se le ocurre sacar este reportaje del 27.
+[wait time="1.0" hide_text="false"]
+NPC12: ¡Los clientes no quieren asociar su marca con la palabra "acoso"! ¿A quién se le ocurrió? ¡Nos está costando millones!
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Le importan los millones, no las personas. La reputación comercial vale más que la seguridad de los empleados.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

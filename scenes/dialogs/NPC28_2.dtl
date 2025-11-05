@@ -1,0 +1,17 @@
+# Ana se acerca a David
+NPC28: Oye, Ana, estoy leyendo el guion del 27. Hablan de 'intimidación' y 'ambiente hostil'.
+[wait time="1.0" hide_text="false"]
+NPC28: Pero vamos, esto es PARADECIMAMA, es la tele. No es para débiles. Si no aguantas la presión o un grito del director, ¿qué haces aquí?
+[wait time="1.0" hide_text="false"]
+NPC28: Para mí, si eres muy sensible, este negocio no es para ti. ¿O qué piensas?
+[wait time="1.0" hide_text="false"]
+- De acuerdo. La TV es para gente 'dura', el que no aguanta, que se vaya.
+	[wait time="1.0" hide_text="false"]
+	NPC28: ¡Exacto! [pause=0.5] Pero el guion dice que [color=red]la 'presión' no es excusa para la 'humillación'[/color]. [pause=0.3] Que una cosa es ser exigente y otra es ser abusivo.
+- Una cosa es la presión del trabajo y otra el maltrato. No hay que confundirlos.
+	[wait time="1.0" hide_text="false"]
+	NPC28: [color=green]Justo esa frase leí en el guion[/color]. [pause=0.5] Que [b]la 'presión laboral' no es una licencia para el 'acoso psicológico'[/b]. [pause=0.3] Que puedes ser exigente sin humillar. Supongo que tienen un punto.
+- Esos 'gritos' son para sacar lo mejor de ti, te forjan el carácter.
+	[wait time="1.0" hide_text="false"]
+	NPC28: ¡Claro! ¡Te forja! [pause=0.5] Pero el guion dice que [color=red]el acoso psicológico (mobbing) no 'forja', sino que 'destruye'[/color] [pause=0.3] y que la empresa es responsable por ese 'estilo de liderazgo'.
+[end_timeline]

@@ -1,0 +1,10 @@
+# Ana se acerca a Ximena, que está en el comedor con su laptop.
+NPC4: Hola, Ana. Estoy tratando de diseñar las gráficas para el especial del 27 y es imposible.
+[wait time="1.0" hide_text="false"]
+NPC4: Legal quiere que todo sea en tonos grises, "serios". ¡Somos PARADECIMAMA! ¡Nuestra marca es vibrante, es colorida!
+[wait time="1.0" hide_text="false"]
+NPC4: Este reportaje es visualmente deprimente. ¿Quién va a querer ver algo tan feo? Está arruinando nuestra identidad de marca.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Está preocupada por la 'identidad de marca' y los colores. El tema de fondo, el acoso, es solo un 'brief' de diseño deprimente para ella.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

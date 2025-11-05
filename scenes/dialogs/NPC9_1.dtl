@@ -1,0 +1,10 @@
+# Ana se acerca a Lucas, que está en el Comedor revisando su teléfono con fastidio.
+NPC9: Hola, Ana. ¿Puedes creer esto? Con la ciudad como está, ¿y me tienen asignado al especial del 27?
+[wait time="1.0" hide_text="false"]
+NPC9: Yo debería estar cubriendo política, ¡esa es la noticia! No un reportaje interno de Recursos Humanos.
+[wait time="1.0" hide_text="false"]
+NPC9: Esto no es periodismo de calle, es... un memo corporativo largo. Qué pérdida de tiempo.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Ve el acoso laboral como "un memo corporativo". No lo considera "noticia de verdad". Subestima por completo la gravedad del tema.[/i]
+[wait time="1.o" hide_text="false"]
+[end_timeline]

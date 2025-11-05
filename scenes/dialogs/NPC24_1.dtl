@@ -1,0 +1,17 @@
+# Ana se acerca a Andrés
+NPC24: Ana, estaba leyendo el guion del reportaje del 27...
+[wait time="1.0" hide_text="false"]
+NPC24: Hablan de una víctima que sufría acoso y nunca le respondió mal al jefe, nunca se defendió.
+[wait time="1.0" hide_text="false"]
+NPC24: Si alguien te trata mal, tú te defiendes, ¿no? Le alzas la voz. Si te quedas callado, es casi como si estuvieras de acuerdo. ¿Qué piensas?
+[wait time="1.0" hide_text="false"]
+- Exacto. Si no te defiendes, es tu culpa por débil.
+	[wait time="1.0" hide_text="false"]
+	NPC24: ¡Verdad! [pause=0.5] Pero el guion dice que [color=red]eso es culpar a la víctima[/color]. [pause=0.2] Que el [b]miedo a perder el trabajo[/b] o el [b]shock[/b] pueden paralizar a una persona. [pause=0.2] No lo había visto así.
+- El miedo al jefe o al despido puede paralizar a la víctima.
+	[wait time="1.0" hide_text="false"]
+	NPC24: [color=green]Supongo que tienes razón[/color]. [pause=0.5] El guion dice [b]exactamente eso[/b]. [pause=0.2] Que el [b]abuso de poder[/b] se basa en que la víctima [i]no puede[/i] defenderse fácilmente. [pause=0.2] Es una situación injusta.
+- Debería haberle pegado. Ojo por ojo.
+	[wait time="1.0" hide_text="false"]
+	NPC24: Uf, ¿pegarle? [pause=0.5] El guion dice que [color=red]la violencia solo empeora la situación[/color] [pause=0.2] y que la víctima probablemente [b]terminaría despedida y denunciada[/b] ella. [pause=0.2] Mala idea.
+[end_timeline]

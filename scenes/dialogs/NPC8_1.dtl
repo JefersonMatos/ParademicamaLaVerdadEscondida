@@ -1,0 +1,10 @@
+# Ana se acerca a Daniela, que está en el comedor removiendo su café.
+NPC8: Hola Ana. Este reportaje del 27 me tiene removiendo el pasado.
+[wait time="1.0" hide_text="false"]
+NPC8: Me pidieron buscar material de archivo de... bueno, de chicas que ya no trabajan aquí.
+[wait time="1.0" hide_text="false"]
+NPC8: Es duro. Yo me fui de mi anterior trabajo por algo muy parecido. Ver que en todas partes es igual... es agotador.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Ella es una sobreviviente. El reportaje no es solo 'trabajo' para ella, es real. Su agotamiento es empatía pura.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

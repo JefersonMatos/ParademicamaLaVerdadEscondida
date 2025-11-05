@@ -1,0 +1,17 @@
+# Ana se acerca a Ximena
+NPC4: Oye, Ana, estoy diseñando la gráfica para la sección de "Mitos y Verdades" del reportaje del 27.
+[wait time="1.0" hide_text="false"]
+NPC4: Y hay uno que dice que "coquetear" puede ser acoso.
+[wait time="1.0" hide_text="false"]
+NPC4: Pero, vamos, ¿cómo es eso? El coqueteo es normal, es parte de la vida. ¿Ahora ya nadie puede decirle algo bonito a alguien? ¿Tú qué piensas?
+[wait time="1.0" hide_text="false"]
+- Tienes razón. Es una exageración, el coqueteo es inofensivo.
+	[wait time="1.0" hide_text="false"]
+	NPC4: ¡Verdad! [pause=0.5] Pero el guion que estoy ilustrando dice que [color=red]depende de la 'reciprocidad'[/color]. [pause=0.2] Si solo uno coquetea y el otro se siente mal, [pause=0.2] ya no es coqueteo, es hostigamiento.
+- Solo es acoso si es tu jefe, entre compañeros es coqueteo.
+	[wait time="1.0" hide_text="false"]
+	NPC4: Mmm. [pause=0.5] El guion dice que [color=red]el acoso horizontal (entre compañeros) es muy común[/color] [pause=0.2] y que el poder no es la única variable. [pause=0.2] La clave es si es "no deseado".
+- Es coqueteo si es mutuo. Si es unilateral y no deseado, es acoso.
+	[wait time="1.0" hide_text="false"]
+	NPC4: [color=green]¡Exacto! Justo esa es la definición que usa el guion[/color]. [pause=0.5] Que la diferencia es [b]el consentimiento y la reciprocidad[/b]. [pause=0.2] Si ambos están cómodos, es coqueteo. Si uno no lo está, es acoso. [pause] Qué clara.
+[end_timeline]

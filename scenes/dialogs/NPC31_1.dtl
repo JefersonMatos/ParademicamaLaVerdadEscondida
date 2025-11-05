@@ -1,0 +1,17 @@
+# Ana se acerca a Beatriz
+NPC31: Oye, Ana, ahora que estoy actualizando el Manual de Conducta...
+[wait time="1.0" hide_text="false"]
+NPC31: El manual dice que la política de 'Tolerancia Cero' aplica a *todos*, desde un practicante hasta el Gerente General.
+[wait time="1.0" hide_text="false"]
+NPC31: Pero, seamos realistas... si el que te acosa es un Gerente de alto nivel, ¿realmente lo vas a denunciar? ¿No es mejor solo... aguantar? Es tu jefe, al fin y al cabo.
+[wait time="1.0" hide_text="false"]
+- El acoso es ilegal sin importar el rango. La ley protege a la víctima.
+	[wait time="1.0" hide_text="false"]
+	NPC31: [color=green]Sí, eso es lo que dice el manual[/color]. [pause=0.5] Que la [b]Ley 27942[/b] es clara: [b]el rango del acosador es un agravante[/b], [pause=0.2] no una excusa. [pause=0.2] Es bueno que quede por escrito.
+- Es mejor aguantar. Si denuncias a un jefe, pierdes tu trabajo.
+	[wait time="1.0" hide_text="false"]
+	NPC31: ¡Es lo que yo pienso! [pause=0.5] Pero el manual dice que [color=red]eso es un mito basado en el miedo[/color]. [pause=0.2] Que la [b]ley prohíbe las represalias[/b] [pause=0.2] y que la denuncia (con pruebas) debe proceder sin importar el cargo.
+- Solo lo puedes denunciar si tienes el apoyo de otro gerente.
+	[wait time="1.0" hide_text="false"]
+	NPC31: Mmm, no. [pause=0.5] El manual dice que [color=red]no necesitas apoyo de otros gerentes[/color]. [pause] Que puedes ir directo al [b]Comité de Intervención[/b] o a [b]SUNAFIL[/b], [pause] y ellos deben investigar confidencialmente.
+[end_timeline]

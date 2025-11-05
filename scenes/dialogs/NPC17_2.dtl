@@ -1,0 +1,17 @@
+# Ana se acerca a Samuel
+NPC17: Hola, Ana. Estamos editando la sección del reportaje sobre 'Tipos de Acoso'.
+[wait time="1.0" hide_text="false"]
+NPC17: Y tengo una duda. Yo entiendo que es acoso si, ya sabes, hay contacto físico.
+[wait time="1.0" hide_text="false"]
+NPC17: Pero, ¿chistes por el chat interno o correos insistentes? ¿Eso realmente es 'acoso sexual' o solo mala educación? ¿Usted qué cree?
+[wait time="1.0" hide_text="false"]
+- No. Si no hay contacto físico, no es acoso sexual.
+	[wait time="1.0" hide_text="false"]
+	NPC17: Mmm, yo pensaba igual. [pause=0.5] Pero el guion del reportaje que editamos es claro: [color=red]el acoso sexual incluye lo verbal y escrito[/color]. [pause=0.2] Dicen que crear un "ambiente intimidante u hostil" es suficiente.
+- Solo si es el jefe. Si es un compañero, es una broma.
+	[wait time="1.0" hide_text="false"]
+	NPC17: ¿Solo el jefe? [pause=0.5] Pues el guion que estamos editando dice que [color=red]la ley también cubre el acoso 'horizontal'[/color], [pause=0.2] o sea, entre compañeros. [pause=0.2] Tuvimos que ponerlo en una gráfica.
+- Sí. El acoso verbal o escrito de naturaleza sexual también es acoso.
+	[wait time="1.0" hide_text="false"]
+	NPC17: [color=green]Exacto. Eso mismo dice el guion que estamos editando[/color]. [pause=0.5] Que la ley es clara: [b]conductas verbales o escritas[/b] de naturaleza sexual, [pause=0.2] no deseadas, [pause=0.2] son acoso. Bien.
+[end_timeline]

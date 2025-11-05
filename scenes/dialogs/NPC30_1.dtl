@@ -1,0 +1,17 @@
+# Ana se acerca a Carlos
+NPC30: Ana, ayúdame con una duda legal del guion del 27. Es sobre la prescripción.
+[wait time="1.0" hide_text="false"]
+NPC30: Estamos escribiendo sobre un caso donde la víctima fue despedida y quiere denunciar el acoso *después* de irse.
+[wait time="1.0" hide_text="false"]
+NPC30: Pero si ya no trabajas aquí, ¿pierdes tu derecho a denunciar? ¿O cómo funciona eso?
+[wait time="1.0" hide_text="false"]
+- No. La ley te protege incluso después de terminada la relación laboral.
+	[wait time="1.0" hide_text="false"]
+	NPC30: [color=green]Ah, ¿así es? Justo eso dice la nota de Legal[/color]. [pause=0.5] Que la [b]Ley 27942[/b] te protege [b]incluso después de extinguida la relación laboral[/b]. [pause=0.2] Qué buen dato. Lo incluyo.
+- Sí. Si ya no trabajas aquí, ya no es problema de la empresa.
+	[wait time="1.0" hide_text="false"]
+	NPC30: Eso pensé. [pause=0.5] Pero el guion dice que [color=red]eso es falso[/color]. [pause=0.2] La [b]Ley 27942[/b] dice que puedes denunciar [b]incluso si ya te fuiste o te despidieron[/b]. [pause=0.2] Qué complicado.
+- Solo si denuncia el mismo día de su despido.
+	[wait time="1.0" hide_text="false"]
+	NPC30: ¿El mismo día? [pause=0.5] No, el guion dice que [color=red]tienes un plazo[/color], [pause=0.2] pero definitivamente no es solo un día. [pause=0.2] Es bueno saber que la protección continúa.
+[end_timeline]

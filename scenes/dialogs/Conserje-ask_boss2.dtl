@@ -1,0 +1,9 @@
+[background arg="res://assets/enviroMENTS/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+"Miguel - Conserje": Buen día, Ana.
+Ana: Buen día, Miguel.
+"Miguel - Conserje": (En voz baja) ¿Lista para... bueno, para el día?
+Ana: (Asiente) Lista. Voy a ver al jefe para recibir mis tareas.
+"Miguel - Conserje": Entendido. Con cuidado.
+[end_timeline]

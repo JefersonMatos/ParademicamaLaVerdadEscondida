@@ -1,0 +1,17 @@
+# Ana se acerca a Felipe
+NPC26: Oye, Ana, estoy atascado en una parte del guion del 27. Es sobre los 'rumores'.
+[wait time="1.0" hide_text="false"]
+NPC26: El guion dice que si se esparce un rumor malicioso o se aísla a alguien, es 'acoso psicológico'.
+[wait time="1.0" hide_text="false"]
+NPC26: ¿Pero no es eso un simple 'chisme' o un problema personal entre compañeros? ¿Por qué tendría que meterse la empresa en eso?
+[wait time="1.0" hide_text="false"]
+- Tiene razón. La empresa no es un jardín de infantes.
+	[wait time="1.0" hide_text="false"]
+	NPC26: Eso mismo pensé. [pause=0.5] Pero los abogados revisaron el guion y dicen que [color=red]si esos 'chismes' crean un 'ambiente hostil',[/color] [pause=0.2] la empresa es 100% responsable legalmente.
+- Si pasa en la oficina y afecta el trabajo, la empresa debe intervenir.
+	[wait time="1.0" hide_text="false"]
+	NPC26: [color=green]Correcto. Eso es lo que dice el guion[/color]. [pause=0.5] Que [b]el empleador debe garantizar un ambiente de trabajo seguro[/b], [pause=0.2] y eso incluye proteger a la gente de rumores maliciosos o aislamiento. [pause] Lo reescribiré así.
+- Solo si el rumor es sobre algo sexual. Si no, no es acoso.
+	[wait time="1.0" hide_text="false"]
+	NPC26: Mmm, no. [pause=0.5] El guion que estoy escribiendo [color=red]diferencia el acoso sexual del acoso psicológico (mobbing)[/color]. [pause] Dicen que esparcir rumores, aunque no sean sexuales, [pause] igual es acoso laboral.
+[end_timeline]

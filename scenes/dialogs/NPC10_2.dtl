@@ -1,0 +1,17 @@
+# Ana se acerca a Martín
+NPC10: Hola, Ana. Estamos revisando el enfoque del reportaje del 27.
+[wait time="1.0" hide_text="false"]
+NPC10: Hablamos mucho de las víctimas, pero, ¿qué hay de las denuncias falsas? Eso también destruye carreras, ¿no?
+[wait time="1.0" hide_text="false"]
+NPC10: Honestamente, yo creo que muchas denuncias de acoso hoy en día son exageradas, solo para sacar ventaja o por venganza. ¿Tú qué piensas?
+[wait time="1.0" hide_text="false"]
+- Tiene razón. Hoy en día ya no se puede ni hacer una broma.
+	[wait time="1.0" hide_text="false"]
+	NPC10: Exacto. [pause=0.3] Pero bueno, el equipo de investigación del reportaje nos pasó un dato: [color=red]dicen que las denuncias falsas son extremadamente raras[/color], [pause=0.2] menos del 2%. [pause=0.2] Insisten en que el problema real es la gente que [b]no[/b] denuncia.
+- No estoy de acuerdo. El acoso es un problema real y muy grave.
+	[wait time="1.0" hide_text="false"]
+	NPC10: Veo que vienes con la lección aprendida. [pause=0.3] [color=green]El guion dice lo mismo[/color]. [pause=0.2] Que estadísticamente las denuncias falsas son muy raras [pause=0.2] y que el verdadero problema es el silencio. [pause=0.2] Un dolor de cabeza para el marketing.
+- Solo son falsas si la víctima no tiene pruebas físicas.
+	[wait time="1.0" hide_text="false"]
+	NPC10: Mmm, buen punto. [pause=0.3] Pero el guion del reportaje es claro: [color=red]el acoso sexual rara vez deja pruebas físicas[/color]. [pause=0.2] Dicen que se basa en testimonios, patrones de conducta y abuso de poder. [pause=0.2] Qué complicado.
+[end_timeline]

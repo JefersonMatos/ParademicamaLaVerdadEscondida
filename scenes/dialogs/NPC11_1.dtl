@@ -1,0 +1,10 @@
+# Ana se acerca a Diego en la Sala de Juntas
+NPC11: Ah, la asistente de Víctor. ¿Sabe cuánto nos va a costar este reportaje del 27?
+[wait time="1.0" hide_text="false"]
+NPC11: Horas-hombre, recursos de producción, [pause=0.3] y ahora todos quieren implementar un nuevo "canal de denuncias" que cuesta un dineral.
+[wait time="1.0" hide_text="false"]
+NPC11: Honestamente, no entiendo tanto alboroto por algo que Recursos Humanos debería manejar con una liquidación y listo.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Para él, la dignidad de una persona tiene un precio. Ve la justicia como un gasto en el presupuesto, no como un derecho.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

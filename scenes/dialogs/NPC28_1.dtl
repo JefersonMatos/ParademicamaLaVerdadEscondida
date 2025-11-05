@@ -1,0 +1,10 @@
+# Ana se acerca a David, que está organizando equipo.
+NPC28: Ana, ¿tú eres la nueva, no? Yo soy David, productor de campo.
+[wait time="1.o" hide_text="false"]
+NPC28: Acabo de llegar de una cobertura en Gamarra... ¡eso sí es caos! Y llego a la oficina y todos están de puntillas por el reportaje del 27.
+[wait time="1.0" hide_text="false"]
+NPC28: En la calle te gritan, te empujan... ¡eso es el trabajo! Siento que la gente aquí en la oficina necesita un poco más de 'calle'.
+[wait time"1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Él confunde el estrés del trabajo de campo con el acoso interno. Usa su 'dureza' como excusa para invalidar el sufrimiento de otros.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

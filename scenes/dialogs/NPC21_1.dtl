@@ -1,0 +1,10 @@
+# Ana se acerca a Daniel, que está ajustando una cámara de estudio.
+NPC21: Hola, Ana. ¿Ves esta iluminación? Es un desastre.
+[wait time="1.0" hide_text="false"]
+NPC21: Para el especial del 27, el director quiere un tono "serio" y "sombrío". ¡Eso es horrible para la cámara!
+[wait time="1.0" hide_text="false"]
+NPC21: La gente se va a ver pálida, enferma. ¿A quién le importa el 'tono' si la imagen se ve mal? Yo hago que la gente se vea bien, ¡ese es mi trabajo!
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Él está preocupado por la estética de la toma, no por el sufrimiento que el reportaje intenta transmitir. Totalmente desconectado del mensaje.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

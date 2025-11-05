@@ -1,0 +1,15 @@
+# Ana se acerca a Gabriel
+NPC16: Ana, una consulta rápida de terminología para el guion del 27. La ley es muy específica.
+[wait time="1.0" hide_text="false"]
+NPC16: ¿Qué crees que se necesita para que una conducta sea *legalmente* considerada 'hostigamiento sexual' aquí en Perú?
+[wait time="1.0" hide_text="false"]
+- Que la conducta sea repetitiva y no deseada, o una sola vez si es grave.
+	[wait time="1.0" hide_text="false"]
+	NPC16: [color=green]Correcto.[/color] [pause=0.5] Veo que alguien leyó la [b]Ley 27942[/b]. [pause=0.3] La ley habla de "conducta reiterada" O "un solo acto grave". [pause=0.2] Es una distinción legal clave. Gracias.
+- Que la víctima tenga pruebas físicas, como moretones o fotos.
+	[wait time="1.0" hide_text="false"]
+	NPC16: Ah, no. [pause=0.5] Eso es un mito común. [pause=0.3] El reportaje [color=red]aclarará que el hostigamiento es usualmente psicológico o verbal[/color]. [pause=0.2] La ley no exige pruebas físicas.
+- Que el acosador sea un jefe directo de la víctima.
+	[wait time="1.0" hide_text="false"]
+	NPC16: No necesariamente. [pause=0.5] Legalmente, [color=red]puede ser 'horizontal' (entre compañeros)[/color] o incluso de un subordinado a un jefe. [pause=0.2] La ley cubre todas las direcciones.
+[end_timeline]

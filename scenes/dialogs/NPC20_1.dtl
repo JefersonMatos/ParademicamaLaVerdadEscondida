@@ -1,0 +1,17 @@
+# Ana se acerca a Leonardo
+NPC20: Ana, qué bueno. Justo estoy ensayando la parte de "Qué hacer si eres víctima". Es la parte más importante del reportaje.
+[wait time="1.0" hide_text="false"]
+NPC20: El guion dice que hay que "recolectar evidencia". Pero, ¿qué tipo de evidencia sirve realmente?
+[wait time="1.0" hide_text="false"]
+NPC20: Si es la palabra de la víctima contra la del jefe, ¿qué pesa más? ¿Qué crees que es lo más importante?
+[wait time="1.0" hide_text="false"]
+- Irse de la empresa. No vale la pena luchar.
+	[wait time="1.0" hide_text="false"]
+	NPC20: ¿Irse? [pause=0.5] Mmm, el guion dice que [color=red]eso es lo que el acosador busca[/color]. [pause=0.2] Dicen que la ley protege el derecho a trabajar sin violencia.
+- Solo sirve si hay videos o fotos. Si no, no hay caso.
+	[wait time="1.0" hide_text="false"]
+	NPC20: ¡Eso pensé! [pause=0.5] Pero el guion es claro: [color=red]los correos, mensajes de chat, e incluso una bitácora personal[/color] de incidentes [pause=0.2] son pruebas cruciales. [pause=0.2] No todo es video.
+- Correos, chats, testimonios de testigos y un registro de fechas y horas.
+	[wait time="1.0" hide_text="false"]
+	NPC20: [color=green]¡Exacto! Justo esas palabras estoy ensayando[/color]. [pause=0.5] El guion dice que hay que [b]guardar todo[/b]: correos, chats, [pause=0.2] y [b]anotar fechas, horas y lugares[/b] de los incidentes. [pause=0.2] Buen punto.
+[end_timeline]

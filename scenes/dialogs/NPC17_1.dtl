@@ -1,0 +1,10 @@
+# Ana se acerca a Samuel en la Sala de Juntas
+NPC17: Ana, buenos días. No te imaginas el trabajo que nos está dando el especial del 27.
+[wait time="1.0" hide_text="false"]
+NPC17: Tenemos horas de testimonios y dramatizaciones. ¿Sabes lo que es editar eso? Es lento, es denso.
+[wait time="1.0" hide_text="false"]
+NPC17: Encima, los editores ahora están súper sensibles, que si esta toma es "muy fuerte", que si "afecta la dignidad"... ¡Solo retrasa la entrega!
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Ve los testimonios de acoso como "material denso" que retrasa la entrega. La eficiencia de la edición está por encima de la dignidad de las víctimas.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

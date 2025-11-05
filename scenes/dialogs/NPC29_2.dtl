@@ -1,0 +1,17 @@
+# Ana se acerca a Camila
+NPC29: Ana, qué bueno que vienes. Estoy transcribiendo una parte del guion del 27 y hay un término que no entiendo.
+[wait time="1.0" hide_text="false"]
+NPC29: El guion dice que, según la ley, la empresa debe tener un... [b]"Comité de Intervención frente al Hostigamiento Sexual"[/b].
+[wait time="1.0" hide_text="false"]
+NPC29: ¿Qué es eso? ¿Es como un grupo de gerentes que te juzga?
+[wait time="1.0" hide_text="false"]
+- Es un grupo de abogados externos que te cobra por la denuncia.
+	[wait time="1.0" hide_text="false"]
+	NPC29: ¿Abogados? [pause=0.5] Mmm, no creo. El guion dice que [color=red]es un órgano interno de la empresa[/color]. [pause=0.2] Y que es gratuito.
+- Es otro nombre para Recursos Humanos.
+	[wait time="1.0" hide_text="false"]
+	NPC29: ¿Segura? [pause=0.5] El guion dice que [color=red]RR.HH. es una parte, pero que el Comité debe incluir representantes de los trabajadores[/color], [pause=0.2] para que sea justo.
+- Es un comité obligatorio por ley, con representantes de la empresa y trabajadores, que recibe e investiga las denuncias.
+	[wait time="1.0" hide_text="false"]
+	NPC29: [color=green]¡Ah, eso tiene más sentido![/color] [pause=0.5] El guion dice que [b]debe ser paritario[/b] (mitad trabajadores, mitad empleador) [pause=0.2] y que [b]ellos investigan la denuncia y emiten recomendaciones[/b]. [pause] Gracias, ahora sí lo entiendo.
+[end_timeline]

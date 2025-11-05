@@ -1,0 +1,17 @@
+# Ana se acerca a Paolo
+NPC3: Oye, Ana, estaba leyendo el guion del 27 mientras esperaba mi equipo.
+[wait time="1.0" hide_text="false"]
+NPC3: Habla de la "cultura tóxica". Pero, vamos, todos sabemos cómo es la tele antes de entrar, ¿no?
+[wait time="1.0" hide_text="false"]
+NPC3: Si sabes que es un ambiente pesado y aceptas el trabajo, ¿no estás aceptando también las 'reglas del juego'? No te puedes quejar después. ¿Qué opinas?
+[wait time="1.0" hide_text="false"]
+- Exacto. Si no te gusta el calor, sal de la cocina.
+	[wait time="1.0" hide_text="false"]
+	NPC3: ¡Eso digo yo! [pause=0.5] Pero el guion dice que [color=red]eso es un mito[/color]. [pause=0.2] Que [b]ningún contrato de trabajo incluye una cláusula de 'aguantar acoso'[/b]. [pause=0.2] Y que la ley está por encima de la 'cultura' de la empresa.
+- Solo te puedes quejar si te bajan el sueldo, no por el 'ambiente'.
+	[wait time="1.0" hide_text="false"]
+	NPC3: Mmm. [pause=0.5] El guion dice que [color=red]el 'ambiente hostil' es denunciable en sí mismo[/color]. [pause=0.2] Que el acoso psicológico es tan grave como el financiero.
+- No. Aceptar un trabajo no significa aceptar ser acosado. Es ilegal.
+	[wait time="1.0" hide_text="false"]
+	NPC3: [color=green]Sí, justo eso dice el guion[/color]. [pause=0.5] Que [b]la 'cultura' de la empresa no puede estar por encima de la ley[/b]. [pause=0.2] Y que [b]SUNAFIL[/b] puede multar a la empresa por permitir esa 'cultura tóxica'. [pause] Qué fuerte.
+[end_timeline]

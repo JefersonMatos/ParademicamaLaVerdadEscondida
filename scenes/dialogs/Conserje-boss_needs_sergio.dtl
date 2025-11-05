@@ -1,0 +1,10 @@
+[background arg="res://assets/enviroMENTS/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+Ana: ¡Miguel! ¿Has visto a Sergio? El jefe lo necesita en su oficina.
+"Miguel - Conserje": ¿A Sergio? Uf.
+"Miguel - Conserje": Como siempre, debe estar en su cueva, la sala de vigilancia.
+"Miguel - Conserje": Ya sabes, al lado del comedor.
+Ana: Gracias, Miguel. Voy para allá.
+"Miguel - Conserje": (Para sí mismo) ...justo como lo planeamos.
+[end_timeline]

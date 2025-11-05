@@ -1,0 +1,17 @@
+# Ana se acerca a Esteban
+NPC14: Ana, ayúdame con una duda de guion para el reportaje. Es sobre la escena de la denuncia.
+[wait time="1.0" hide_text="false"]
+NPC14: El guion dice que es acoso [b]incluso si la víctima nunca dijo 'NO' explícitamente[/b].
+[wait time="1.0" hide_text="false"]
+NPC14: Para mí, si no dices 'no' fuerte y claro, ¿cómo se supone que la otra persona adivine que te molesta? Es sentido común, ¿o no?
+[wait time="1.0" hide_text="false"]
+- Tiene razón. Si no dice 'no' activamente, no es acoso.
+	[wait time="1.0" hide_text="false"]
+	NPC14: ¡Eso pensé! [pause=0.5] Pero el guion insiste en que [color=red]el acoso se basa en si la conducta es 'no deseada'[/color], [pause=0.2] no en si la víctima tuvo el valor de gritar. [pause=0.2] Dicen que el miedo o el shock pueden paralizar.
+- No decir 'no' no es lo mismo que dar consentimiento.
+	[wait time="1.0" hide_text="false"]
+	NPC14: [color=green]Buen punto. Eso mismo dice el guion[/color]. [pause=0.5] Que la ausencia de un 'no' [b]no[/b] implica un 'sí'. [pause=0.3] Especialmente si hay una relación de poder, como un jefe. [pause=0.2] Lo dejaremos así, entonces.
+- Solo es acoso si hay violencia física evidente.
+	[wait time="1.0" hide_text="false"]
+	NPC14: No, no. Eso sí lo tengo claro. [pause=0.5] El reportaje [color=red]cubre explícitamente el acoso psicológico y verbal[/color], [pause=0.2] dicen que es el más común y el más difícil de probar. Qué tema.
+[end_timeline]

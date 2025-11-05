@@ -1,0 +1,17 @@
+# Ana se acerca a Mariana
+NPC32: Ana, estaba revisando el presupuesto que Legal nos pasó para el reportaje del 27.
+[wait time="1.0" hide_text="false"]
+NPC32: Mencionan unos costos altísimos por 'multas' de SUNAFIL si la empresa no actúa.
+[wait time="1.0" hide_text="false"]
+NPC32: Yo pensaba que el acoso era un tema moral, no financiero. ¿Tú crees que una multa de SUNAFIL es realmente un riesgo grande?
+[wait time="1.0" hide_text="false"]
+- No. Es una amenaza vacía, esas multas casi nunca se pagan.
+	[wait time="1.0" hide_text="false"]
+	NPC32: Yo también lo veía así. [pause=0.5] Pero el reporte de Legal dice que [color=red]las multas son reales y se aplican[/color]. [pause=0.2] Dicen que no tener un Comité de Intervención ya es una falta grave.
+- Sí. Las multas por no tener un Comité o no investigar son muy altas.
+	[wait time="1.0" hide_text="false"]
+	NPC32: [color=green]¡Exacto! El reporte dice eso[/color]. [pause=0.5] Que las multas [b]por no tener un Comité[/b] o [b]no investigar[/b] son altísimas, [pause] independientemente de si se prueba el acoso. [pause] Es un riesgo financiero real.
+- Solo si la víctima denuncia a la policía, no a SUNAFIL.
+	[wait time="1.0" hide_text="false"]
+	NPC32: Mmm, no. El reporte dice que [color=red]SUNAFIL es la vía administrativa laboral[/color], [pause] y sus multas son independientes de la vía penal (policía). [pause] La empresa puede ser multada por SUNAFIL aunque el caso no vaya a juicio.
+[end_timeline]

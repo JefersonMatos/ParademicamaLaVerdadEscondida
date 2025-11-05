@@ -1,0 +1,17 @@
+# Ana se acerca a Jimena
+Jimena: Ana, una pregunta... ya que tú eres asistente del jefe y sabes cómo se manejan las cosas.
+[wait time="1.0" hide_text="false"]
+Jimena: El guion del 27 dice que el acoso le puede pasar a cualquiera.
+[wait time="1.0" hide_text="false"]
+Jimena: Pero, ¿no es normal que a los practicantes nos traten un poco... 'duro'? [pause=0.3] O sea, como 'derecho de piso', para aprender. ¿O eso también es acoso?
+[wait time="1.0" hide_text="false"]
+- Sí, es normal. Todos pagan 'derecho de piso' para aprender.
+	[wait time="1.0" hide_text="false"]
+	Jimena: ¿Sí? [pause=0.5] Uf... [pause=0.2] Pero el guion dice que [color=red]el 'derecho de piso' es una excusa para normalizar el maltrato[/color] [pause=0.2] y que la ley protege a practicantes y empleados por igual.
+- No. El 'derecho de piso' no es excusa para el maltrato. El acoso es ilegal.
+	[wait time="1.0" hide_text="false"]
+	Jimena: [color=green]¿En serio? ¡Qué alivio![/color] [pause=0.5] El guion dice justo eso: [b]que la ley protege a practicantes y empleados por igual[/b]. [pause] Que exigir 'derecho de piso' con humillaciones es acoso.
+- Solo es acoso si te pegan. Si solo te gritan, es parte de aprender.
+	[wait time="1.0" hide_text="false"]
+	Jimena: Ay... [pause=0.5] pero el guion dice que [color=red]los gritos y la humillación son 'acoso psicológico' (mobbing)[/color] [pause=0.2] y que eso también está prohibido por ley.
+[end_timeline]

@@ -1,0 +1,10 @@
+# Ana se acerca a Valeria, que está escuchando una grabación.
+NPC33: Ana, qué estrés. Estoy buscando la cuña perfecta para el reportaje del 27.
+[wait time="1.0" hide_text="false"]
+NPC33: El productor quiere algo "impactante pero esperanzador". ¿Cómo consigues eso de alguien que acaba de sufrir acoso?
+[wait time="1.0" hide_text="false"]
+NPC33: Siento que estoy presionando a la gente para que me dé el 'sonido' que necesito. Es horrible, pero es la chamba.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Ella reconoce que es horrible, pero igual lo hace por 'la chamba'. La presión del trabajo la obliga a priorizar el contenido sobre la persona.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

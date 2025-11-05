@@ -1,0 +1,10 @@
+# Ana se acerca a Sofía, que está en su escritorio revisando una pauta.
+NPC2: (Sin levantar la mirada) Ana, ¿verdad? Un segundo, estoy cerrando la pauta del especial del 27.
+[wait time="1.0" hide_text="false"]
+NPC2: Es un tema necesario, supongo, pero es un dolor de muelas logístico.
+[wait time="1.0" hide_text="false"]
+NPC2: ¡Legal quiere revisar cada palabra! No tienen idea de cómo funciona la producción real. Aquí todo es rápido, directo. El que no sigue el ritmo, se queda.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Justifica un ambiente de alta presión. Para ella, el "ritmo" es más importante que el bienestar. En esta oficina no hay espacio para la vulnerabilidad.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

@@ -1,0 +1,10 @@
+# Ana se acerca a Sebastián, que está limpiando un audio con audífonos.
+NPC34: (Se quita los audífonos) Uf, Ana, menos mal que llegaste. Necesito un descanso.
+[wait time="1.0" hide_text="false"]
+NPC34: Estoy limpiando los audios de los testimonios para el especial del 27. ¡Qué pesadilla!
+[wait time="1.0" hide_text="false"]
+NPC34: La gente llora, susurra... el nivel de ruido de fondo es terrible. ¿Tan difícil es hablar claro y fuerte al micrófono? Me toma horas ecualizar una sola frase.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Él escucha los testimonios y solo oye "ruido de fondo". El dolor de la víctima es solo un problema técnico que le dificulta el trabajo.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

@@ -1,0 +1,17 @@
+# Ana se acerca a Benjamín
+NPC27: Ana, tengo una duda de guion para el reportaje del 27. ¿Qué opinas?
+[wait time="1.0" hide_text="false"]
+NPC27: Estamos escribiendo una escena donde un gerente invita a salir a su subordinada.
+[wait time="1.0" hide_text="false"]
+NPC27: ¿Eso es acoso? Para mí, si lo hace educadamente, es solo romance. ¿O cómo sabes que no es mutuo?
+[wait time="1.0" hide_text="false"]
+- No es acoso. La gente se enamora en el trabajo.
+	[wait time="1.0" hide_text="false"]
+	NPC27: Sí, eso creo yo. [pause=0.5] Pero el guion dice que [color=red]cuando hay una relación de poder (jefe-empleado), la subordinada no puede decir 'no' libremente[/color] [pause] por miedo a represalias.
+- Es acoso de inmediato. Un jefe nunca puede hablar con una empleada.
+	[wait time="1.0" hide_text="false"]
+	NPC27: ¿Nunca? [pause=0.5] El guion no dice eso. [color=red]Dice que se vuelve acoso cuando la invitación es insistente[/color] [pause] o si hay una represalia si ella dice 'no'.
+- Es abuso de poder. Ella no puede negarse libremente por miedo.
+	[wait time="1.0" hide_text="false"]
+	NPC27: [color=green]¡Exacto! Justo esa frase usa el guion: 'abuso de poder'[/color]. [pause=0.5] Dice que [b]no hay consentimiento libre[/b] [pause] cuando la persona que invita [pause] es la misma que firma tu cheque o aprueba tus vacaciones. [pause] Tiene sentido.
+[end_timeline]

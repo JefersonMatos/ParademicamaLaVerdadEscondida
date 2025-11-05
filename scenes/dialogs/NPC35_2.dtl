@@ -1,0 +1,17 @@
+# Ana se acerca a Mateo
+NPC35: Oye, Ana, estoy revisando el guion del reportaje del 27...
+[wait time="1.0" hide_text="false"]
+NPC35: Dicen que el acoso psicológico es grave porque causa 'daño emocional'.
+[wait time="1.0" hide_text="false"]
+NPC35: Pero, sinceramente, ¿no crees que a veces las mujeres son demasiado sensibles? [pause=0.3] Quizás exageran un poco las cosas o lloran para conseguir lo que quieren, ¿no?
+[wait time="1.0" hide_text="false"]
+- Tienes razón. Muchas lloran para manipular la situación.
+	[wait time="1.0" hide_text="false"]
+	NPC35: Eso pensaba. [pause=0.5] Pero el guion que estoy leyendo dice que [color=red]descartar el llanto como 'sensibilidad' o 'manipulación' es un mito[/color] [pause=0.2] y que es una respuesta genuina al estrés y al miedo.
+- Si lloran tanto, quizás no están hechas para un trabajo de alta presión.
+	[wait time="1.0" hide_text="false"]
+	NPC35: ¡Exacto! [pause=0.5] Pero el guion dice que [color=red]la 'alta presión' no es excusa para el maltrato[/color]. [pause=0.2] Y que el llanto no es signo de debilidad, sino de un ambiente laboral hostil.
+- El llanto es una respuesta válida al acoso. No es 'ser sensible'.
+	[wait time="1.0" hide_text="false"]
+	NPC35: [color=green]Sí, justo eso dice el guion[/color]. [pause=0.5] Que el [b]daño emocional[/b] es real [pause=0.2] y que minimizar los sentimientos de la víctima es parte del problema. [pause=0.2] Interesante.
+[end_timeline]

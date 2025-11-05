@@ -1,0 +1,17 @@
+# Ana se acerca a Lucas
+NPC9: Ana, como reportero, estoy acostumbrado a los hechos. Y este guion del 27... es complicado.
+[wait time="1.0" hide_text="false"]
+NPC9: Habla de casos donde no hay videos, no hay correos... nada. Es literalmente la palabra de ella contra la de él.
+[wait time="1.0" hide_text="false"]
+NPC9: Como periodista, ¿cómo cubres eso? Si es un 'él dijo, ella dijo', ¿no es imposible saber la verdad?
+[wait time="1.o" hide_text="false"]
+- Se debe investigar el contexto, el patrón de conducta y el abuso de poder.
+	[wait time="1.0" hide_text="false"]
+	NPC9: [color=green]Buen punto. Justo eso dice el guion[/color]. [pause=0.5] Que el trabajo no es solo buscar 'la foto', sino [b]investigar el patrón[/b]. [pause=0.2] Si el jefe tiene un historial de 'él dijo, ella dijo' con varias personas... [pause=0.2] ya no es solo 'él dijo'.
+- Si no hay pruebas, no hay historia. Es solo un chisme.
+	[wait time="1.0" hide_text="false"]
+	NPC9: ¡Eso es lo que yo digo! [pause=0.5] Pero el guion dice que [color=red]el 'testimonio' es una prueba válida en sí misma[/color]. [pause=0.2] Y que descartarlo como 'chisme' es una forma de encubrir el acoso.
+- En esos casos, siempre se le cree al que tiene más poder.
+	[wait time="1.0" hide_text="false"]
+	NPC9: Uf, tristemente así funciona a veces. [pause=0.5] Pero el guion dice que [color=red]nuestro trabajo en el reportaje es, justamente, desafiar eso[/color]. [pause=0.2] Que la ley (SUNAFIL) está diseñada para [b]equilibrar ese abuso de poder[/b].
+[end_timeline]

@@ -1,0 +1,9 @@
+[background arg="res://assets/enviroMENTS/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+"Miguel - Conserje": Hola, Ana. ¿Vas a otra reunión con el jefe?
+Ana: Algo así... Carla también va a entrar.
+"Miguel - Conserje": Ah, ya veo.
+"Miguel - Conserje": ... Bueno, que tengas suerte ahí dentro.
+Ana: Gracias, Miguel.
+[end_timeline]

@@ -1,0 +1,17 @@
+# Ana se acerca a Rosa
+NPC19: Ay, Ana, qué bueno que te veo. Estaba leyendo la parte del guion del reportaje sobre [b]cómo denunciar[/b] y es confuso.
+[wait time="1.0" hide_text="false"]
+NPC19: Mencionan el canal interno de la empresa, pero también a... ¿[b]SUNAFIL[/b]?
+[wait time="1.0" hide_text="false"]
+NPC19: Si vieras que alguien está sufriendo acoso, ¿qué crees que es lo primero que se debe hacer?
+[wait time="1.0" hide_text="false"]
+- No hacer nada. Es muy peligroso meterse.
+	[wait time="1.0" hide_text="false"]
+	NPC19: ¿Tú crees? [pause=0.5] Entiendo el miedo... [pause=0.3] pero el reportaje dice que [color=red]el silencio solo protege al acosador[/color]. [pause=0.2] Dicen que es mejor buscar ayuda.
+- Hablar con el acosador directamente para que pare.
+	[wait time="1.0" hide_text="false"]
+	NPC19: ¡Uy, no! [pause=0.5] Justo el reportaje dice que [color=red]eso puede ser muy peligroso[/color], [pause=0.2] especialmente si es tu jefe. Podría tomar represalias.
+- Usar el canal de denuncias de la empresa o ir a SUNAFIL.
+	[wait time="1.0" hide_text="false"]
+	NPC19: [color=green]Exacto, eso leí.[/color] [pause=0.5] Que primero se deben revisar los [b]canales internos[/b] (como Recursos Humanos) [pause=0.3] y si eso no funciona o no confías, [b]SUNAFIL[/b] es la entidad externa que te protege. [pause=0.2] Qué bueno saberlo.
+[end_timeline]

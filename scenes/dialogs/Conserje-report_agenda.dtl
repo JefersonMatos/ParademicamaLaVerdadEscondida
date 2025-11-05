@@ -1,0 +1,10 @@
+[background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+"Miguel - Conserje": ¿Ya terminaste con la computadora? Fue rápido.
+Ana: Eh... sí, sí, ya terminé. Ahora solo tengo que reportarle al jefe.
+"Miguel - Conserje": ¿Te encuentras bien, Ana? Pareces algo... pálida.
+Ana: ¿Yo? No, no, estoy bien. Solo es el cansancio... la pantalla.
+"Miguel - Conserje": Entiendo. Bueno, avísale al jefe entonces. No dejes que te explote mucho.
+Ana: Gracias, Miguel.
+[end_timeline]

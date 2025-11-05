@@ -1,0 +1,10 @@
+# Ana se acerca a Esteban en la Sala de Juntas
+NPC14: Ana, qué bueno que te veo. Este reportaje del 27 nos tiene locos.
+[wait time="1.0" hide_text="false"]
+NPC14: Legal insiste en que el tono debe ser súper serio, casi fúnebre. ¡Estamos en PARADECIMAMA! ¡Necesitamos dinamismo, rating!
+[wait time="1.0" hide_text="false"]
+NPC14: ¿Acoso? Sí, es un tema... pero es denso. La gente quiere entretenerse, no deprimirse.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Él ve el sufrimiento de las víctimas como 'contenido denso'. Su única métrica es el rating, no el bienestar de sus empleados.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

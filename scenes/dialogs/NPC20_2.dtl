@@ -1,0 +1,10 @@
+# Ana se acerca a Leonardo, que está ensayando sus líneas en el set.
+NPC20: (Practicando líneas) "El acoso... una sombra silenciosa que destruye carreras..." Uf, Ana, qué denso.
+[wait time="1.0" hide_text="false"]
+NPC20: Soy el presentador del especial del 27. ¡Es el material más pesado que he leído en años!
+[wait time="1.0" hide_text="false"]
+NPC20: ¿Cómo se supone que diga "hostigamiento sexual" y mantenga la sonrisa del canal? Es imposible.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Está más preocupado por su "sonrisa" que por el significado de las palabras que está diciendo. Para él, es solo un guion más.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

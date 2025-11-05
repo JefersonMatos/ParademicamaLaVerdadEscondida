@@ -1,0 +1,12 @@
+[background arg="res://assets/enviroMENTS/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+"Miguel - Conserje": Ana.
+Ana: Miguel.
+"Miguel - Conserje": ¿Es la hora? ¿Vas a...?
+Ana: Sí. Voy a enfrentarlo. Tengo todo lo necesario.
+"Miguel - Conserje": Has sido muy valiente. Más valiente que todos nosotros.
+"Miguel - Conserje": No sé qué pasará ahí dentro, pero... gracias. Por todo.
+Ana: Deséame suerte.
+"Miguel - Conserje": No la necesitas. Tienes la verdad.
+[end_timeline]

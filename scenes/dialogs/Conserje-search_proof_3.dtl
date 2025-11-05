@@ -1,0 +1,8 @@
+[background arg="res://assets/enviroMENTS/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+Ana: ¿Así que estas son las cajas que mencionó el jefe?
+"Miguel - Conserje": Esas meras. Están un poco desordenadas, disculpa.
+"Miguel - Conserje": Lo que sea que estés buscando debe estar en esa pila del fondo.
+Ana: Perfecto, echaré un vistazo.
+[end_timeline]

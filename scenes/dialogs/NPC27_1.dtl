@@ -1,0 +1,10 @@
+# Ana se acerca a Benjamín, que está revisando papeles.
+NPC27: ¡Ana, hola! Estoy súper emocionado, me dejaron ayudar con el guion del especial del 27.
+[wait time="1.0" hide_text="false"]
+NPC27: Aunque, la verdad, es bastante aburrido. Me tienen investigando la Ley 27942... ¡Puros artículos y definiciones!
+[wait time="1.0" hide_text="false"]
+NPC27: Yo quería escribir dramatizaciones, ¿sabes? Algo con más acción. Esto es solo... papeleo.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Ve la ley que protege a las víctimas como 'papeleo aburrido'. Está más interesado en la 'acción' que en el impacto real del acoso.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

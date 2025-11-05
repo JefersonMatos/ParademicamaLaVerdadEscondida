@@ -1,0 +1,10 @@
+# Ana se acerca a Santiago, que está comiendo algo rápidamente.
+NPC6: Hola Ana... uff, qué día. No doy más.
+[wait time="1.0" hide_text="false"]
+NPC6: Estoy revisando horas de material para el especial del 27. Me tienen pixelando los rostros de los testimonios anónimos.
+[wait time="1.0" hide_text="false"]
+NPC6: Es un trabajo súper minucioso y aburrido. ¿Por qué no graban simplemente a un actor y ya? Me ahorraría horas de trabajo.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Ve la protección de la identidad de una víctima como un 'trabajo minucioso'. La anonimidad es un fastidio técnico para él, no un derecho vital.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

@@ -1,0 +1,17 @@
+# Ana se acerca a Diego
+NPC11: Ana, una pregunta rápida de eficiencia, usted que es nueva.
+[wait time="1.0" hide_text="false"]
+NPC11: Estamos debatiendo el impacto del reportaje del 27. [pause=0.3] Si un empleado se siente "incómodo" o "acosado", ¿qué es más eficiente para la empresa?
+[wait time="1.0" hide_text="false"]
+NPC11: ¿Gastar miles en investigaciones internas, o simplemente sugerirle a esa persona que busque un lugar donde se sienta "más cómoda"?
+[wait time="1.0" hide_text="false"]
+- Sugerirle que se vaya es lo más eficiente y rápido.
+	[wait time="1.0" hide_text="false"]
+	NPC11: Financieramente, [i]quizás[/i]. [pause=0.5] Pero el equipo legal del reportaje dice que eso se llama [color=red]"despido constructivo"[/color] [pause=0.2] y que las multas de SUNAFIL serían astronómicas. Mal negocio.
+- Se debe investigar, cueste lo que cueste.
+	[wait time="1.0" hide_text="false"]
+	NPC11: [color=green]Correcto, aunque no me guste el gasto[/color]. [pause=0.5] El guion del reportaje insiste en que [b]la empresa tiene la obligación legal de investigar[/b] y sancionar. [pause=0.2] Ignorarlo sale más caro al final.
+- La víctima debería ignorarlo hasta que pase.
+	[wait time="1.0" hide_text="false"]
+	NPC11: ¿Ignorarlo? [pause=0.5] El reportaje dice que [color=red]el acoso nunca "pasa" solo[/color], [pause=0.2] solo empeora. [pause=0.2] Y si la víctima se rinde y renuncia, [pause=0.2] igual puede demandar después. Pésimo para los números.
+[end_timeline]

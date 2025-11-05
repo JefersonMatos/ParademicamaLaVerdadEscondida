@@ -1,0 +1,17 @@
+# Ana se acerca a Daniel
+NPC21: Oye, Ana, en el guion del reportaje del 27 hablan mucho de los "testigos".
+[wait time="1.0" hide_text="false"]
+NPC21: Yo grabo lo que me piden, pero si viera algo... [pause=0.3] la verdad, no sé si me metería.
+[wait time="1.0" hide_text="false"]
+NPC21: Es un problema entre dos personas, ¿no? ¿Para qué buscarse un lío gratis? ¿O qué harías tú?
+[wait time="1.0" hide_text="false"]
+- Reportarlo es una obligación. El silencio te hace cómplice.
+	[wait time="1.0" hide_text="false"]
+	NPC21: Guau, ¿'obligación'? [pause=0.5] [color=green]El guion dice algo así[/color], que no ser neutral es una forma de ayudar. [pause=0.3] Que se puede [b]reportar anónimamente[/b] o [b]apoyar a la víctima[/b] en privado. Tienes un punto.
+- Mejor no meterse. Podrías salir perjudicado tú también.
+	[wait time="1.0" hide_text="false"]
+	NPC21: ¡Exacto! Es lo que pienso. [pause=0.5] Pero el guion dice que [color=red]el silencio es lo que permite que el acoso continúe[/color]. [pause=0.3] Que si ves algo, tienes que [b]apoyar a la víctima[/b] o reportarlo. Qué complicado.
+- Solo deberías meterte si la víctima es amiga tuya.
+	[wait time="1.0" hide_text="false"]
+	NPC21: Mmm, ¿solo si es un amigo? [pause=0.5] El guion dice que [color=red]es un tema de derechos laborales, no de amistad[/color]. [pause=0.3] Que deberíamos reportarlo sin importar quién sea. Supongo que tiene sentido.
+[end_timeline]

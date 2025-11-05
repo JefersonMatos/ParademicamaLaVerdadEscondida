@@ -1,0 +1,17 @@
+# Ana se acerca a Alonso
+NPC23: Oye, Ana, una consulta...
+[wait time="1.0" hide_text="false"]
+NPC23: El guion dice que la empresa debe proteger la identidad de la víctima.
+[wait time="1.0" hide_text="false"]
+NPC23: Pero, en la práctica, si alguien denuncia aquí, ¿realmente crees que se mantiene en secreto? Yo creo que al día siguiente se entera todo el mundo, ¿no?
+[wait time="1.0" hide_text="false"]
+- Se vuelve público. Por eso la gente no denuncia.
+	[wait time="1.0" hide_text="false"]
+	NPC23: ¡Es lo que yo digo! [pause=0.5] Pero el guion del reportaje dice que [color=red]la ley obliga a la empresa a mantener la confidencialidad[/color] [pause=0.2] de la víctima y del denunciado durante la investigación. [pause=0.2] No debería hacerse público.
+- La empresa está legalmente obligada a mantener la confidencialidad.
+	[wait time="1.0" hide_text="false"]
+	NPC23: [color=green]¿Es una obligación legal? Tienes razón[/color]. [pause=0.5] El guion insiste mucho en [b]la confidencialidad[/b]. [pause=0.3] Dicen que es un derecho clave para que la gente se atreva a denunciar. [pause=0.2] Qué bueno saberlo.
+- Solo es confidencial si lo haces en SUNAFIL, no en la empresa.
+	[wait time="1.0" hide_text="false"]
+	NPC23: Ah, ¿solo afuera? [pause=0.5] Pues el guion dice que [color=red]el empleador también tiene esa obligación legal[/color]. [pause=0.3] La confidencialidad aplica en ambos casos. [pause=0.2] Supongo que es para proteger a la gente.
+[end_timeline]

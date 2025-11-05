@@ -1,0 +1,10 @@
+# Ana se acerca a Martín en la Sala de Juntas
+NPC10: Ana, ¿verdad? La nueva asistente. Qué lío esto del reportaje del 27.
+[wait time="1.0" hide_text="false"]
+NPC10: Estoy preparando el plan de control de daños. Una sola acusación, así sea falsa, y la reputación de PARADECIMAMA se va al tacho.
+[wait time="1.0" hide_text="false"]
+NPC10: A veces creo que estas campañas de 'concientización' solo le dan ideas a la gente para quejarse por nada.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Le preocupa el "control de daños", no el acoso. Ve las denuncias como un problema de imagen, no como un problema humano.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

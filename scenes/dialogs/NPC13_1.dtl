@@ -1,0 +1,17 @@
+# Ana se acerca a Ricardo
+NPC13: Hola, Ana. Estaba en la reunión del reportaje del 27 y no entiendo nada.
+[wait time="1.0" hide_text="false"]
+NPC13: En mi equipo (producción), siempre hemos bromeado sobre todo. Si alguien hace un chiste de doble sentido, ¿ahora es acoso sexual?
+[wait time="1.0" hide_text="false"]
+NPC13: Para mí, si nadie se queja en el momento, es porque no le molestó. Es solo una broma. ¿No?
+[wait time="1.0" hide_text="false"]
+- Sí, si es una broma y nadie dice nada, no es acoso.
+	[wait time="1.0" hide_text="false"]
+	NPC13: ¡Pienso igual! [pause=0.5] Pero el guion del reportaje dice que [color=red]muchas víctimas no dicen nada por miedo a represalias[/color]. [pause=0.3] Dicen que el silencio no significa consentimiento. Complicado.
+- Depende. Si la broma es sexual y repetitiva, es acoso.
+	[wait time="1.0" hide_text="false"]
+	NPC13: [color=green]Exacto, eso dice el guion[/color]. [pause=0.5] Que la clave es si el contenido es [b]sexual[/b] y [b]repetitivo[/b], [pause=0.3] aunque el acosador diga que 'solo era una broma'. Tiene sentido.
+- No es acoso, es solo parte de la 'cultura' del canal.
+	[wait time="1.0" hide_text="false"]
+	NPC13: Eso mismo dije yo. [pause=0.5] Pero los de Legal dijeron que [color=red]la 'cultura de la empresa' no es una excusa legal[/color] [pause=0.3] y que la ley (¡hasta SUNAFIL!) nos puede sancionar igual. Qué fastidio.
+[end_timeline]

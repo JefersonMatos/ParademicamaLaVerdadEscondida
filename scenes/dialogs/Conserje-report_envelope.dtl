@@ -1,0 +1,9 @@
+[background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+"Miguel - Conserje": ¿Qué tal, Ana? ¿Pudiste encontrar a Sergio?
+Ana: Sí, Miguel, muchas gracias por la indicación.
+"Miguel - Conserje": No hay de qué. Es un tipo... peculiar. Parece que siempre está de mal humor.
+"Miguel - Conserje": Bueno, supongo que ahora te toca reportarle al jefe, ¿no?
+Ana: Sí, justo voy para allá.
+[end_timeline]

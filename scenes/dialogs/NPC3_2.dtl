@@ -1,0 +1,10 @@
+# Ana se acerca a Paolo, que está guardando baterías en el comedor.
+NPC3: ¡Ana! Justo a tiempo, ya me iba a una comisión.
+[wait time="1.0" hide_text="false"]
+NPC3: Oye, ¿qué tanto alboroto hay con el especial ese del 27? ¿Algo del acoso?
+[wait time="1.0" hide_text="false"]
+NPC3: La verdad, como paro en la calle, ni me entero de los chismes de oficina. Mientras me paguen las horas extra y el equipo funcione, el resto no es mi problema.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Ve el acoso como un 'chisme de oficina'. Como no le afecta directamente, prefiere ignorarlo. Es la definición de indiferencia.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

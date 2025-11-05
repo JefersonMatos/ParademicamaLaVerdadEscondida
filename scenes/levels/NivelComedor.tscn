@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c75p5hoghfh3h"]
+[gd_scene load_steps=26 format=3 uid="uid://c75p5hoghfh3h"]
 
 [ext_resource type="Texture2D" uid="uid://6umxoa0fb1ya" path="res://assets/enviroments/Room_Builder_32x32.png" id="1_3tbj8"]
 [ext_resource type="Texture2D" uid="uid://0vncdyviq60m" path="res://assets/enviroments/14_Basement_32x32.png" id="2_1qq8j"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://15ovmulgybm6" path="res://assets/enviroments/B-C-D-E_Jail_01.png" id="5_q5fnp"]
 [ext_resource type="Script" uid="uid://c2cptxi6lyv0n" path="res://scripts/systems/cambio_escena_hacia_sala_conserje.gd" id="6_xbjix"]
 [ext_resource type="Script" uid="uid://8gd6atglp0yn" path="res://scripts/systems/cambio_escena_hacia_sala_vigilancia.gd" id="7_jfpb5"]
+[ext_resource type="PackedScene" uid="uid://bwn0ajqrway75" path="res://scenes/characters/GenericNPC.tscn" id="9_jayhy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q5fnp"]
 texture = ExtResource("1_3tbj8")
@@ -44326,3 +44327,140 @@ script = ExtResource("7_jfpb5")
 z_index = 3
 position = Vector2(992, 336)
 shape = SubResource("RectangleShape2D_xwrtg")
+
+[node name="GenericNpc1" parent="." instance=ExtResource("9_jayhy")]
+z_index = 2
+position = Vector2(704, 127)
+dialogues = Array[String](["NPC1_1"])
+animation_name = "NPC1"
+
+[node name="AnimatedSprite2D" parent="GenericNpc1" index="0"]
+animation = &"NPC1"
+
+[node name="GenericNpc3" parent="." instance=ExtResource("9_jayhy")]
+z_index = 2
+position = Vector2(768, 128)
+dialogues = Array[String](["NPC3_1", "NPC3_2"])
+animation_name = "NPC3"
+
+[node name="AnimatedSprite2D" parent="GenericNpc3" index="0"]
+animation = &"NPC3"
+
+[node name="GenericNpc4" parent="." instance=ExtResource("9_jayhy")]
+z_index = 2
+position = Vector2(959, 128)
+dialogues = Array[String](["NPC4_1", "NPC4_2"])
+animation_name = "NPC4"
+
+[node name="AnimatedSprite2D" parent="GenericNpc4" index="0"]
+animation = &"NPC4"
+
+[node name="GenericNpc5" parent="." instance=ExtResource("9_jayhy")]
+z_index = 2
+position = Vector2(832, 352)
+dialogues = Array[String](["NPC5_1"])
+animation_name = "NPC5"
+
+[node name="AnimatedSprite2D" parent="GenericNpc5" index="0"]
+animation = &"NPC5"
+
+[node name="GenericNpc6" parent="." instance=ExtResource("9_jayhy")]
+z_index = 2
+position = Vector2(640, 240)
+dialogues = Array[String](["NPC6_1", "NPC6_2"])
+animation_name = "NPC6"
+
+[node name="AnimatedSprite2D" parent="GenericNpc6" index="0"]
+animation = &"NPC6"
+
+[node name="GenericNpc8" parent="." instance=ExtResource("9_jayhy")]
+z_index = 2
+position = Vector2(768, 240)
+dialogues = Array[String](["NPC8_1", "NPC8_2"])
+animation_name = "NPC8"
+
+[node name="AnimatedSprite2D" parent="GenericNpc8" index="0"]
+animation = &"NPC8"
+
+[node name="GenericNpc9" parent="." instance=ExtResource("9_jayhy")]
+z_index = 2
+position = Vector2(832, 240)
+dialogues = Array[String](["NPC9_1", "NPC9_2"])
+animation_name = "NPC9"
+
+[node name="AnimatedSprite2D" parent="GenericNpc9" index="0"]
+animation = &"NPC9"
+
+[node name="GenericNpc24" parent="." instance=ExtResource("9_jayhy")]
+z_index = 2
+position = Vector2(896, 240)
+dialogues = Array[String](["NPC24_1"])
+animation_name = "NPC_24"
+
+[node name="AnimatedSprite2D" parent="GenericNpc24" index="0"]
+animation = &"NPC_24"
+
+[node name="GenericNpc25" parent="." instance=ExtResource("9_jayhy")]
+z_index = 2
+position = Vector2(320, 67)
+dialogues = Array[String](["NPC25_1"])
+animation_name = "NPC_25"
+
+[node name="AnimatedSprite2D" parent="GenericNpc25" index="0"]
+animation = &"NPC_25"
+
+[node name="GenericNpc31" parent="." instance=ExtResource("9_jayhy")]
+z_index = 2
+position = Vector2(896, 352)
+dialogues = Array[String](["NPC31_1", "NPC31_2"])
+animation_name = "NPC_31"
+
+[node name="AnimatedSprite2D" parent="GenericNpc31" index="0"]
+animation = &"NPC_31"
+
+[node name="GenericNpc32" parent="." instance=ExtResource("9_jayhy")]
+z_index = 2
+position = Vector2(704, 463)
+dialogues = Array[String](["NPC32_1"])
+animation_name = "NPC_32"
+
+[node name="AnimatedSprite2D" parent="GenericNpc32" index="0"]
+animation = &"NPC_32"
+
+[node name="GenericNpc18" parent="." instance=ExtResource("9_jayhy")]
+z_index = 5
+position = Vector2(360, 375)
+dialogues = Array[String](["NPC18_1"])
+animation_name = "NPC_18"
+
+[node name="AnimatedSprite2D" parent="GenericNpc18" index="0"]
+animation = &"NPC_18"
+
+[node name="CollisionShape2D" parent="GenericNpc18/StaticBody2D" index="0"]
+position = Vector2(0, 11.5)
+
+[node name="GenericNpc19" parent="." instance=ExtResource("9_jayhy")]
+z_index = 5
+position = Vector2(360, 282)
+dialogues = Array[String](["NPC19_1"])
+animation_name = "NPC_19"
+
+[node name="AnimatedSprite2D" parent="GenericNpc19" index="0"]
+animation = &"NPC_19"
+
+[node name="CollisionShape2D" parent="GenericNpc19/StaticBody2D" index="0"]
+position = Vector2(0, 11)
+
+[editable path="GenericNpc1"]
+[editable path="GenericNpc3"]
+[editable path="GenericNpc4"]
+[editable path="GenericNpc5"]
+[editable path="GenericNpc6"]
+[editable path="GenericNpc8"]
+[editable path="GenericNpc9"]
+[editable path="GenericNpc24"]
+[editable path="GenericNpc25"]
+[editable path="GenericNpc31"]
+[editable path="GenericNpc32"]
+[editable path="GenericNpc18"]
+[editable path="GenericNpc19"]

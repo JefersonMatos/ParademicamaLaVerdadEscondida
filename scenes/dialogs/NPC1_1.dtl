@@ -1,0 +1,17 @@
+# Ana se acerca a Jorge
+NPC1: Oye, Ana, estoy revisando el guion del 27 y hay algo que no entiendo de las denuncias.
+[wait time="1.0" hide_text="false"]
+NPC1: El guion habla de una chica que fue ascendida por un jefe, y *después* lo acusa de acoso.
+[wait time="1.0" hide_text="false"]
+NPC1: Para mí, si aceptaste el ascenso, estás aceptando el trato, ¿no? No puedes quejarte después. ¿O cómo es?
+[wait time="1.0" hide_text="false"]
+- Exacto. Si aceptó el beneficio, aceptó el 'acuerdo'.
+	[wait time="1.0" hide_text="false"]
+	NPC1: ¡Eso creía yo! [pause=0.5] Pero el guion dice que [color=red]eso es un mito[/color]. [pause=0.2] Que los acosadores usan ascensos o bonos [b]para comprar el silencio[/b] y que aceptar un beneficio bajo coacción no es consentimiento.
+- Debería devolver el dinero del ascenso si quiere denunciar.
+	[wait time="1.0" hide_text="false"]
+	NPC1: Mmm, ¿devolverlo? [pause=0.5] El guion no dice eso. [pause=0.2] Dice que [color=red]el beneficio (el ascenso) es una prueba más del abuso de poder[/color], [pause=0.2] no un pago por el acoso. Qué complicado.
+- No. Aceptar un ascenso por presión no anula el acoso.
+	[wait time="1.0" hide_text="false"]
+	NPC1: [color=green]Justo eso dice el guion[/color]. [pause=0.5] Que [b]el acoso no es un intercambio[/b] [pause=0.2] y que usar un ascenso para presionar a alguien es [b]abuso de poder[/b] y es denunciable. [pause] Vaya.
+[end_timeline]

@@ -1,0 +1,10 @@
+# Ana se acerca a Camila, que está organizando una pila de papeles.
+NPC29: Hola, Ana. Ni me hables, estoy tapada en trabajo por el especial del 27.
+[wait time="1.0" hide_text="false"]
+NPC29: Que imprime estos guiones, que saca estas copias, que lleva esto al estudio...
+[wait time="1.0" hide_text="false"]
+NPC29: Todos están muy "concientizados" con el tema, pero al final, todo el trabajo extra nos cae a los asistentes. Espero que al menos sirva de algo.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Siente el peso del trabajo extra, pero parece desconectada de la importancia del tema. Para ella, el reportaje es solo más carga laboral.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

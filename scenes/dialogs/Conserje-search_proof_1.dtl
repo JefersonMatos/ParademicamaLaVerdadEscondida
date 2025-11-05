@@ -1,0 +1,10 @@
+[background arg="res://assets/enviroments/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+"Miguel - Conserje": ¡Hola, Ana! Parece que ya te tienen ocupada.
+Ana: Hola, Miguel. Sí, el jefe me pidió que le ayude a organizar su agenda en la computadora.
+"Miguel - Conserje": Ah, ¿así que también te encargarás de lo digital?
+"Miguel - Conserje": Bueno, mejor tú que yo. Esas máquinas modernas y yo no nos llevamos muy bien.
+Ana: (Sonríe) Haré lo que pueda. Nos vemos.
+"Miguel - Conserje": ¡Claro, suerte con eso!
+[end_timeline]

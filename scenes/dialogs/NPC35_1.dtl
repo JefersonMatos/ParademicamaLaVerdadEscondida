@@ -1,0 +1,10 @@
+# Ana se acerca a Mateo, que está editando
+NPC35: Hola, Ana. Estoy editando unos testimonios para el especial del 27.
+[wait time="1.0" hide_text="false"]
+NPC35: Es agotador. Tienes que cortar cada vez que alguien se pone a llorar. ¡Puro drama!
+[wait time="1.0" hide_text="false"]
+NPC35: ¿Por qué la gente no puede ser más profesional y solo decir los hechos? Perdemos mucho tiempo limpiando el audio de llantos.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Ve el llanto como un 'problema de audio', no como una respuesta humana al trauma. Su prioridad es la eficiencia de la edición.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

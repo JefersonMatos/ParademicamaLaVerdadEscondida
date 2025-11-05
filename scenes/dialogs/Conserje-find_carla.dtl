@@ -1,0 +1,8 @@
+[background arg="res://assets/enviroMENTS/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+Ana: ¡Miguel! Disculpa, ¿por casualidad has visto a Carla? El jefe la necesita.
+"Miguel - Conserje": ¿Carla? Sí, creo que la vi en el área de oficinas, cerca del escritorio de Luisa.
+"Miguel - Conserje": Es una chica amable, seguro la encuentras rápido.
+Ana: ¡Estupendo, mil gracias!
+[end_timeline]

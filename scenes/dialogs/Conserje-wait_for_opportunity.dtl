@@ -1,0 +1,10 @@
+[background arg="res://assets/enviroMENTS/Conserje.png" fade="0.0"]
+join "Miguel - Conserje" leftmost
+join Ana rightmost [mirrored="true"]
+Ana: Miguel... ¿estás seguro de lo que me dijiste?
+"Miguel - Conserje": (Mirando a los lados, nervioso) Sí, Ana, estoy seguro. Pero por favor...
+"Miguel - Conserje": No podemos hacer nada precipitado. Debes tener cuidado.
+"Miguel - Conserje": El jefe y Sergio siempre están vigilando. Tienes que esperar el momento justo.
+Ana: Tienes razón. Seré paciente y tendré cuidado. Gracias, Miguel.
+"Miguel - Conserje": Cuídate mucho, por favor.
+[end_timeline]

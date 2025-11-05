@@ -1,0 +1,10 @@
+# Ana se acerca a Felipe, que está leyendo un guion.
+NPC26: Ah, la asistente de Víctor. ¿Viendo cómo la gerencia se lava la cara con el especial del 27?
+[wait time="1.0" hide_text="false"]
+NPC26: Llevo quince años en este negocio. He escrito docenas de estos reportajes de "concientización".
+[wait time="1.0" hide_text="false"]
+NPC26: Escribimos sobre 'respeto' y 'canales de denuncia', y al día siguiente, los mismos jefes de siempre siguen gritando y humillando. Es solo tinta sobre papel, Ana. Nada cambia realmente.
+[wait time="1.0" hide_text="false"]
+Ana: (Pensamiento) [i]Su cinismo es profundo. Ha visto esto antes y no cree en el cambio. Esta normalización es peligrosa.[/i]
+[wait time="1.0" hide_text="false"]
+[end_timeline]

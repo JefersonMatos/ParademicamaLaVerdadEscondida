@@ -1,0 +1,17 @@
+# Ana se acerca a Valeria
+NPC33: Oye, Ana, estoy revisando el guion del 27. Hay una parte sobre 'regalos' o 'atenciones especiales' del acosador.
+[wait time="1.0" hide_text="false"]
+NPC33: El guion dice que es una táctica de manipulación.
+[wait time="1.0" hide_text="false"]
+NPC33: Pero si aceptas un regalo, digamos, una invitación a almorzar cara, ¿no estás aceptando también el juego? ¿No estás dando a entender que aceptas?
+[wait time="1.0" hide_text="false"]
+- Sí, aceptar un regalo es como dar consentimiento.
+	[wait time="1.0" hide_text="false"]
+	NPC33: Eso pensé. [pause=0.5] Pero el guion dice que [color=red]el acoso se basa en el poder, no en el intercambio[/color]. [pause=0.2] Dicen que el acosador usa regalos para 'endeudar' a la víctima [pause=0.2] y que aceptarlos por miedo o presión no es consentimiento.
+- Los regalos no importan. Solo importan las agresiones físicas.
+	[wait time="1.0" hide_text="false"]
+	NPC33: Mmm, no. El guion dice que [color=red]los regalos son MUY relevantes, pero como prueba de manipulación[/color]. [pause=0.2] Que son una táctica de 'preparación' (grooming) del acosador.
+- No. Aceptar un regalo por presión no significa que consientas el acoso.
+	[wait time="1.0" hide_text="false"]
+	NPC33: [color=green]Justo eso dice el guion[/color]. [pause=0.5] Que el acosador usa [b]regalos o ascensos para 'comprar' el silencio[/b] [pause=0.2] o [b]crear una deuda falsa[/b]. [pause=0.2] Que aceptar algo por miedo no es consentimiento. [pause] Qué fuerte.
+[end_timeline]

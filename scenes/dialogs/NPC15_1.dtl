@@ -1,0 +1,17 @@
+# Ana se acerca a Bruno
+NPC15: Ana, usted que es asistente del jefe, debe entender de procesos.
+[wait time="1.0" hide_text="false"]
+NPC15: Estoy leyendo el guion del reportaje. Dicen que si hay una denuncia, hay que 'detener' todo e 'investigar'. ¡Imagínese el caos en operaciones!
+[wait time="1.0" hide_text="false"]
+NPC15: Si hay un problema entre un gerente y... digamos, una practicante, ¿no es operativamente más simple reubicar a la practicante en otro piso y seguir trabajando?
+[wait time="1.0" hide_text="false"]
+- Sí, es lo más simple. La operación no puede parar.
+	[wait time="1.0" hide_text="false"]
+	NPC15: Parece lógico, ¿verdad? [pause=0.5] Pero el guion dice que [color=red]eso es una represalia[/color]. [pause=0.2] Que si 'reubicas' a la víctima y no al acosador, [pause=0.2] la empresa está admitiendo la culpa. Vaya lío.
+- No. Se debe investigar al gerente, no castigar a la víctima.
+	[wait time="1.0" hide_text="false"]
+	NPC15: [color=green]Correcto. Eso dice el guion[/color]. [pause=0.5] Que la [b]obligación legal[/b] es investigar la queja, [pause=0.2] no mover a la víctima. [pause=0.2] Aunque me paralice el set, qué remedio.
+- Solo si la practicante tiene pruebas, si no, que se aguante.
+	[wait time="1.0" hide_text="false"]
+	NPC15: Uf, eso sería ideal. [pause=0.5] Pero el guion dice que [color=red]no se necesitan 'pruebas físicas'[/color] para iniciar una investigación, [pause=0.2] que el testimonio basta. [pause=0.2] Eso sí que complica mi logística.
+[end_timeline]

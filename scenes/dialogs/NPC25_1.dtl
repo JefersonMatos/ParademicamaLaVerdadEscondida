@@ -1,0 +1,17 @@
+# Ana se acerca a Joaquín
+NPC25: Hola, Ana. Estaba escuchando a los guionistas del reportaje del 27 aquí en el comedor.
+[wait time="1.0" hide_text="false"]
+NPC25: Hablaban de un caso de acoso que pasó en una oficina cerrada, sin testigos.
+[wait time="1.0" hide_text="false"]
+NPC25: Pero si nadie más lo vio... ¿cómo sabes que no es un invento? Es la palabra de uno contra la del otro. ¿A quién le crees?
+[wait time="1.0" hide_text="false"]
+- El acoso suele ocurrir en privado. La falta de testigos no invalida la denuncia.
+	[wait time="1.0" hide_text="false"]
+	NPC25: [color=green]¿En serio? Justo eso decían los guionistas[/color]. [pause=0.5] Que [b]el acoso rara vez ocurre en público[/b] [pause=0.2] y que por eso la ley toma tan en serio los testimonios y las [b]pruebas indirectas[/b] (como chats o cambios de conducta).
+- Si no hay testigos, la víctima miente.
+	[wait time="1.o" hide_text="false"]
+	NPC25: ¡Eso es lo que yo digo! [pause=0.5] Pero los guionistas decían que [color=red]ese es el mito más común[/color]. [pause=0.2] Que el acosador busca la privacidad a propósito [pause=0.2] y que desestimar un caso por "falta de testigos" es culpar a la víctima.
+- Deberían poner cámaras en todas las oficinas para evitar eso.
+	[wait time="1.0" hide_text="false"]
+	NPC25: Uf, ¿cámaras en las oficinas? [pause=0.5] No creo que sea legal. [pause=0.2] Los guionistas decían que [color=red]la solución no es la vigilancia total[/color], [pause=0.2] sino crear una cultura donde la gente se atreva a denunciar, [pause] incluso si pasó en privado.
+[end_timeline]

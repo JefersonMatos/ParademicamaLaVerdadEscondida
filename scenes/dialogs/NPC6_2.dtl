@@ -1,0 +1,17 @@
+# Ana se acerca a Santiago
+NPC6: Oye Ana, ya que estoy editando los testimonios anónimos del reportaje...
+[wait time="1.0" hide_text="false"]
+NPC6: ¿Tú crees que eso de la 'denuncia anónima' de verdad funciona aquí en la empresa?
+[wait time="1.0" hide_text="false"]
+NPC6: Para mí, si denuncias anónimamente, ¿cómo van a investigar si no saben quién eres? ¿O cómo te protegen? ¿Tú qué crees?
+[wait time="1.0" hide_text="false"]
+- Es un derecho. Permite reportar sin miedo a represalias directas.
+	[wait time="1.0" hide_text="false"]
+	NPC6: [color=green]Ah, ¿sí? Justo el guion dice eso[/color]. [pause=0.5] Que la [b]denuncia anónima[/b] es un derecho protegido [b]por ley[/b] para que la gente hable sin miedo. [pause=0.3] Dicen que SUNAFIL también las acepta.
+- No sirve de nada. Siempre se enteran quién fue.
+	[wait time="1.0" hide_text="false"]
+	NPC6: ¡Eso es lo que temo! [pause=0.5] Pero el guion insiste en que [color=red]la empresa está obligada a tener un canal que *garantice* el anonimato[/color]. [pause=0.3] Si se filtra, es un delito.
+- Solo sirve si lo haces anónimamente por fuera, no en la empresa.
+	[wait time="1.0" hide_text="false"]
+	NPC6: Mmm. [pause=0.5] El guion dice que [color=red]ambos canales son válidos[/color]. [pause=0.3] Que puedes usar el [b]Comité interno[/b] de forma anónima [pause=0.2] o ir directo a [b]SUNAFIL[/b]. [pause] Qué complicado.
+[end_timeline]

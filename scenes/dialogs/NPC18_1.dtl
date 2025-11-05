@@ -1,0 +1,18 @@
+# Ana se acerca a Javier
+
+NPC18: Hola, Ana. [pause=0.3] Con esto del reportaje del 27, ahora la gerencia nos mandó un memo... ridículo.
+[wait time="1.0" hide_text="false"]
+NPC18: Dice que "hacer cumplidos sobre la apariencia" está prohibido. ¡Prohibido!
+[wait time="1.0" hide_text="false"]
+NPC18: ¿Desde cuándo decirle a una compañera que se ve bien es 'acoso'? [pause=0.4] Yo creo que solo es ser amable, ¿usted qué opina?
+[wait time="1.0" hide_text="false"]
+- Tiene razón. Es una exageración, solo es amabilidad.
+	[wait time="1.0" hide_text="false"]
+	NPC18: ¡Exacto! ¿Ve? Usted sí entiende. [pause=0.5] Pero bueno, el memo dice que si es [b]repetitivo[/b] o [b]incómodo[/b] para la otra persona, [color=red]igual se considera acoso[/color]. [pause=0.3] Qué complicado todo.
+- Depende. Si es no deseado o repetitivo, puede serlo.
+	[wait time="1.0" hide_text="false"]
+	NPC18: ¿"No deseado"? [pause=0.5] Mmm, tiene sentido. [color=green]Supongo que esa es la clave[/color]. [pause=0.3] El memo decía algo así. [pause=0.2] Si la otra persona se siente mal, ya no es un 'cumplido'. Entendido.
+- Mientras no sea el jefe, no es acoso.
+	[wait time="1.0" hide_text="false"]
+	NPC18: ¿Solo si es el jefe? [pause=0.5] Ah, pues el memo dice que [color=red]es acoso así sea entre compañeros[/color]. [pause=0.3] Nos van a volver locos con tantas reglas.
+[end_timeline]

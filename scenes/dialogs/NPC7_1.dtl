@@ -1,0 +1,17 @@
+# Ana se acerca a Nicolás
+NPC7: Oye, Ana, estábamos discutiendo una de las dramatizaciones del reportaje...
+[wait time="1.0" hide_text="false"]
+NPC7: Es sobre un caso donde la víctima denunció el acoso [b]un año después[/b] de que pasó.
+[wait time="1.0" hide_text="false"]
+NPC7: Honestamente, si fue tan grave, ¿por qué esperar tanto? A mí me suena a que no estaba tan segura o que busca algo, ¿no crees?
+[wait time="1.0" hide_text="false"]
+- Si esperó tanto, seguro es mentira.
+	[wait time="1.0" hide_text="false"]
+	NPC7: Yo también lo dudo. [pause=0.5] Pero el guion del reportaje dice que [color=red]el miedo a las represalias o la culpa[/color] [pause=0.2] hace que la gente tarde meses, o años, en procesarlo y denunciar.
+- Solo es creíble si denuncia en la primera semana.
+	[wait time="1.0" hide_text="false"]
+	NPC7: ¿Una semana? [pause=0.5] El guion dice que [color=red]no hay 'fecha de vencimiento' para denunciar el acoso[/color]. [pause=0.2] Que el shock y el miedo a perder el trabajo son las razones principales del silencio.
+- El miedo a las represalias puede hacer que alguien tarde mucho en denunciar.
+	[wait time="1.0" hide_text="false"]
+	NPC7: [color=green]Justo eso dice el guion[/color]. [pause=0.5] Que [b]el miedo a no ser creída[/b] o [b]a perder el trabajo[/b] [pause=0.2] es la razón principal del silencio. [pause=0.2] Supongo que tiene lógica.
+[end_timeline]
